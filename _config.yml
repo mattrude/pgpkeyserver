@@ -10,6 +10,9 @@ destination: "/var/www/keyserver.mattrude.com"
 markdown: kramdown
 permalink: pretty
 
+exclude:
+- README.md
+
 gems:
  - jekyll-sitemap
  - jekyll-less
