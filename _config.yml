@@ -1,0 +1,15 @@
+# Site settings
+title: OpenPGP Key Server
+email: matt@mattrude.com
+description: ""
+baseurl: ""
+url: "http://keyserver.mattrude.com"
+destination: "/var/www/keyserver.mattrude.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+gems:
+ - jekyll-sitemap
+ - jekyll-less

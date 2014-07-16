@@ -1,0 +1,32 @@
+<p>You can extract a key by typing in some words that appear in the user id of the key you are looking for, or by typing in the keyid in hex format (“0x…”)</p>
+<form action="{{ site.url }}/pks/lookup" method="get">
+<table cellpadding=5 cellspacing=0>
+<tr>
+<td align=right valign=top >Search String: </td>
+<td > <input name="search" size="40"></td>
+</tr>
+<tr>
+<td align=right valign=top >Show PGP "fingerprints" for keys</td>
+<td> <input type="checkbox" name="fingerprint"></td>
+</tr>
+<tr>
+<td align=right valign=top >Show SKS full-key hashes </td>
+<td > <input type="checkbox" name="hash"></td>
+</tr>
+<tr>
+<td align=right valign=top >Search for keys:</td>
+<td>
+<input type="radio" name="op" value="index" CHECKED> get regular index of matching keys  <br>
+<input type="radio" name="op" value="vindex"> get <b>verbose</b> index of matching keys  <br>
+<input type="radio" name="op" value="get"> retrieve ascii-armored keys <br>
+<input type="radio" name="op" value="hget"> retrieve keys by full-key hash
+</td>
+</tr>
+<tr>
+<td colspan=2 align=right>
+<input type="reset" value="Reset">
+<input type="submit">
+</td>
+</tr>
+</table>
+</form>
