@@ -9,9 +9,9 @@ Type the text you want to search for in the "Search String" box. If you want to 
 
 Select either the "Index" or "Verbose Index" check box. The "Verbose" option will display signatures on keys.
 
-Press the "Do the search!" button.
+Press the "Submit" button.
 
-The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. < marc@mit.edu>). Clicking on the hypertext link will display an ASCII-armored version of the public key.
+The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. <marc@mit.edu>). Clicking on the hypertext link will display an ASCII-armored version of the public key.
 
 ## Extraction caveats
 The search engine is not the same as that used by the pgp program. It will return information for all keys which contain all the words in the search string. A "word" in this context is a string of consecutive alphabetic characters. For example, in the string marc@mit.edu, the words are marc, mit, and edu.
