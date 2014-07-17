@@ -1,10 +1,16 @@
 # PGP Keyserver Site Source
 
-This repsitory holds the source for the PGP Key Server site at [keyserver.mattrude.com](http://keyserver.mattrude.com).
+This repsitory holds the source for the [SKS PGP Key Server](https://sks-keyservers.net/) similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).
 
 ## Jekyll
 
+[Jekyll](http://jekyllrb.com/) is a static site generator in built with [Ruby on Rails](http://rubyonrails.org/). With this approach, you are able to build a high power build system, but have a low power, very stable webserver running a static site.
+
+Updates must be done by a build system, from this source repository.
+
 ### Updating site
+
+First change into the source directory of the site, once in, update via
 
     jekyll build
 
