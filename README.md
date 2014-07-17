@@ -8,7 +8,7 @@ This repsitory holds the source for the [SKS PGP Key Server](https://sks-keyserv
 
 Updates must be done by a build system, from this source repository.
 
-### Updating site
+### Updating the site
 
 First change into the source directory of the site, once in, update via
 
