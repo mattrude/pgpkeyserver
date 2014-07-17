@@ -6,6 +6,10 @@ baseurl: ""
 url: "http://keyserver.mattrude.com"
 destination: "/var/www/keyserver.mattrude.com"
 
+# Analytics settings
+#gauges_id: 
+#google_analytics_id: 
+
 # Build settings
 markdown: kramdown
 permalink: pretty
