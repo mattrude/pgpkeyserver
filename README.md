@@ -17,8 +17,8 @@ First change into the source directory of the site, once in, update via
 ## Installing Jekyll
 Since Jekyll only needs to be installed on your build system. Below are a few quick how-to's how setting up your build system.
 
-### Installing Jekyll on Ubuntu
-On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also install the dev packets.
+### Installing Ruby on Ubuntu
+On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also install the development kit.
 
     apt-get install git ruby ruby-dev ruby-dir
 
@@ -33,21 +33,30 @@ Next install the needed gems and Jekyll
 
 Now you may use Jekyll to build the site, using the source provided in this repository.
 
-### Installing Jekyll on Windows
-### Installing Jekyll on OSX
+### Installing Ruby on Windows
+First start out by downloading the current production version of the [Ruby Installer](http://rubyinstaller.org/downloads/) for windows.
+
+#### Installing the Ruby Development Kit
+After installing Ruby via the [Ruby Installer](http://rubyinstaller.org/downloads/) talked about above, you must now download the Development Kit.
+
+1. Download the Development Kit from http://rubyinstaller.org/downloads/
+1. Extract the contact into a location easy accessible to your command prompt.
+1. Open a command prompt, change into the directory that you extracted the content of the Development Kit to and run the command: `rake devkit sfx=1`.
+
+### Installing Ruby on OSX
 
 ## License
 
                   GNU GENERAL PUBLIC LICENSE
                      Version 2, June 1991
-                     
+
     Copyright (C) 2012-2014 Matt Rude <matt@mattrude.com>
-     
+
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
-    
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
