@@ -16,3 +16,4 @@ exclude:
 gems:
  - jekyll-sitemap
  - jekyll-less
+ - jekyll-press
