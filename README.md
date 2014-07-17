@@ -14,6 +14,13 @@ First change into the source directory of the site, once in, update via
 
     jekyll build
 
+A simple script would be
+
+    rm -rf /var/src/pgpkeyserver && mkdir -p /var/src/ && \
+    git clone git@github.com:mattrude/pgpkeyserver.git /var/src/pgpkeyserver -q && \
+    jekyll build -s /var/src/pgpkeyserver -d /var/www/keyserver.mattrude.com -q && \
+    rm -rf /var/src/pgpkeyserver
+
 ## Installing Jekyll
 Since Jekyll only needs to be installed on your build system. Below are a few quick how-to's how setting up your build system.
 
