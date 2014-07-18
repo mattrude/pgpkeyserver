@@ -7,7 +7,7 @@ before_install:
   - gem install jekyll-less 
   - gem install jekyll-press 
   - gem install jekyll-sitemap
-script: jekyll build
+script: jekyll build -d _site
 rvm:
   - 1.9.3
   - 2.0.0
