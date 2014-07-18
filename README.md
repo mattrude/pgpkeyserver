@@ -1,10 +1,9 @@
 # PGP Keyserver Site Source
 
+[![Build Status](https://travis-ci.org/mattrude/pgpkeyserver.svg?branch=master)](https://travis-ci.org/mattrude/pgpkeyserver)
 This repsitory holds the source for the [SKS PGP Key Server](https://sks-keyservers.net/) similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).
 
 ## Jekyll
-
-[![Build Status](https://travis-ci.org/mattrude/pgpkeyserver.svg?branch=master)](https://travis-ci.org/mattrude/pgpkeyserver)
 
 [Jekyll](http://jekyllrb.com/) is a static site generator in built with [Ruby on Rails](http://rubyonrails.org/). With this approach, you are able to build a high power build system, but have a low power, very stable webserver running a static site.
 
