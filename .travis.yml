@@ -1,5 +1,7 @@
 before_install:
   - gem install bundler
+  - gem install kramdown
+  - gem install therubyracer
   - gem install jekyll 
   - gem install jekyll-less 
 language: ruby
