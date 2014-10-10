@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mattrude/pgpkeyserver.svg?branch=master)](https://travis-ci.org/mattrude/pgpkeyserver)
 
-This repsitory holds the source for the [SKS PGP Key Server](https://sks-keyservers.net/) similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).
+This repsitory holds the source for a [SKS PGP Key Server](https://sks-keyservers.net/) website similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).  This is only the HTML source code for the supporting documention site for the PGP server, not the PGP Keyserver software used on the server.
 
 ## Jekyll
 
