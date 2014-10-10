@@ -1,5 +1,5 @@
 # Site settings
-title: OpenPGP Key Server
+title: OpenPGP Public SKS Key Server
 email: matt@mattrude.com
 description: ""
 baseurl: ""
@@ -18,6 +18,6 @@ exclude:
 - README.md
 
 gems:
- - jekyll-sitemap
- - jekyll-less
- - jekyll-press
+- jekyll-sitemap
+- jekyll-less
+- jekyll-press
