@@ -1,6 +1,6 @@
 ---
 layout: default
-title: about
+title: About
 permalink: /doc/about/
 ---
 
