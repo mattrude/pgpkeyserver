@@ -21,3 +21,4 @@ gems:
 - jekyll-sitemap
 - jekyll-less
 - jekyll-press
+- jekyll-last-modified-at

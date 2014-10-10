@@ -1,3 +1,6 @@
+                {% if page.path contains 'doc' %}
+                    <div id="modifydate" style="font-size:0.8em;text-align:right"><p>Modified last: {{ page.last_modified_at | date: '%d-%B-%Y'}}</p></div>
+                {% endif %}
 		<!-- Starting Footer Section -->
 		<div id="footer">
 			<div class="footer-left">
