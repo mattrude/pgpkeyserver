@@ -23,6 +23,52 @@ A simple script would be
     jekyll build -s /var/src/pgpkeyserver -d /var/www/keyserver.mattrude.com -q && \
     rm -rf /var/src/pgpkeyserver
 
+## Configuration
+
+## Nginx Configuration
+
+    #----------------------------------------------------------------------
+    # OpenPGP Public SKS Key Server
+    #----------------------------------------------------------------------
+
+    # keyserver.mattrude.com
+    server {
+        listen 80;
+        listen [::]:80;
+        listen 11371;
+        listen [::]:11371;
+        server_name keyserver.mattrude.com;
+        server_name *.sks-keyservers.net;
+        server_name *.pool.sks-keyservers.net;
+        server_name pool.sks-keyservers.net;
+        server_name na.pool.sks-keyservers.net;
+        server_name p80.pool.sks-keyservers.net;
+        server_name ipv6.pool.sks-keyservers.net;
+        server_name ipv4.pool.sks-keyservers.net;
+        server_name subset.pool.sks-keyservers.net;
+        server_name ha.pool.sks-keyservers.net;
+        server_name hkps.pool.sks-keyservers.net;
+        server_name pgp.mit.edu;
+        server_name keys.gnupg.net;
+        root /var/www/keyserver.mattrude.com;
+
+        rewrite ^/stats /pks/lookup?op=stats;
+        rewrite ^/search/(.*) /pks/lookup?search=$1&op=vindex;
+        rewrite ^/get/(.*) /pks/lookup?op=get&search=$1;
+        rewrite ^/dl/(.*) /pks/lookup?op=get&options=mr&search=$1;
+        rewrite ^/pull/(.*) /pks/lookup?op=get&options=mr&search=$1;
+        rewrite ^/download/(.*) /pks/lookup?op=get&options=mr&search=$1;
+
+        location /pks {
+            proxy_pass         http://127.0.0.1:11371;
+            proxy_pass_header  Server;
+            add_header         Via "1.1 keyserver.mattrude.com:11371 (nginx)";
+            proxy_ignore_client_abort on;
+            client_max_body_size 8m;
+        }
+    }
+
+
 ## Installing Jekyll
 Since Jekyll only needs to be installed on your build system. Below are a few quick how-to's how setting up your build system.
 
