@@ -4,5 +4,9 @@
     <a href="/doc/submitting">Submitting keys</a> |
     <a href="/doc/faq">FAQ</a> |
     <a href="/stats">Statistics</a> |
-    <a href="/doc/about">About</a>
+    {% for post in site.posts limit: 1 %}
+        <a href="/news">News</a> |
+    {% endfor %}
+        <a href="/doc/about">About</a>
+    {{ posts }}
     <hr>
