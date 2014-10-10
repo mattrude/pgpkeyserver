@@ -7,7 +7,7 @@ url: "http://keyserver.mattrude.com"
 destination: "/var/www/keyserver.mattrude.com"
 
 # Analytics settings
-google_analytics_id: UA-55622044-1
+#google_analytics_id: UA-55622044-1
 
 # Build settings
 markdown: kramdown
