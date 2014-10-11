@@ -1,12 +1,12 @@
-    <hr>
-    <b>Help:</b> <a href="/">Home</a> |
-    <a href="/doc/extracting">Extracting keys</a> |
-    <a href="/doc/submitting">Submitting keys</a> |
-    <a href="/doc/faq">FAQ</a> |
-    <a href="/stats">Statistics</a> |
-    {% for post in site.posts limit: 1 %}
-        <a href="/news">News</a> |
-    {% endfor %}
+    <div id="menu">
+        <b>Help:</b>
+        <a href="/">Home</a> |
+        <a href="/doc/extracting">Extracting keys</a> |
+        <a href="/doc/submitting">Submitting keys</a> |
+        <a href="/doc/faq">FAQ</a> |
+        <a href="/stats">Statistics</a> |
+        {% for post in site.posts limit: 1 %}
+            <a href="/news">News</a> |
+        {% endfor %}
         <a href="/doc/about">About</a>
-    {{ posts }}
-    <hr>
+    </div>
