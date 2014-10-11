@@ -11,10 +11,9 @@ fail anyway with deadlocks in the conflict resolution system) we'll grab a stati
 existing SKS server. Currently the only known source is:
 
 
+* <a href="http://keyserver.mattrude.com/dump/current/">http://keyserver.mattrude.com/dump/current/</a> - Generated every Friday
 * <a href="ftp://ftp.prato.linux.it/pub/keyring/">ftp://ftp.prato.linux.it/pub/keyring/</a> - Generated every Wednesday
 * <a href="http://keys.niif.hu/keydump/">http://keys.niif.hu/keydump/</a> - Generated every Monday
-* <a href="http://key-server.de/dump">http://key-server.de/dump</a> - Generated every Friday
-* <a href="ftp://key-server.de/dump">ftp://key-server.de/dump</a> (anonymous) - Generated every Friday
 * <a href="http://keyserver.borgnet.us/dump">http://keyserver.borgnet.us/dump</a> - Generated every Sunday
 
 ### Download Keydump
