@@ -5,11 +5,11 @@ permalink: /doc/extracting/
 ---
 
 ## Extracting a key
-Type the text you want to search for in the "Search String" box. If you want to look up a key by its hexadecimal KeyID, you have to prefix the ID with 0x
+Type the text you want to search for in the **Search String** box. If you want to look up a key by its hexadecimal KeyID, you have to prefix the ID with 0x
 
-Select either the "Index" or "Verbose Index" check box. The "Verbose" option will display signatures on keys.
+Select either the **Index** or **Verbose Index** check box. The **Verbose** option will display signatures on keys.
 
-Press the "Submit" button.
+Press the **Submit** button.
 
 The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. <marc@mit.edu>). Clicking on the hypertext link will display an ASCII-armored version of the public key.
 
