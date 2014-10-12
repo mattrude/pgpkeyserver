@@ -12,7 +12,7 @@ To build a production SKS Server, you must...
 * Building the SKS Daemon
 * Download the needed database files
 * Import the downloaded databases files into your own
-* Configure your webserver to proxy SKS
+* Configure your web-server to proxy SKS
 * Start the SKS Daemon
 
 ## Building the SKS Daemon
