@@ -4,12 +4,18 @@ title: Building a SKS Server
 permalink: /doc/building-server/
 ---
 
-# Building a SKS Server
+# Building your own PGP SKS Server
 Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a pretty straight forward project if you are use to running servers.
 
+To build a production SKS Server, you must...
 
+* Building the SKS Daemon
+* Download the needed database files
+* Import the downloaded databases files into your own
+* Configure your webserver to proxy SKS
+* Start the SKS Daemon
 
-## Building the SKS software
+## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
     apt-get -y install gcc ocaml libdb6.0-dev ssmtp
