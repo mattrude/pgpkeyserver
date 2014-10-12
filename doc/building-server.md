@@ -11,9 +11,8 @@ fail anyway with deadlocks in the conflict resolution system) we'll grab a stati
 existing SKS server. Currently the only known source is:
 
 
-* <a href="http://keyserver.mattrude.com/dump/current/">http://keyserver.mattrude.com/dump/current/</a> - Generated every Friday
+* <a href="http://keyserver.mattrude.com/dump/">http://keyserver.mattrude.com/dump/</a> - Generated every Friday
 * <a href="ftp://ftp.prato.linux.it/pub/keyring/">ftp://ftp.prato.linux.it/pub/keyring/</a> - Generated every Wednesday
-* <a href="http://keys.niif.hu/keydump/">http://keys.niif.hu/keydump/</a> - Generated every Monday
 * <a href="http://keyserver.borgnet.us/dump">http://keyserver.borgnet.us/dump</a> - Generated every Sunday
 
 ### Download Keydump
@@ -21,15 +20,15 @@ The keydump is about 4.3GB as of May 2011, so fetching it will take a long time.
 divided into a bunch of individual numbered files so you'll need to fetch all of them. Because
 I'm too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
-    mkdir /sks/dump
-    cd /sks/dump
+    mkdir /var/lib/sks/dump
+    cd /var/lib/sks/dump
     wget --recursive --timestamping --level=1 --cut-dirs=3 \
     --no-host-directories http://keyserver.mattrude.com/dump/current/
 
 Many hours later, check that all the pieces downloaded correctly by comparing their checksums 
 against the list published by the dump provider:
 
-    md5sum -c MD5SUMS
+    md5sum -c metadata-sks-dump.txt
 
 ### Build Local Database
 There are two ways to do this: either a full build (which reads in the dump you just downloaded 
