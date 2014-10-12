@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Building a SKS Server
+title: Building a PGP Key Server
 permalink: /doc/building-server/
 ---
+
+A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks key-server](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks key-server on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS.
 
 ## Building your own PGP SKS Server
 Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a pretty straight forward project if you are use to running servers.
@@ -10,10 +12,10 @@ Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a p
 To build a production SKS Server, you must...
 
 * [Building the SKS Daemon](#building-the-sks-daemon)
-* [Download the needed database files](#pre-populate-database)
-* Import the downloaded databases files into your own
-* Configure your web-server to proxy SKS
-* Start the SKS Daemon
+* [Download the needed database files](#download-the-needed-database-files)
+* [Import the downloaded databases files](#import-the-downloaded-databases-files)
+* [Configure your web-server](#configure-your-web-server)
+* [Start the SKS Daemon](#start-the-sks-daemon)
 
 ## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
@@ -33,7 +35,7 @@ The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
     make install
     echo $?
 
-## Pre-Populate Database
+## Download the needed database files
 Rather than starting with an empty database and attempting to populate it by syncing with
 other keyservers (a bad idea because it loads up your peers with lots of traffic and will probably
 fail anyway with deadlocks in the conflict resolution system) we'll grab a static dump from an
@@ -59,7 +61,7 @@ against the list published by the dump provider:
 
     md5sum -c metadata-sks-dump.txt
 
-## Build Local Database
+## Import the downloaded databases files
 There are two ways to do this: either a full build (which reads in the dump you just downloaded
 and leaves you with a complete, self-contained database) or a fastbuild (which just references
 the dump and requires it to be left in place after the fastbuild is complete). I started doing
@@ -101,3 +103,6 @@ the floor and you may as well abort it and start again (after deleting the KDB a
 directories created by the aborted import).
 
 If all goes smoothly you'll end up with *KDB* and *PTree* directories in **/var/lib/sks**.
+
+## Configure your web-server
+## Start the SKS Daemon
