@@ -4,13 +4,13 @@ title: Building a SKS Server
 permalink: /doc/building-server/
 ---
 
-# Building your own PGP SKS Server
+## Building your own PGP SKS Server
 Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a pretty straight forward project if you are use to running servers.
 
 To build a production SKS Server, you must...
 
-* Building the SKS Daemon
-* Download the needed database files
+* [Building the SKS Daemon](#building-the-sks-daemon)
+* [Download the needed database files](#pre-populate-database)
 * Import the downloaded databases files into your own
 * Configure your web-server to proxy SKS
 * Start the SKS Daemon
@@ -40,12 +40,12 @@ fail anyway with deadlocks in the conflict resolution system) we'll grab a stati
 existing SKS server. Currently the only known source is:
 
 
-* <a href="http://keyserver.mattrude.com/dump/">http://keyserver.mattrude.com/dump/</a> - Generated every Friday
+* <a href="http://keyserver.mattrude.com/dump/">http://keyserver.mattrude.com/dump/</a> - Generated every DAY
 * <a href="ftp://ftp.prato.linux.it/pub/keyring/">ftp://ftp.prato.linux.it/pub/keyring/</a> - Generated every Wednesday
 * <a href="http://keyserver.borgnet.us/dump">http://keyserver.borgnet.us/dump</a> - Generated every Sunday
 
 ### Download Keydump
-The keydump is about 4.3GB as of May 2011, so fetching it will take a long time. It's
+The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time. It's
 divided into a bunch of individual numbered files so you'll need to fetch all of them. Because
 I'm too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
@@ -59,7 +59,7 @@ against the list published by the dump provider:
 
     md5sum -c metadata-sks-dump.txt
 
-### Build Local Database
+## Build Local Database
 There are two ways to do this: either a full build (which reads in the dump you just downloaded
 and leaves you with a complete, self-contained database) or a fastbuild (which just references
 the dump and requires it to be left in place after the fastbuild is complete). I started doing
