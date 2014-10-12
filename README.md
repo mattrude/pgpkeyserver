@@ -20,12 +20,11 @@ A simple script would be
 
     rm -rf /var/src/pgpkeyserver && mkdir -p /var/src/ && \
     git clone git@github.com:mattrude/pgpkeyserver.git /var/src/pgpkeyserver -q && \
-    jekyll build -s /var/src/pgpkeyserver -d /var/www/keyserver.mattrude.com -q && \
-    rm -rf /var/src/pgpkeyserver
+    cd /var/src/pgpkeyserver && jekyll build -q && rm -rf /var/src/pgpkeyserver
 
-## Configuration
+## Installing the server
 
-## Nginx Configuration
+### Nginx Configuration
 
     #----------------------------------------------------------------------
     # OpenPGP Public SKS Key Server
@@ -70,10 +69,10 @@ A simple script would be
     }
 
 
-## Installing Jekyll
+### Installing Jekyll
 Since Jekyll only needs to be installed on your build system. Below are a few quick how-to's how setting up your build system.
 
-### Installing Ruby on Ubuntu
+#### Installing Ruby on Ubuntu
 On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also install the development kit.
 
     apt-get install git ruby ruby-dev ruby-dir
@@ -90,17 +89,17 @@ Next install the needed gems and Jekyll
 
 Now you may use Jekyll to build the site, using the source provided in this repository.
 
-### Installing Ruby on Windows
+#### Installing Ruby on Windows
 First start out by downloading the current production version of the [Ruby Installer](http://rubyinstaller.org/downloads/) for windows.
 
-#### Installing the Ruby Development Kit
+##### Installing the Ruby Development Kit
 After installing Ruby via the [Ruby Installer](http://rubyinstaller.org/downloads/) talked about above, you must now download the Development Kit.
 
 1. Download the Development Kit from http://rubyinstaller.org/downloads/
 1. Extract the contact into a location easy accessible to your command prompt.
 1. Open a command prompt, change into the directory that you extracted the content of the Development Kit to and run the command: `rake devkit sfx=1`.
 
-### Installing Ruby on OSX
+#### Installing Ruby on OSX
 
 ## License
 
