@@ -3,7 +3,17 @@ layout: default
 title: OpenPGP Public Key Server
 ---
 
-This server hosts and relays <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> keys via the <a href="https://sks-keyservers.net/overview-of-pools.php">SKS pool</a> network.  You may connect to this network by sending or receiving keys to <strong>pool.sks-keyserver.net</strong> (<a href="http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00">hkp</a>).
+<p>This server hosts and relays <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> keys via the <a href="https://sks-keyservers.net/overview-of-pools.php">SKS pool</a> network.  You may connect to this network by sending or receiving keys to <strong>pool.sks-keyserver.net</strong> (<a href="http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00">hkp</a>).</p>
+
+<p>This web page is provided as a convenient alternative to the usual methods of interacting with a keyserver. Key submission and retrieval are usually handled by key management software (such as <a href="http://www.gnupg.org/" target="_blank">GnuPG</a>) on your local system.</p>
+
+<p>This keyserver supports both the traditional email interface (for key submission only) PKS, and the more common HKP interface, for interaction with PGP key management software. The HKP interface allows direct interaction with the keyserver (perhaps via a web proxy server), while the email interface requires that the messages be queued and routed through the Internet via SMTP relays.</p>
+
+<ul>
+    <li>Learn more about <a href="https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home#!overview" target="_blank">SKS Keyservers</a></li>
+    <li>Check the status of the <a href="https://sks-keyservers.net/status/" target="_blank">SKS Keyserver Network</a></li>
+    <li>Check the status of <a href="{{ site.url }}/pks/lookup?op=stats" target="_blank">this keyserver</a></li>
+</ul>
 
 <h2>Extract a key from the pool</h2>
 

@@ -1,14 +1,19 @@
     <div id="menu">
-        <!--<b>Help:</b>-->
         <a href="/">Home</a> |
         <a href="/doc/about">About</a> | 
         <a href="/doc/extracting">Extracting keys</a> |
         <a href="/doc/submitting">Submitting keys</a> |
-        <!--<a href="/doc/building-server">Building A Server</a> | -->
-        <a href="/dump" target="_blank">DB Dumps</a> |
+        <a href="/doc/how-to">How-To's</a> | 
+        <a href="/dump" target="_blank">DB Dumps</a> | 
         <a href="/stats" target="_blank">Statistics</a> |
         {% for post in site.posts limit: 1 %}
             <a href="/news">News</a> |
         {% endfor %}
         <a href="/doc/faq">FAQ</a>
     </div>
+    {% if page.path contains 'how-to' %}
+    <div id="menu-sub">
+        <a href="/doc/how-to/building-server/">Building a Server</a> - 
+        <a href="/doc/how-to/windows-client/">Installing on Windows</a>
+    </div>
+    {% endif %}

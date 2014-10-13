@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building a PGP Key Server
-permalink: /doc/building-server/
+permalink: /doc/how-to/building-server/
 ---
 
 A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks key-server](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks key-server on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS.
@@ -22,25 +22,33 @@ The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
     apt-get -y install gcc ocaml libdb6.0-dev ssmtp
 
+After installing the required software, you need to download SKS
+
     wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
     wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
     gpg --keyid-format long --verify sks-1.1.5.tgz.asc
 
+Now, untar the software
+
     tar -xzf sks-1.1.5.tgz
     cd sks-1.1.5
+
+Next copy the **Makefile.local.unused** to **Makefile.local** and change "ldb-4.6" to "ldb-6.0" for Ubuntu.
+
     cp Makefile.local.unused Makefile.local
     sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
+
+Last, build the software
+
     make dep
     make all
     make install
-    echo $?
 
 ## Download the needed database files
 Rather than starting with an empty database and attempting to populate it by syncing with
 other keyservers (a bad idea because it loads up your peers with lots of traffic and will probably
 fail anyway with deadlocks in the conflict resolution system) we'll grab a static dump from an
 existing SKS server. Currently the only known source is:
-
 
 * <a href="http://keyserver.mattrude.com/dump/">http://keyserver.mattrude.com/dump/</a> - Generated every DAY
 * <a href="ftp://ftp.prato.linux.it/pub/keyring/">ftp://ftp.prato.linux.it/pub/keyring/</a> - Generated every Wednesday
