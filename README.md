@@ -34,20 +34,13 @@ A simple script would be
     server {
         listen 80;
         listen [::]:80;
-        listen 11371;
-        listen [::]:11371;
+        listen <set your IP>11371;
+        listen [set your IPv6 IP]:11371;
         server_name keyserver.mattrude.com;
-        server_name *.sks-keyservers.net;
-        server_name *.pool.sks-keyservers.net;
         server_name pool.sks-keyservers.net;
-        server_name na.pool.sks-keyservers.net;
-        server_name p80.pool.sks-keyservers.net;
-        server_name ipv6.pool.sks-keyservers.net;
-        server_name ipv4.pool.sks-keyservers.net;
-        server_name subset.pool.sks-keyservers.net;
-        server_name ha.pool.sks-keyservers.net;
-        server_name hkps.pool.sks-keyservers.net;
+        server_name *.pool.sks-keyservers.net;
         server_name pgp.mit.edu;
+        server_name pgp.ipfire.org;
         server_name keys.gnupg.net;
         root /var/www/keyserver.mattrude.com;
 
