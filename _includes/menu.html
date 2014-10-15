@@ -3,13 +3,13 @@
         <a href="/doc/about">About</a> | 
         <a href="/doc/extracting">Extracting keys</a> |
         <a href="/doc/submitting">Submitting keys</a> |
+        <a href="/doc/faq">FAQ</a> | 
         <a href="/doc/how-to">How-To's</a> | 
-        <a href="/dump" target="_blank">DB Dumps</a> | 
-        <a href="/stats" target="_blank">Statistics</a> |
         {% for post in site.posts limit: 1 %}
             <a href="/news">News</a> |
         {% endfor %}
-        <a href="/doc/faq">FAQ</a>
+        <a href="/dump" target="_blank">DB Dumps</a> | 
+        <a href="/stats" target="_blank">Statistics</a>
     </div>
     {% if page.path contains 'how-to' %}
 <!--
