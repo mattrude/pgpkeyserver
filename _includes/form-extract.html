@@ -1,32 +1,41 @@
 <p>You can extract a key by typing in some words that appear in the user id of the key you are looking for, or by typing in the keyid in hex format (“0x…”)</p>
-<form action="{{ site.baseurl }}/pks/lookup" method="get">
-<table cellpadding=5 cellspacing=0>
-<tr>
-<td align=right valign=top >Search String: </td>
-<td > <input name="search" size="40"></td>
-</tr>
-<tr>
-<td align=right valign=top >Show PGP "fingerprints" for keys</td>
-<td> <input type="checkbox" name="fingerprint"></td>
-</tr>
-<tr>
-<td align=right valign=top >Show SKS full-key hashes </td>
-<td > <input type="checkbox" name="hash"></td>
-</tr>
-<tr>
-<td align=right valign=top >Search for keys:</td>
-<td>
-<input type="radio" name="op" value="index" CHECKED> get regular index of matching keys  <br>
-<input type="radio" name="op" value="vindex"> get <b>verbose</b> index of matching keys  <br>
-<input type="radio" name="op" value="get"> retrieve ascii-armored keys <br>
-<input type="radio" name="op" value="hget"> retrieve keys by full-key hash
-</td>
-</tr>
-<tr>
-<td colspan=2 align=right>
-<input type="reset" value="Reset">
-<input type="submit">
-</td>
-</tr>
-</table>
-</form>
+<div id="form" class="extract">
+    <form action="{{ site.baseurl }}/pks/lookup" method="get">
+        <div class="key">
+            <label for="search" class="extract-field-label search">Search String:</label>
+            <input type="text" name="search" value="" class="extract-field search">
+        </div>
+        <div class="checkboxs">
+            <div>
+                <label for="fingerprint" class="extract-field-label fingerprint">Show PGP "fingerprints" for keys</label>
+                <input type="checkbox" name="fingerprint" class="extract-field">
+            </div>
+            <div>
+                <label for="hash" class="extract-field-label hash">Show SKS full-key hashes</label>
+                <input type="checkbox" name="hash" class="extract-field">
+            </div>
+        </div>
+        <div class="radio">
+            <div>
+                <input type="radio" name="op" value="index" class="extract-field" CHECKED>
+                <label for="op" class="extract-field-label op op-index">get regular index of matching keys</label>
+            </div>
+            <div>
+                <input type="radio" name="op" value="vindex" class="extract-field">
+                <label for="op" class="extract-field-label op op-index">get <b>verbose</b> index of matching keys</label>
+            </div>
+            <div>
+                <input type="radio" name="op" value="get" class="extract-field">
+                <label for="op" class="extract-field-label op op-index">retrieve ascii-armored keys</label>
+            </div>
+            <div>
+                <input type="radio" name="op" value="hget" class="extract-field">
+                <label for="op" class="extract-field-label op op-index">retrieve keys by full-key hash</label>
+            </div>
+        </div>
+        <div class="buttons">
+            <input type="reset" value="Reset">
+            <input type="submit">
+        </div>
+    </form>
+</div>

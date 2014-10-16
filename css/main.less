@@ -125,6 +125,47 @@ h1 a {
 
 #form {
     padding-bottom: 15px;
+    &.extract {
+        max-width: 600px;
+        .key {
+            float: right;
+            display: table-column;
+            width: 100%;
+            .extract-field {
+                float: right;
+                width: 59%;
+            }
+            .extract-field-label {
+                text-align: right;
+                width: 40%;
+            }
+        }
+        .checkboxs input{
+            margin: 0;
+        }
+        .radio {
+            padding-left: 40%;
+        }
+        label {
+            margin-bottom: 3px;
+            display: inline-block;
+            &.checkbox, &.key {
+                width: 45%;
+            }
+            &.checkbox, input {
+                text-align: right;
+            }
+            &.extract-field-label {
+                &.fingerprint, &.hash {
+                    text-align: right;
+                    width: 40%;
+                }
+            }
+        }
+        div.buttons {
+            float: right;
+        }
+    }
     &.submit {
         width: 80%;
         textarea {
