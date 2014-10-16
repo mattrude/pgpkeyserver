@@ -22,10 +22,10 @@ body {
 }
 
 #header {
-        h4 {
-            -webkit-margin-before: -0.8em;
-            -webkit-margin-after: 1.0em;
-        }
+    h4 {
+        -webkit-margin-before: -0.8em;
+        -webkit-margin-after: 1.0em;
+    }
 }
 #title {
     h1 {
@@ -121,6 +121,22 @@ fieldset {
 
 h1 a {
     text-decoration: none;
+}
+
+#form {
+    padding-bottom: 15px;
+    &.submit {
+        width: 80%;
+        textarea {
+            margin-bottom: 5px;
+            width: 100%;
+            padding: 0px;
+        }
+        input {
+            float: right;
+            margin-right: 5px;
+        }
+    }
 }
 
 #menu {

@@ -1,20 +1,8 @@
 <p>Enter ASCII-armored OpenPGP key here:</p>
-<table cellpadding=5 cellspacing=0>
-<tr>
-<td>
-<form action="{{ site.baseurl }}/pks/add" method="post">
-<tr>
-<td>
-<textarea name="keytext" rows="15" cols="75"></textarea>
-</td>
-</tr>
-<tr>
-<td align=right>
-<input type="reset" value="Reset">
-<input type="submit" value="Submit this key to the keyserver.">
-</td>
-</tr>
-</form>
-</td>
-</tr>
-</table>
+<div id="form" class="submit">
+    <form action="{{ site.baseurl }}/pks/add" method="post">
+        <textarea name="keytext" rows="15"></textarea>
+        <input type="submit" value="Submit this key to the keyserver.">
+        <input type="reset" value="Reset">
+    </form>
+</div>
