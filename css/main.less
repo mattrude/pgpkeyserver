@@ -126,7 +126,8 @@ h1 a {
 #form {
     padding-bottom: 15px;
     &.extract {
-        max-width: 600px;
+        max-width: 430px;
+        margin: 0 auto;
         .key {
             float: right;
             display: table-column;
@@ -137,7 +138,8 @@ h1 a {
             }
             .extract-field-label {
                 text-align: right;
-                width: 40%;
+                width: 165px;
+                margin-right: 5px;
             }
         }
         .checkboxs input{
@@ -150,7 +152,8 @@ h1 a {
             margin-bottom: 3px;
             display: inline-block;
             &.checkbox, &.key {
-                width: 45%;
+                width: 165px;
+                margin: 5px;
             }
             &.checkbox, input {
                 text-align: right;
@@ -158,7 +161,8 @@ h1 a {
             &.extract-field-label {
                 &.fingerprint, &.hash {
                     text-align: right;
-                    width: 40%;
+                    width: 165px;
+                    margin-right: 5px;
                 }
             }
         }
@@ -215,5 +219,31 @@ h1 a {
     h2 {
         padding: 0px;
         border-bottom: none;
+    }
+}
+
+@media (max-width: 700px) {
+    #form {
+        &.submit {
+            width: 99%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #form {
+        &.extract {
+            .key {
+                .extract-field {
+                    width: 100%;
+                }
+                .extract-field-label {
+                    text-align: left;
+               }
+            }
+            .radio {
+                padding-left: 0px;
+            }
+        }
     }
 }
