@@ -4,7 +4,7 @@ title: Extracting
 permalink: /doc/extracting/
 ---
 
-## Extracting a key
+## How-to extract a key
 Type the text you want to search for in the **Search String** box. If you want to look up a key by its hexadecimal KeyID, you have to prefix the ID with 0x
 
 Select either the **Index** or **Verbose Index** check box. The **Verbose** option will display signatures on keys.
@@ -12,6 +12,12 @@ Select either the **Index** or **Verbose Index** check box. The **Verbose** opti
 Press the **Submit** button.
 
 The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. <marc@mit.edu>). Clicking on the hypertext link will display an ASCII-armored version of the public key.
+
+## Extract a key from the pool
+
+<p>You can extract a key by typing in some words that appear in the user id of the key you are looking for, or by typing in the keyid in hex format (“0x…”)</p>
+
+{% include form-extract.html %}
 
 ## Extraction caveats
 The search engine is not the same as that used by the pgp program. It will return information for all keys which contain all the words in the search string. A "word" in this context is a string of consecutive alphabetic characters. For example, in the string marc@mit.edu, the words are marc, mit, and edu.

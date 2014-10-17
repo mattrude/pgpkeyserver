@@ -2,13 +2,17 @@
 layout: default
 ---
 
-<p>This server hosts and relays <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> keys via the <a href="https://sks-keyservers.net/overview-of-pools.php">SKS pool</a> network.  You may connect to this network by sending or receiving keys to <strong>pool.sks-keyserver.net</strong>.</p>
+<p>This server hosts and relays <a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">PGP</a> keys via the <a href="https://sks-keyservers.net/overview-of-pools.php" target="_blank">sks-keyserver pool</a>.  You may connect to this network by adding <strong>pool.sks-keyservers.net</strong> to your server list.</p>
 
 <h2>Extract a key from the pool</h2>
+
+<p>You can extract a key by typing in some words that appear in the user id of the key you are looking for, or by typing in the keyid in hex format (“0x…”)</p>
 
 {% include form-extract.html %}
 
 <h2>Submit a key to the pool</h2>
+
+<p>Enter ASCII-armored PGP key here:</p>
 
 {% include form-submit.html %}
 

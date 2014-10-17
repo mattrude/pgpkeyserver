@@ -125,28 +125,38 @@ h1 a {
 
 #form {
     padding-bottom: 15px;
+    display: table;
     &.extract {
         max-width: 430px;
         margin: 0 auto;
+        .options {
+            border: 1px solid #CCC;
+            display: inline-block;
+            float: left;
+            min-height: 125px;
+            padding: 5px;
+            margin: 5px 0;
+        }
         .key {
             float: right;
             display: table-column;
-            width: 100%;
+            width: 418px;
+            border: 1px solid #CCC;
+            padding: 5px;
             .extract-field {
                 float: right;
-                width: 59%;
+                width: 300px;
             }
             .extract-field-label {
                 text-align: right;
-                width: 165px;
-                margin-right: 5px;
+                width: 100px;
             }
         }
         .checkboxs input{
             margin: 0;
         }
         .radio {
-            padding-left: 40%;
+            margin-left: 5px;
         }
         label {
             margin-bottom: 3px;
@@ -159,7 +169,7 @@ h1 a {
                 text-align: right;
             }
             &.extract-field-label {
-                &.fingerprint, &.hash {
+                &.fingerprint, &.hash, &.exact, &.mr {
                     text-align: right;
                     width: 165px;
                     margin-right: 5px;
@@ -168,10 +178,12 @@ h1 a {
         }
         div.buttons {
             float: right;
+            padding-right: 10px;
         }
     }
     &.submit {
-        width: 80%;
+        width: 550px;
+        margin: 0 auto;
         textarea {
             margin-bottom: 5px;
             width: 100%;
@@ -222,28 +234,33 @@ h1 a {
     }
 }
 
-@media (max-width: 700px) {
-    #form {
-        &.submit {
-            width: 99%;
-        }
-    }
-}
-
 @media (max-width: 500px) {
     #form {
+        width: 100%;
         &.extract {
+            width: 100%;
             .key {
+                float: none;
+                display: table;
+                width: 100%;
                 .extract-field {
-                    width: 100%;
+                    float: none;
+                    width: 95%;
+                    padding: 0 5px;
                 }
                 .extract-field-label {
                     text-align: left;
                }
             }
+            .options {
+                width: 100%;
+            }
             .radio {
                 padding-left: 0px;
             }
+        }
+        &.submit {
+            width: 99%;
         }
     }
 }

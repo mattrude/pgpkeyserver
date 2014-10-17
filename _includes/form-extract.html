@@ -1,11 +1,11 @@
-<p>You can extract a key by typing in some words that appear in the user id of the key you are looking for, or by typing in the keyid in hex format (“0x…”)</p>
 <div id="form" class="extract">
     <form action="{{ site.baseurl }}/pks/lookup" method="get">
         <div class="key">
             <label for="search" class="extract-field-label search">Search String:</label>
             <input type="text" name="search" value="" class="extract-field search">
         </div>
-        <div class="checkboxs">
+        <div class="checkboxs options">
+            <b>Index options:</b>
             <div>
                 <label for="fingerprint" class="extract-field-label fingerprint">Show PGP fingerprints</label>
                 <input type="checkbox" name="fingerprint" class="extract-field">
@@ -14,8 +14,17 @@
                 <label for="hash" class="extract-field-label hash">Show full-key hashes</label>
                 <input type="checkbox" name="hash" class="extract-field">
             </div>
+            <div>
+                <label for="clean" class="extract-field-label exact">Restrict to exact matches</label>
+                <input type="checkbox" name="exact" value="on" class="extract-field">
+            </div>
+            <div>
+                <label for="mr" class="extract-field-label mr">Machine readable</label>
+                <input type="checkbox" name="options" value="mr" class="extract-field">
+            </div>
         </div>
-        <div class="radio">
+        <div class="radio options">
+            <b>Index type:</b>
             <div>
                 <input type="radio" name="op" value="index" class="extract-field" CHECKED>
                 <label for="op" class="extract-field-label op op-index">get regular index of keys</label>
