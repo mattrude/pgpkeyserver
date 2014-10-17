@@ -11,7 +11,7 @@ Select either the **Index** or **Verbose Index** check box. The **Verbose** opti
 
 Press the **Submit** button.
 
-The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. <marc@mit.edu>). Clicking on the hypertext link will display an ASCII-armored version of the public key.
+The server will return a list of keys matching the search text. The page will have links for every KeyID, and every bracket-delimited identifier (i.e. &lt;user@example.com&gt;). Clicking on the hypertext link will display an ASCII-armored version of the public key.
 
 ## Extract a key from the pool
 
@@ -20,7 +20,7 @@ The server will return a list of keys matching the search text. The page will ha
 {% include form-extract.html %}
 
 ## Extraction caveats
-The search engine is not the same as that used by the pgp program. It will return information for all keys which contain all the words in the search string. A "word" in this context is a string of consecutive alphabetic characters. For example, in the string marc@mit.edu, the words are marc, mit, and edu.
+The search engine is not the same as that used by the pgp program. It will return information for all keys which contain all the words in the search string. A "word" in this context is a string of consecutive alphabetic characters. For example, in the string user@example.com, the words are **user**, **example**, and **com**.
 
 This means that some keys you might not expect will be returned. If there was a key in the database for Marc Edu <mit.foo.com>, this would be returned for by the above query. If you do not want to see all these extra matches, you can select "Only return exact matches", and only keys containing the specified search string will be returned.
 
