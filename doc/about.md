@@ -12,15 +12,9 @@ PGP or Pretty Good Privacy is a way of encrypting and signing a email message in
 
 The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your keyserver software to use is **pool.sks-keyservers.net**, or perhaps **ha.pool.sks-keyservers.net**. Folks will understand and expect that choice. (Also **na.pool.sks-keyservers.net** in North America or **eu.pool.sks-keyservers.net** in Europe).
 
-This server is running [SKS Keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home).
+This server is running [SKS](https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home), the Synchronizing Key Server.
 
 ## About this Server
-This site is maintained by Matt Rude ([0x27143affdd23bf73]({{ site.baseurl }}/pks/lookup?search=0x27143affdd23bf73&fingerprint=on&hash=on&op=vindex)). If you would like to report any problems or bugs, please send a email to matt@mattrude.com, but only after reading our [FAQ](/doc/faq/).
-
-    uid = Matt Rude <matt@mattrude.com>
-    pub = 4096R/27143AFFDD23BF73 2014-06-21
-    fingerprint = AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73
-    Hash = DD0FDAFA36EAA057BE2BACE9DB39A2FF
 
 This service may be withdrawn at any time and without notice to end-users. (Peers will be notified). End-users should use a pool definition, such as keys.gnupg.net which will alias into an operational pool.
 
