@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Building a PGP Key Server
-permalink: /doc/how-to/building-server/
+permalink: /guides/building-server/
 ---
 
 A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks key-server](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks key-server on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS.

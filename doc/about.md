@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-permalink: /doc/about/
+permalink: /about/
 ---
 
 ## What is PGP?

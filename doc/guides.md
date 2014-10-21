@@ -1,10 +1,16 @@
 ---
 layout: default
-title: Building a PGP Key Server
-permalink: /doc/how-to/
+title: Open PGP Guides & How-To&#39;s
+permalink: /guides/
 ---
 
 Below you will find my list of help files and how to&#39;s for using PGP on your client and building new key servers.
+
+## Internal Guides
+
+* [How to build a SKS Keyserver](/guides/building-server/)
+
+## External Guides
 
 ### Installed PGP Client Software
 
@@ -15,7 +21,3 @@ Below you will find my list of help files and how to&#39;s for using PGP on your
 ### Webmail PGP Clients
 
 * <a href="https://whiteout.io/" target="_blank">whiteout.io</a> a chrome webmail client
-
-### OpenPGP SKS Keyserver Software
-
-* [How to build a SKS Keyserver](/doc/how-to/building-server)
