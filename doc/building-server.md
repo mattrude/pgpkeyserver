@@ -47,7 +47,7 @@ Last, build the software
 ## Download the needed database files
 Rather than starting with an empty database and attempting to populate it by syncing with
 other keyservers (a bad idea because it loads up your peers with lots of traffic and will probably
-fail anyway with deadlocks in the conflict resolution system) we'll grab a static dump from an
+fail anyway with deadlocks in the conflict resolution system) we&#39;ll grab a static dump from an
 existing SKS server. Currently the only known source is:
 
 * <a href="http://keyserver.mattrude.com/dump/">http://keyserver.mattrude.com/dump/</a> - Generated every DAY
@@ -55,13 +55,13 @@ existing SKS server. Currently the only known source is:
 * <a href="http://keyserver.borgnet.us/dump">http://keyserver.borgnet.us/dump</a> - Generated every Sunday
 
 ### Download Keydump
-The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time. It's
-divided into a bunch of individual numbered files so you'll need to fetch all of them. Because
-I'm too lazy to spend 8 hours sitting there doing it manually I did it like this:
+The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time. It&#39;s
+divided into a bunch of individual numbered files so you&#39;ll need to fetch all of them. Because
+I&#39;m too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
     mkdir /var/lib/sks/dump
     cd /var/lib/sks/dump
-    wget --recursive --timestamping --level=1 --cut-dirs=3 \
+    wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
     --no-host-directories http://keyserver.mattrude.com/dump/current/
 
 Many hours later, check that all the pieces downloaded correctly by comparing their checksums
@@ -110,8 +110,14 @@ many as possible in each pass without hitting swap - if that happens, performanc
 the floor and you may as well abort it and start again (after deleting the KDB and PTree
 directories created by the aborted import).
 
-If all goes smoothly you'll end up with *KDB* and *PTree* directories in **/var/lib/sks**.
+If all goes smoothly you&#39;ll end up with *KDB* and *PTree* directories in **/var/lib/sks**.
 
 ## Configure your web-server
 
 ## Start the SKS Daemon
+
+## Patches for the sks-keyserver software
+
+### SKS-Keyserver v1.1.5
+
+* [sks-1.1.5-download-txt.patch](https://gist.github.com/mattrude/709b2726ceb9d2d3386b) - Patch to change the downloadable "pgpkey.asc" file to a txt file, viewable in a web browser. ([example](http://keyserver.mattrude.com/pks/lookup?search=0x27143affdd23bf73&options=mr&op=get)) - [download](https://gist.githubusercontent.com/mattrude/709b2726ceb9d2d3386b/raw/sks-1.1.5-download-txt.patch)
