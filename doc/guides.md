@@ -8,7 +8,7 @@ Below you will find my list of help files and how to&#39;s for using PGP on your
 
 ## Internal Guides
 
-* [Publish A Public PGP Key via DNS]({{ site.url }}/guides/publish-key-via-dns/)
+* [Publish A Public PGP Key via DNS]({{ site.url }}/guides/public-key-association/)
 * [SKS Key Server Dump Process]({{ site.url }}/guides/dump-process/)
 * [How to build a SKS Keyserver]({{ site.url }}/guides/building-server/)
 

@@ -98,20 +98,29 @@ img {
     font-size: small;
 }
 
-pre {
-    font:0.85em Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
-    width:auto;
-    overflow:auto;
-    background-color:#eee;
-    color:inherit;
-    border:1px solid #999;
-    line-height:1.3em;
-    padding:1.2ex;
+div.code, p code {
+    font-family: Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
+    font-size: 14px;
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 0 2px;
+    margin: 0 2px;
 }
 
+pre, pre.code {
+    font-family: Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
+    font-size: 14px;
+    width: auto;
+    overflow: auto;
+    background-color: #eee;
+    color: inherit;
+    border: 1px solid #999;
+    line-height: 1.3em;
+    padding: 5px;
+}
 
-code {
-    font: 0.97em Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
+pre.code {
+    border: 0;
 }
 
 fieldset {
