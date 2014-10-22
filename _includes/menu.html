@@ -1,21 +1,21 @@
     <div id="menu">
-        <a href="/">Home</a> |
-        <a href="/about">About</a> | 
-        <a href="/contact">Contact me</a> | 
-        <a href="/doc/extracting">Extracting keys</a> |
-        <a href="/doc/submitting">Submitting keys</a> |
-        <a href="/doc/faq">FAQ</a> | 
-        <a href="/guides">How-To</a> | 
+        <a href="{{ site.url }}">Home</a> |
+        <a href="{{ site.url }}/about">About</a> | 
+        <a href="{{ site.url }}/contact">Contact me</a> | 
+        <a href="{{ site.url }}/doc/extracting">Extracting keys</a> |
+        <a href="{{ site.url }}/doc/submitting">Submitting keys</a> |
+        <a href="{{ site.url }}/doc/faq">FAQ</a> | 
+        <a href="{{ site.url }}/guides">How-To</a> | 
         {% for post in site.posts limit: 1 %}
-            <a href="/news">News</a> |
+            <a href="{{ site.url }}/news">News</a> |
         {% endfor %}
-        <a href="/dump" target="_blank">DB Dumps</a> | 
-        <a href="/stats" target="_blank">Statistics</a>
+        <a href="{{ site.url }}/dump" target="_blank">DB Dumps</a> | 
+        <a href="{{ site.url }}/stats" target="_blank">Statistics</a>
     </div>
     {% if page.path contains 'how-to' %}
 <!--
     <div id="menu-sub">
-        <a href="/doc/how-to/building-server/">Building a Server</a> - 
+        <a href="{{ site.url }}/doc/how-to/building-server/">Building a Server</a> - 
     </div>
 -->
     {% endif %}

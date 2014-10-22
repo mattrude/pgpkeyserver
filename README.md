@@ -73,6 +73,7 @@ On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also i
 Next install the needed gems and Jekyll
 
     gem install rails
+    gem install rouge
     gem install kramdown
     gem install therubyracer
     gem install jekyll

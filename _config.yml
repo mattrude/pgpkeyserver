@@ -12,6 +12,7 @@ destination: "/var/www/keyserver.mattrude.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: rouge
 
 exclude:
 - README.md

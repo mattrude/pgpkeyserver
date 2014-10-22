@@ -20,29 +20,40 @@ To build a production SKS Server, you must...
 ## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
-    apt-get -y install gcc ocaml libdb6.0-dev ssmtp
+{% highlight bash %}
+apt-get -y install gcc ocaml libdb6.0-dev ssmtp
+{% endhighlight %}
 
 After installing the required software, you need to download SKS
 
-    wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
-    wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
-    gpg --keyid-format long --verify sks-1.1.5.tgz.asc
+{% highlight bash %}
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-key 0x0B7F8B60E3EDFAE3
+wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
+wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
+gpg --keyid-format long --verify sks-1.1.5.tgz.asc
+{% endhighlight %}
 
 Now, untar the software
 
-    tar -xzf sks-1.1.5.tgz
-    cd sks-1.1.5
+{% highlight bash %}
+tar -xzf sks-1.1.5.tgz
+cd sks-1.1.5
+{% endhighlight %}
 
 Next copy the **Makefile.local.unused** to **Makefile.local** and change "ldb-4.6" to "ldb-6.0" for Ubuntu.
 
-    cp Makefile.local.unused Makefile.local
-    sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
+{% highlight bash %}
+cp Makefile.local.unused Makefile.local
+sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
+{% endhighlight %}
 
 Last, build the software
 
-    make dep
-    make all
-    make install
+{% highlight bash %}
+make dep
+make all
+make install
+{% endhighlight %}
 
 ## Download the needed database files
 Rather than starting with an empty database and attempting to populate it by syncing with
@@ -59,15 +70,19 @@ The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time.
 divided into a bunch of individual numbered files so you&#39;ll need to fetch all of them. Because
 I&#39;m too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
-    mkdir /var/lib/sks/dump
-    cd /var/lib/sks/dump
-    wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
-    --no-host-directories http://keyserver.mattrude.com/dump/current/
+{% highlight bash %}
+mkdir /var/lib/sks/dump
+cd /var/lib/sks/dump
+wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
+--no-host-directories http://keyserver.mattrude.com/dump/current/
+{% endhighlight %}
 
 Many hours later, check that all the pieces downloaded correctly by comparing their checksums
 against the list published by the dump provider:
 
-    md5sum -c metadata-sks-dump.txt
+{% highlight bash %}
+md5sum -c metadata-sks-dump.txt
+{% endhighlight %}
 
 ## Import the downloaded databases files
 There are two ways to do this: either a full build (which reads in the dump you just downloaded
@@ -80,8 +95,13 @@ run so this might take a while.
 You need to be in the basedir when running this and the dumps have to be in a sub-directory
 called "dump" (which they should be if you followed the steps above), so:
 
-    cd /var/lib/sks
-    /usr/local/bin/sks_build.sh
+{% highlight bash %}
+cd /var/lib/sks
+{% endhighlight %}
+
+{% highlight bash %}
+/usr/local/bin/sks_build.sh
+{% endhighlight %}
 
 On the next screen, choose **2**.
 
