@@ -12,10 +12,12 @@
         <a href="{{ site.url }}/dump" target="_blank">DB Dumps</a> | 
         <a href="{{ site.url }}/stats" target="_blank">Statistics</a>
     </div>
-    {% if page.path contains 'how-to' %}
-<!--
+    {% if page.url contains 'guides' %}
     <div id="menu-sub">
-        <a href="{{ site.url }}/doc/how-to/building-server/">Building a Server</a> - 
+        Guides: 
+        <a href="{{ site.url }}/guides/">Index</a> |
+        <a href="{{ site.url }}/guides/public-key-association/">Public Key Association</a> |
+        <a href="{{ site.url }}/guides/dump-process/">SKS Key Server Dump Process</a> |
+        <a href="{{ site.url }}/guides/building-server/">Building a SKS Keyserver</a>
     </div>
--->
     {% endif %}
