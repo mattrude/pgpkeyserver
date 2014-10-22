@@ -12,6 +12,8 @@ This site is maintained by Matt Rude ([0x27143affdd23bf73]({{ site.url }}/pks/lo
     pub = 4096R/27143AFFDD23BF73 2014-06-21
     fingerprint = AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73
 
+You may also validate my key using my [PKA]({{ site.url }}/guides/public-key-association/) DNS record.
+
 ## Secure Contact Form
 
 <iframe height="650" width="100%" frameborder="0" src="https://encrypt.mattrude.com/0x27143affdd23bf73"></iframe>

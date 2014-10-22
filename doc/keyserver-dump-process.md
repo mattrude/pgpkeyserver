@@ -4,13 +4,13 @@ title: Keyserver Dump Process
 permalink: /guides/dump-process/
 ---
 
-## SKS Key Server Dump Process
+# SKS Key Server Dump Process
 
 This script is intended to be ran from cron, since sks requires the db process to be stopped before a dump can be started.  
 
     0 0 * * * /usr/local/bin/sks-dump-script.sh &
 
-### Key Server Dump Script
+## Key Server Dump Script
 
 {% highlight bash %}
 #!/bin/bash

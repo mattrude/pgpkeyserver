@@ -4,7 +4,7 @@ title: Open PGP Guides & How-To&#39;s
 permalink: /guides/
 ---
 
-Below you will find my list of help files and how to&#39;s for using PGP on your client and building new key servers.
+Below you will find my list of help files and guides for using PGP on your client and building new key servers.
 
 ## Internal Guides
 
