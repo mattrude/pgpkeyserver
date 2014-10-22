@@ -2,9 +2,11 @@
 layout: default
 title: Keyserver Dump Process
 permalink: /guides/dump-process/
+description: A simple script to export a sks keyserver dump database
+tags: sks, sks-keyserver, sks server dump, PGP, GnuPG
 ---
 
-# SKS Key Server Dump Process
+# SKS Keyserver Dump Process
 
 This script is intended to be ran from cron, since sks requires the db process to be stopped before a dump can be started.  
 
