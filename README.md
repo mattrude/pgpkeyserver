@@ -75,7 +75,6 @@ Next install the needed gems and Jekyll
     gem install rails
     gem install rouge
     gem install kramdown
-    gem install therubyracer
     gem install jekyll
     gem install jekyll-sitemap
     gem install jekyll-less
