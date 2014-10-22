@@ -1,5 +1,9 @@
+---
+path: /robots.txt
+---
+
 User-agent: *
 Disallow: /dump/
 Disallow: /pks/
 
-Sitemap: /sitemap.xml
+Sitemap: {{ "/sitemap.xml" | prepend: site.url }}
