@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Publish A Public PGP Key via DNS
-permalink: /guides/publish-key-via-dns/
+permalink: /guides/public_key_association/
 ---
 
 A keyserver is not the only way to publish your public pgp key.
