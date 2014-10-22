@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Keyserver Dump Process
-permalink: /guides/keyserver-dump-process/
+permalink: /guides/dump-process/
 ---
 
 ## SKS Key Server Dump Process
@@ -10,7 +10,7 @@ This script is intended to be ran from cron, since sks requires the db process t
 
     0 0 * * * /usr/local/bin/sks-dump-script.sh &
 
-## Key Server Dump Script
+### Key Server Dump Script
 
 {% highlight bash %}
 #!/bin/bash
@@ -19,7 +19,7 @@ This script is intended to be ran from cron, since sks requires the db process t
 # the $PREDIR, then restart the sks server.
 #
 # Matt Rude <matt@mattrude.com>  PGP: 0xDD23BF73
-# URL: http://keyserver.mattrude.com/guides/keyserver-dump-process/
+# URL: http://keyserver.mattrude.com/guides/dump-process/
 
 SKSDATE=`date +%Y-%m-%d`
 USER="debian-sks"
@@ -27,7 +27,7 @@ INDIR="/var/lib/sks"
 PREDIR="/external/sks-dump"
 OUTDIR="$PREDIR/$SKSDATE"
 
-for DEL in `ls -1t $PREDIR |grep -v 'current' |tail -n +7`
+for DEL in `ls -1t $PREDIR |grep -v 'current' |tail -n +8`
 do
     echo "Deleting old directory $PREDIR/$DEL"
     rm -rf $PREDIR/$DEL
@@ -64,7 +64,7 @@ echo "This is the PGP key server dump from keyserver.mattrude.com created: `date
 
 On a linux/unix system, you may download this directory via the following command:
 
-wget -c -r -p -e robots=off --reject \"index.html*\" --timestamping --level=1 --cut-dirs=3 --no-host-directories http://keyserver.mattrude.com/dump/current/
+wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 --no-host-directories http://keyserver.mattrude.com/dump/current/
 
 These files were created with the following command: sks dump 15000 $SKSDATE/ sks-dump
 
