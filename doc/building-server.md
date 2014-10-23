@@ -21,17 +21,25 @@ To build a production SKS Server, you must...
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
 {% highlight bash %}
-apt-get -y install gcc ocaml libdb6.0-dev ssmtp
+apt-get -y install gcc ocaml libdb6.0-dev gnupg wget
 {% endhighlight %}
 
 After installing the required software, you need to download SKS
 
 {% highlight bash %}
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-key 0x0B7F8B60E3EDFAE3
+gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x0B7F8B60E3EDFAE3
 wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
 wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
 gpg --keyid-format long --verify sks-1.1.5.tgz.asc
 {% endhighlight %}
+
+The output of the last command should be
+
+<pre>
+gpg: Signature made Mon 05 May 2014 02:06:51 PM CDT
+gpg:                using RSA key 41259773973A612A
+gpg: Good signature from "SKS Keyserver Signing Key"
+</pre>
 
 Now, untar the software
 
@@ -40,7 +48,7 @@ tar -xzf sks-1.1.5.tgz
 cd sks-1.1.5
 {% endhighlight %}
 
-Next copy the **Makefile.local.unused** to **Makefile.local** and change "ldb-4.6" to "ldb-6.0" for Ubuntu.
+Next copy the **Makefile.local.unused** to **Makefile.local** and change `ldb-4.6` to `ldb-6.0` for Ubuntu.
 
 {% highlight bash %}
 cp Makefile.local.unused Makefile.local
@@ -53,6 +61,32 @@ Last, build the software
 make dep
 make all
 make install
+{% endhighlight %}
+
+## Configure the sks-server
+
+**/var/lib/sks/sksconf**
+{% highlight bash %}
+# /var/lib/sks/sksconf
+
+debuglevel: 3
+
+# Set the hostname of your server
+hostname:                       --keyserver-hostname--
+
+hkp_address:                    127.0.0.1
+hkp_port:                       11371
+recon_port:                     11370
+
+# Set the PGP ID for the Server Contact
+server_contact:                 --contact-pgp-id--
+
+initial_stat:
+disable_mailsync:
+membership_reload_interval:     1
+stat_hour:                      12
+
+max_matches:                    500
 {% endhighlight %}
 
 ## Download the needed database files
@@ -93,7 +127,7 @@ quickbuild. On the 4-processor machine I was using it still took in the order of
 run so this might take a while.
 
 You need to be in the basedir when running this and the dumps have to be in a sub-directory
-called "dump" (which they should be if you followed the steps above), so:
+called `dump` (which they should be if you followed the steps above), so:
 
 {% highlight bash %}
 cd /var/lib/sks
@@ -120,21 +154,121 @@ On the next screen, choose **2**.
 
     Enter enter the mode (1/2): 2
 
-If you edit the sks_build.sh script you'll discover it's just a shell script which calls SKS
+If you edit the `sks_build.sh` script you'll discover it's just a shell script which calls SKS
 itself to do the heavy lifting. If you have trouble with lack of memory you may need to tweak the
-script a bit: in particular the "-n 10" flag used in the fastbuild call is a multiple of 15,000
+script a bit: in particular the `-n 10` flag used in the fastbuild call is a multiple of 15,000
 keys to load at a time. The default setting therefore loads 150,000 keys at a time which could
-cause your machine to go into swap, and changing to something like "-n 2" will cause it to load
+cause your machine to go into swap, and changing to something like `-n 2` will cause it to load
 only 30,000 at a time instead and possibly complete the job faster. The trick is to load as
 many as possible in each pass without hitting swap - if that happens, performance falls through
 the floor and you may as well abort it and start again (after deleting the KDB and PTree
 directories created by the aborted import).
 
-If all goes smoothly you&#39;ll end up with *KDB* and *PTree* directories in **/var/lib/sks**.
+If all goes smoothly you&#39;ll end up with `KDB` and `PTree` directories in `/var/lib/sks`.
 
 ## Configure your web-server
 
+**/etc/nginx/nginx.conf**
+{% highlight config %}
+#/etc/nginx/nginx.conf
+
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 768;
+}
+
+http {
+    sendfile    on;
+    tcp_nopush  on;
+    tcp_nodelay on;
+    client_max_body_size 8m;
+
+    access_log  /var/log/nginx/access.log;
+    error_log   /var/log/nginx/error.log;
+    rewrite_log on;
+
+    include /etc/nginx/mime.types;
+
+    #----------------------------------------------------------------------
+    # OpenPGP Public SKS Key Server
+    #----------------------------------------------------------------------
+
+    server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        listen --IPv4-Address-- default_server;
+        listen [--IPv6-Address--]:11371 default_server;
+
+        server_name *.sks-keyservers.net;
+        server_name *.pool.sks-keyservers.net;
+        server_name pgp.mit.edu;
+        server_name keys.gnupg.net;
+
+        root /var/www/html;
+
+        rewrite ^/stats /pks/lookup?op=stats;
+        rewrite ^/s/(.*) /pks/lookup?search=$1;
+        rewrite ^/search/(.*) /pks/lookup?search=$1;
+        rewrite ^/g/(.*) /pks/lookup?op=get&search=$1;
+        rewrite ^/get/(.*) /pks/lookup?op=get&search=$1;
+        rewrite ^/d/(.*) /pks/lookup?op=get&options=mr&search=$1;
+        rewrite ^/download/(.*) /pks/lookup?op=get&options=mr&search=$1;
+
+        location /pks {
+            proxy_pass         http://127.0.0.1:11371;
+            proxy_pass_header  Server;
+            add_header         Via "1.1 --keyserver-hostname--:11371 (nginx)";
+            proxy_ignore_client_abort on;
+            client_max_body_size 8m;
+        }
+    }
+}
+{% endhighlight %}
+
 ## Start the SKS Daemon
+
+**/etc/init.d/sks**
+{% highlight bash %}
+#! /bin/sh
+
+DAEMON=/usr/local/bin/sks
+DIR=/var/lib/sks
+
+test -e $DAEMON || exit 0
+test -d $DIR || exit 0
+
+case "$1" in
+        start)
+                cd $DIR
+                echo -n "Starting SKS:"
+                echo -n \ sks_db
+                $DAEMON db &
+                echo -n \ sks_recon
+                $DAEMON recon &
+                echo "."
+        ;;
+        stop)
+                echo -n "Stopping SKS:"
+                killall sks
+                while [ "`pidof sks`" ]; do sleep 1; done # wait until SKS processes have exited
+                echo "."
+        ;;
+        restart)
+                $0 stop
+                sleep 1
+                $0 start
+        ;;
+        *)
+                echo "Usage: $0 {start|stop|restart}"
+                exit 1
+        ;;
+esac
+
+exit 0
+{% endhighlight %}
 
 ## Patches for the sks-keyserver software
 
