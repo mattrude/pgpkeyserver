@@ -8,6 +8,7 @@ before_install:
   - gem install therubyracer
   - gem install jekyll-press 
   - gem install jekyll-sitemap
+  - jekyll-redirect-from
   - gem install jekyll-last-modified-at
 script: jekyll build -d _site
 rvm:
