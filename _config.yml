@@ -2,12 +2,12 @@
 title: OpenPGP Public Keyserver
 email: matt@mattrude.com
 description: ""
-url: "http://keyserver.mattrude.com"
+url: "https://keyserver.mattrude.com"
 baseurl: "keyserver.mattrude.com"
 destination: "/var/www/keyserver.mattrude.com"
 
 # Analytics settings
-#google_analytics_id: UA-55622044-1
+google_analytics_id: UA-55622044-1
 
 # Build settings
 markdown: kramdown
