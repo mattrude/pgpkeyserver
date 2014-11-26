@@ -6,9 +6,9 @@ This repsitory holds the source for a [SKS PGP Key Server](https://sks-keyserver
 
 ## Jekyll
 
-[Jekyll](http://jekyllrb.com/) is a static site generator in built with [Ruby on Rails](http://rubyonrails.org/). With this approach, you are able to build a high power build system, but have a low power, very stable webserver running a static site.
+[Jekyll](http://jekyllrb.com/) is a static site generator built in [Ruby on Rails](http://rubyonrails.org/). With this approach, you are able to build a high power build site, using a low power, very stable webserver running a static site.
 
-Updates must be done by a build system, from this source repository.
+Jekyll is not needed on the webserver, updates must be done by a build system, from this source repository, then sent to the webserver.
 
 ### Updating the site
 
