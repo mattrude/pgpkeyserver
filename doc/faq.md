@@ -4,8 +4,9 @@ title: FAQ
 permalink: /doc/faq/
 ---
 
-## Frequently Asked Questions
-Before you send mail with a question, please check that it isn't already answered below.
+# Frequently Asked Questions
+
+Below you will find questions pertaining to this server (and perhaps other sks-keyservers).
 
 **Can you delete my key from the key server?**
 
@@ -17,7 +18,7 @@ Before you send mail with a question, please check that it isn't already answere
 
 **But the reason I want to delete my key from the keyserver is that I lost the private key (so I can't generate a revocation certificate), can you please delete my key for me?**
 
-* No.
+* No.  Due to the keyserver's peering service, any key deleted on one server will be readded by another server. So even if I were to delete your key from my database, it would be readded a few minutes latter from another keyserver.
 
 **Can I delete old email addresses / IDs from my key on the keyserver?**
 
