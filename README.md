@@ -77,8 +77,10 @@ Next install the needed gems and Jekyll
     gem install kramdown
     gem install therubyracer
     gem install jekyll
+    gem install jekyll-press
     gem install jekyll-sitemap
     gem install jekyll-less
+    gem install jekyll-redirect-from
     gem install jekyll-last-modified-at
 
 Now you may use Jekyll to build the site, using the source provided in this repository.
