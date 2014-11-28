@@ -68,13 +68,14 @@ Since Jekyll only needs to be installed on your build system. Below are a few qu
 #### Installing Ruby on Ubuntu
 On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also install the development kit.
 
-    apt-get install git ruby ruby-dev ruby-dir
+    apt-get install git g++ ruby ruby-dev
 
 Next install the needed gems and Jekyll
 
     gem install rails
     gem install rouge
     gem install kramdown
+    gem install therubyracer
     gem install jekyll
     gem install jekyll-sitemap
     gem install jekyll-less
