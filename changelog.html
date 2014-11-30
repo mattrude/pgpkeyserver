@@ -1,0 +1,17 @@
+---
+layout: default
+title: OpenPGP Public SKS Key Server Changelog
+---
+
+<div id="news">
+<h2>Site Change Log</h2>
+<p>Below you will find the changelog for the keyserver {{ site.baseurl }}.</p>
+<ul>
+  {% for post in site.categories['changelog'] %}
+    <li>
+      <h3>{{ post.date | date_to_long_string }} - <a href="{{ post.url }}">{{ post.title }}</a></h3>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+</div>

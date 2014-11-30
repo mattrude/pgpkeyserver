@@ -4,7 +4,7 @@ email: matt@mattrude.com
 description: ""
 url: "https://keyserver.mattrude.com"
 baseurl: "keyserver.mattrude.com"
-destination: "/var/www/keyserver.mattrude.com"
+destination: "/var/www/html"
 
 # Analytics settings
 google_analytics_id: UA-55622044-1
