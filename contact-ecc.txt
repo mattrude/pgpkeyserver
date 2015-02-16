@@ -10,21 +10,22 @@ RSA PGP Key infromation:
 
 ECC PGP Key infromation:
     uid = Matt Rude <matt@mattrude.com>
-    pub = nistp256/349A9627 2015-02-12
-    sub = nistp256/23A2AE48 2015-02-12 nistp256
-    fingerprint = 3AD2 90CF D890 FCF7 3B53  9914 22A9 AE46 349A 9627
+    pub = nistp256/03305F35 2015-02-15
+    fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
 Website: http://mattrude.com
-BitMessage: BM-NC4p7gxf1Ejrip9AJisx66FYXjvnsAB4
-Keybase: mattrude
+Personal Wiki: https://wiki.mattrude.com
+Keyserver: https://keyserver.mattrude.com
+
 Twitter: mdrude
-Github:  mattrude
 Facebook: mattrude
+Github:  mattrude
+Keybase: mattrude
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iF4EARMIAAYFAlThQhkACgkQAxTNhQMwXzVXHQEA3kHYWtXKUy2kICLkFpvy01ts
-W7zOIMlpnpthRXv6gNgA/01WN0icyPlS+yOVyM8iuRJ79AnLVsc1HWxC1WYPwZc4
-=1xyt
+iF4EARMIAAYFAlThXfsACgkQAxTNhQMwXzX33gEAiJB2dIRxrHrhPf7BHDiZRQnE
+bfb2uM+yMXBg6SrWQzUBALr1n9r6e0zUUJfll9ZCGK2Bf32WOnXPZpDR1bEGUgkc
+=gleF
 -----END PGP SIGNATURE-----

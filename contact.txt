@@ -10,31 +10,32 @@ RSA PGP Key infromation:
 
 ECC PGP Key infromation:
     uid = Matt Rude <matt@mattrude.com>
-    pub = nistp256/349A9627 2015-02-12
-    sub = nistp256/23A2AE48 2015-02-12 nistp256
-    fingerprint = 3AD2 90CF D890 FCF7 3B53  9914 22A9 AE46 349A 9627
+    pub = nistp256/03305F35 2015-02-15
+    fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
 Website: http://mattrude.com
-BitMessage: BM-NC4p7gxf1Ejrip9AJisx66FYXjvnsAB4
-Keybase: mattrude
+Personal Wiki: https://wiki.mattrude.com
+Keyserver: https://keyserver.mattrude.com
+
 Twitter: mdrude
-Github:  mattrude
 Facebook: mattrude
+Github:  mattrude
+Keybase: mattrude
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQIcBAEBCAAGBQJU4SE7AAoJECcUOv/dI79zaooP+gMjz5RKJSu/K8Usai4d5q4N
-pUUecfOphv2tEOqspUIVTncm705IReXwna9MNuVmbb9b3nZd3diTo1gyaUOSCEj+
-3P+pyvs35C9cE6PeQePpEX9IOV3dXKRsoWnjA5YifLRzAAj/6uFYBoEnlzvh6Zqn
-xOBCf228jCT9/XQ9whzvuVZHQ5x3nb9hWQPKcVq5nfsWVi8VtWIUm+wN+OceajVz
-l4zYhXE2AybV05T0kqko5RtmG0MTDEEK6WiMaHTE4E/XCnM9mjONUelOHMUa9oi7
-k0+zDK3CZLQkaJuThgrUGi87f5eLnQw+Nl6JR95AIDx8xY69IyN9mH+8zH7axIO/
-aZ5YW6DmSpp84Dl7FN+0Pb87nKBIjBbptsD8L+KLmXWQRHOT0P93iQ7ic07GRml7
-7ObOEWCbhiENkTkcCCwzc39soA7ZFcCUfYovXjf5TiqTasIeFlboaHfOTaviD+Uy
-HKDpyPFTCU/o1y8zZL3BdQrlAD0jBDUMwvtrUu5OdPaF8YOh+My+ZluF8HX0nKtt
-wZ0+5MI/DsNmgtc8E7iBBxNtyN2MQTtgIKW3aKoy4oWQ2RDlKrWih0csrIQjIg8r
-KFS2AgPHb21sbL72zo0NIhL1qj7t+TxMY7Fd43J/h+pR1PDS2tMB0bpN6N7ifHDk
-TnokfdC70QroNRXKfyas
-=sVZ+
+iQIcBAEBCAAGBQJU4V9wAAoJECcUOv/dI79z5v0QALKtDIG0EmRszyl8on55Qktt
+tCdGIszyqhr4ATqgwS7JytYGhSHfjt1DXk7AZDDg5CVW0JD7tmolDmGdGgLEXD6g
+IIevuc4aHPwzkmP2bIA/3LLGEEmQV4xQI4A780S4AGwisxAF14DapkzWIGSDe+LM
+iV/iqfH/n35TzgQxS0N7mWUfs04vecKjhoH4hrsdFGqtdvFQ2/IYg5zQk2R1Ajep
+FZaHRoyu01UOFbz1Zf29tBPB0o2Av2d6yruhlUlFFmA0t19REAE+MYbrpGZPEiJq
+k2TFh8KCXaNRgPnH6UFVNGoaLd9jCfAuCEK5qqft7Bt9UqBuH9RGkLSJut1DgNAK
+EQggiVgO3ZNLIIMkz6I2Ml4m/BXhICrvq+BbptgJPmHmy43mQqZdyqPc1kINbyHM
+BlcgBiDwea9GIYw8Z92iOedt3utnbVlb6LuehifE0Mkr4Kb4HPuFlyyEbE5HrZic
+1AZLQ/t4A0EEYtU5oT5XkTmZ0mebWcRfhstt7sMMK9x6OOaNvfbHUKAdBWtNuyFk
+YijUz+kFjpRdjnWejKwkX+lVbF0yI+TPQ/3euNm1DCvdWgDRGYYpbQlb9yuGmVrc
+Sg4ZskGkYKNN8bgewhT1r689Nc2Sa3bFXERUjV2rZwv+x9qMWctEBuQwNODqeh0Y
+SDyGOAo8wGCTHLIPLsmP
+=1O3d
 -----END PGP SIGNATURE-----
