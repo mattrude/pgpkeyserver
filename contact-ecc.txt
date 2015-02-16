@@ -9,7 +9,7 @@ RSA PGP Key infromation:
     fingerprint = AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73
 
 ECC PGP Key infromation:
-    uid = Matt Rude <matt@mattrude.com>
+    uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
@@ -25,7 +25,7 @@ Keybase: mattrude
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iF4EARMIAAYFAlThXfsACgkQAxTNhQMwXzX33gEAiJB2dIRxrHrhPf7BHDiZRQnE
-bfb2uM+yMXBg6SrWQzUBALr1n9r6e0zUUJfll9ZCGK2Bf32WOnXPZpDR1bEGUgkc
-=gleF
+iF4EARMIAAYFAlThYG0ACgkQAxTNhQMwXzWzIAD9EmLpcCE2AG1Qw0hCnHPOwiNi
+yoJfdBNg+5hfs6B8qJMA+gNc3q9f7rbwYB4lqojvDy+cQ8TdCz1p23ByZ17VRvZa
+=6yqS
 -----END PGP SIGNATURE-----
