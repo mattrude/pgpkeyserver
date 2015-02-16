@@ -1,19 +1,19 @@
     <div id="menu">
         <a href="{{ site.url }}">Home</a> |
-        <a href="/about">About</a> | 
-        <a href="/contact">Contact</a> | 
-        <a href="/doc/extracting">Extracting keys</a> |
-        <a href="/doc/submitting">Submitting keys</a> |
-        <a href="/doc/faq">FAQ</a> | 
-        <a href="/guides">How-To</a> | 
+        <a href="/about/">About</a> | 
+        <a href="/contact/">Contact</a> | 
+        <a href="/doc/extracting/">Extracting keys</a> |
+        <a href="/doc/submitting/">Submitting keys</a> |
+        <a href="/doc/faq/">FAQ</a> | 
+        <a href="/guides/">How-To</a> | 
         {% for post in site.posts limit: 1 %}
-            <a href="/news">News</a> |
+            <a href="/news/">News</a> |
         {% endfor %}
-        <a href="/dump" target="_blank">DB Dumps</a> | 
-        <a href="/status">Statistics</a>
+        <a href="/dump/" target="_blank">DB Dumps</a> | 
+        <a href="/status/">Statistics</a>
     </div>
     {% if page.url contains 'guides' %}
-    <div id="menu-sub">
+    <div id="menu-sub/">
         <strong>Guides:</strong>
         <a href="/guides/">Index</a> |
         <a href="/guides/public-key-association/">Public Key Association</a> |
