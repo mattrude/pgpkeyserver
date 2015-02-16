@@ -24,3 +24,4 @@ Below you will find my list of help files and guides for using PGP on your clien
 ### Webmail PGP Clients
 
 * <a href="https://whiteout.io/" target="_blank">whiteout.io</a> a chrome webmail client
+* <a href="https://https://github.com/google/end-to-end" target="_blank">Google: end-to-end</a> a chrome webmail PGP extension
