@@ -63,17 +63,36 @@ Testing the url is simple, you can browse it it via your web client or you can d
 
 Should produce the public key in the `0xDD23BF73.asc` file you created above.
 
-<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBFOk0+QBEADL9L1wjHGrBLWFxpZHumJJo+pjfLh7wtiOBqWv3aOyxOmyUzYo
 h50IVaa3xjv6XiXYInh+gkrSdRq/jm0QHLqNNj0SGiabttaHDFiOsc2NBn+eu7ay
-
-                           (...)
-
+yYpXYPtzQmUrdSbi5UguiJguOrHKokyqj72HAwLQ1HxEZhcS7ZFijbYvOOmKL0DR
+HOpM0O+ZElJE85Bl+Kv90WOq779dTBZTvmiB0dHuZRw/N0w30rjqkYhyEwxAlI8n
+NfHwcH1+V+kFKVXOsbSXp4tW7i6Tm5BGuyj8imLcoYgL3r5QWzZcVq/xiTrDYHrg
+T0OIGqpFL+nwGa+XEtBr7RD/Xzqx3Y3P7zKS+SxWoWITqFQOn13264wYBXj7ohjg
+QWmpoQ9Rk8YIQBjEsBcznCQfB1ndDx06zueytMCgJjX/lm5VDjOToiBDok7h4Stc
+4OeDXzItIHC5GnpREjkutN7GhIPcnBPgiKu6xc4eTfPyF8MSYxQtm3NWHT5Sx78+
+kecX1YqMffOWkmGgx9Fwb1VmEflShODR0oe8VifHEv/dR/afroOSlH5iyUkQMNrU
+f3aSsmWSU5FqPaxMzraJJrra+DMpO627FSglyYUH8S/tlgD9l9yX3JxRkwL19LMO
+1aPUn72jlJcmbFLjgW8vEOlz15zcTajaxXDFEtVuDBKaOy5Oug8ee2uYzwARAQAB
+tB1NYXR0IFJ1ZGUgPG1hdHRAbWF0dHJ1ZGUuY29tPokCPwQTAQIAKQUCU6TT5AIb
+LwUJA8H7rAcLCQgHAwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJECcUOv/dI79zj+cQ
+AMZBjZA8LQmoPxlAbrrCcSi8hhlU2AS1Vr4VLMjTxcALHkVcfAPf/NP4xkTssLfT
+6gcxyJUI+pY9x0e7a1tGYCVNjpTEhCgZWSNh+JN9Mzx3rHVeH/8TqInggydVu0dW
+9KSrbhXtjarczh9BTx9yzPkA4Sl2DIpVZOYhkZYH7w9RuplfkGEvo3NRqmUX7TSe
+2eo1yPNa4Yh3hfUv0K7C3TpNrZuTPc/pJwR9guOn/vl6XIabFbRfePyBX87+TiIO
+BLX+AMWHklArI5azoCy8Rp30ztpAtUDqg8gXfrYz65AgerwprxGEvNhvv1Aa2Pqc
+2lPPE7Gvr7CuPjUoCatKPikLGDwbP6fp3hjU1rnabEdlSg3FMa60Jk2zRNN2KusR
+/MKvsnrY80w9E7miRY/lbkrqYQj40UdnI4GaWReSHQJFHRa0ecD65djodc2wID+p
+qpEEbPP2HU2L9iU2KmG4DnH+VHJN9LPeUdWrDs23e5l/y+Fkd87lHQe/xGv1jry0
+tOWI6YGvKZTSboJ7IA6ROH5+SLkrH/C4PeTiPPqNRerJZercaVxCnqcfDj8GZ6CC
 Zw4sePv6GR0uhc/2vBryexqOHCN0bGMXz1aQcGbbIPqRC8Yxk/YpQ94bzkqDzsz+
 KfA0ddb9tp4DHuHxO1QtnPDVY2TqBa9/fPjH3NSLegry
 =oKC/
------END PGP PUBLIC KEY BLOCK-----</pre>
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
 
 ## Importing a key via PKA
 
