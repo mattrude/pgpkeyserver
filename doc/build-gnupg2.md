@@ -1,13 +1,13 @@
 ---
 layout: default
-title: GnuPg 2.1 Build Instructions
+title: GnuPG 2.1.2 Build Instructions
 permalink: /guides/build-gnupg2/
-description: GnuPG 2.1 build for a Ubuntu 14.04 LTS
+description: My GnuPG 2.1.2 build for a Ubuntu 14.04 LTS.
 tags: PGP, GnuPG
 ---
 
 # GnuPG 2.1.2 Build Instructions
-Below you is my build instructions for [GnuPG 2.1.2](https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html) released on 2/12/2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
+Below you is my build instructions for [GnuPG 2.1.2](https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html) released on 12-Feb-2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
 
 ## Install the needed depends
     apt-get -y install libgnutls-dev pinentry-qt bzip2 make
