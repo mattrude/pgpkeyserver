@@ -7,12 +7,13 @@ baseurl: "keyserver.mattrude.com"
 destination: "/var/www/html"
 
 # Analytics settings
-google_analytics_id: UA-55622044-1
+google_analytics_id: UA-9532791-9
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 highlighter: rouge
+date: YYYY-MM-DD HH:MM
 
 exclude:
 - README.md
@@ -21,12 +22,12 @@ exclude:
 gems:
 - jekyll-sitemap
 - jekyll-less
-- jekyll-press
+#- jekyll-press
 - jekyll-redirect-from
 - jekyll-last-modified-at
 
 jekyll-press:
-  exclude: 'robots.txt' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  exclude: 'robots.txt, contact.txt, make-dns-cert.c' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
   js_options: {}      # js minifier options
   css_options: {}     # css minifier options
   html_options: {}    # html minifier options
