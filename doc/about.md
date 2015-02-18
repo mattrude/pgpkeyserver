@@ -4,29 +4,52 @@ title: About
 permalink: /about/
 ---
 
+## About this Site
+
+This site hosts 
+
 ## What is PGP?
 
-PGP or Pretty Good Privacy is a way of encrypting and signing a email message in a "_end to end_" way.  This means, the message is encrypted on your computer in a way that the e-mail server has no knowledge of the message or the key that was used to encrypt the message.  The recipient of the message then decrypts the message on their own computer.
+**PGP** (<b>P</b>retty **G**ood **P**rivacy) is a method of encrypting and signing data (for example an email) in a secure "_end to end_" way.  This means, the message is encrypted on your computer, using the recipient&rsquo;s public key, in a way that the e-mail server has no knowledge of the content of the message.  The recipient of the message then decrypts the message on their own computer using their private key.
+
+Quoted from [RFC 4880](http://tools.ietf.org/html/rfc4880):
+
+> OpenPGP software uses a combination of strong public-key and
+> symmetric cryptography to provide security services for electronic
+> communications and data storage.  These services include
+> confidentiality, key management, authentication, and digital
+> signatures.  This document specifies the message formats used in
+> OpenPGP.
+
+### PGP Resources
+
+* [GnuPG Homepage](https://gnupg.org/) - The main location for the OpenPGP Standard
+* [PGP Inc.](http://www.pgp.com/) - This historical home of PGP, but has since been sold to Symantec.
+* [Email Self-defense](https://emailselfdefense.fsf.org/en/) - A teaching site to learn how and why you should use PGP for your electronic communication.
+* [Wikipedia - Pretty Good Privacy](http://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
 ## About the Server Pool
 
-The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your keyserver software to use is **pool.sks-keyservers.net**, or perhaps **ha.pool.sks-keyservers.net**. Folks will understand and expect that choice. (Also **na.pool.sks-keyservers.net** in North America or **eu.pool.sks-keyservers.net** in Europe).
+The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your keyserver software to use is **pool.sks-keyservers.net**, or perhaps **subset.pool.sks-keyservers.net**. Folks will understand and expect that choice.
 
 This server is running [SKS](https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home), the Synchronizing Key Server.
 
-## About this Server
-
-This service may be withdrawn at any time and without notice to end-users. (Peers will be notified). End-users should use a pool definition below, such as **pool.sks-keyservers.net** which will alias into an operational pool.
+The available pools are listed below:
 
 * **pool.sks-keyservers.net** - The main pool
 * **p80.pool.sks-keyservers.net** - Servers with port 80 open for HKP access
+* **subset.pool.sks-keyservers.net** - Servers that are running the lastest version of sks
 * **ipv4.pool.sks-keyservers.net** - Servers with an IPv4 IP address
 * **ipv6.pool.sks-keyservers.net** - Servers with an IPv6 IP address
 * **na.pool.sks-keyservers.net** - Servers located in North Aamerica
 * **eu.pool.sks-keyservers.net** - Servers located in Europe
 * **oc.pool.sks-keyservers.net** - Servers located in Oceania
 
-More infromation may be found on the SKS Keyservers [Pools Overview Page](https://sks-keyservers.net/overview-of-pools.php).
+More information may be found on the SKS Keyservers [Pools Overview Page](https://sks-keyservers.net/overview-of-pools.php).
+
+## About this Service
+
+This service may be withdrawn at any time and without notice to end-users. (Peers will be notified). End-users should use a pool definition above, such as **pool.sks-keyservers.net** which will alias into an operational pool.
 
 _**Note:** This service is provided free, to the public, in the hopes that it might prove useful. **No warranty is provided**, nor any offer of continuing service or access._
 
