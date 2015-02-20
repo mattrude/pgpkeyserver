@@ -3,7 +3,8 @@ title: PGP Public Keyserver
 email: matt@mattrude.com
 description: ""
 url: "https://keyserver.mattrude.com"
-baseurl: "keyserver.mattrude.com"
+name: "keyserver.mattrude.com"
+baseurl: ""
 destination: "/var/www/html"
 
 # Analytics settings

@@ -1,0 +1,39 @@
+@media (max-width: 500px) {
+    #form {
+        width: 100%;
+        &.extract {
+            width: 100%;
+            .key {
+                float: none;
+                display: table;
+                width: 95%;
+                .extract-field {
+                    float: none;
+                    width: 90%;
+                    padding: 0 5px;
+                }
+                .extract-field-label {
+                    text-align: left;
+                }
+            }
+            .checkboxs input {
+                float: left;
+            }
+            .options {
+                width: 95%;
+            }
+            .radio {
+                margin-left: 0px;
+            }
+            label.extract-field-label.fingerprint, label.extract-field-label.hash, label.extract-field-label.exact, label.extract-field-label.mr {
+                text-align: left;
+                margin-left: 5px;
+                margin-right: 0px;
+            }
+        }
+        &.submit {
+            width: 99%;
+        }
+    }
+}
+

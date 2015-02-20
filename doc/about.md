@@ -1,12 +1,9 @@
 ---
 layout: default
+lang: en
 title: About
 permalink: /about/
 ---
-
-## About this Site
-
-This site hosts 
 
 ## What is PGP?
 
