@@ -192,7 +192,7 @@ http {
     server {
         listen 80 default_server;
         listen [::]:80 default_server;
-        listen --IPv4-Address-- default_server;
+        listen --IPv4-Address--:11371 default_server;
         listen [--IPv6-Address--]:11371 default_server;
 
         server_name *.sks-keyservers.net;
