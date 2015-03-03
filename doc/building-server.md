@@ -24,18 +24,14 @@ To build a production SKS Server, you must...
 ## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
-{% highlight bash %}
-apt-get -y install gcc ocaml libdb6.0-dev gnupg nginx wget
-{% endhighlight %}
+    apt-get -y install gcc ocaml libdb6.0-dev gnupg nginx wget
 
 After installing the required software, you need to download SKS
 
-{% highlight bash %}
-gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x0B7F8B60E3EDFAE3
-wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
-wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
-gpg --keyid-format long --verify sks-1.1.5.tgz.asc
-{% endhighlight %}
+    gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x0B7F8B60E3EDFAE3
+    wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
+    wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
+    gpg --keyid-format long --verify sks-1.1.5.tgz.asc
 
 The output of the last command should be
 
@@ -47,36 +43,29 @@ gpg: Good signature from "SKS Keyserver Signing Key"
 
 Now, untar the software
 
-{% highlight bash %}
-tar -xzf sks-1.1.5.tgz
-cd sks-1.1.5
-{% endhighlight %}
+    tar -xzf sks-1.1.5.tgz
+    cd sks-1.1.5
 
 Next copy the **Makefile.local.unused** to **Makefile.local** and change `ldb-4.6` to `ldb-6.0` for Ubuntu.
 
-{% highlight bash %}
-cp Makefile.local.unused Makefile.local
-sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
-{% endhighlight %}
+    cp Makefile.local.unused Makefile.local
+    sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
 
 If you would like to upgrade your sks install to sks 1.1.5+ with ECC support, you can apply the patch quick with the following command:
 
-{% highlight bash %}
-curl -sL "https://bitbucket.org/skskeyserver/sks-keyserver/commits/40280f59d0f503da1326972757168aa42335573f/raw/" |patch -p1
-{% endhighlight %}
+    curl -sL "https://bitbucket.org/skskeyserver/sks-keyserver/commits/40280f59d0f503da1326972757168aa42335573f/raw/" |patch -p1
 
 Last, build the software
 
-{% highlight bash %}
-make dep
-make all
-make install
-{% endhighlight %}
+    make dep
+    make all
+    make install
 
 ## Configure the sks-server
 
 **/var/lib/sks/sksconf**
-{% highlight bash %}
+
+<pre>
 # /var/lib/sks/sksconf
 
 debuglevel: 3
@@ -97,7 +86,7 @@ membership_reload_interval:     1
 stat_hour:                      12
 
 max_matches:                    500
-{% endhighlight %}
+</pre>
 
 ## Download the needed database files
 Rather than starting with an empty database and attempting to populate it by syncing with
@@ -114,19 +103,15 @@ The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time.
 divided into a bunch of individual numbered files so you&#39;ll need to fetch all of them. Because
 I&#39;m too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
-{% highlight bash %}
-mkdir /var/lib/sks/dump
-cd /var/lib/sks/dump
-wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
---no-host-directories http://keyserver.mattrude.com/dump/current/
-{% endhighlight %}
+    mkdir /var/lib/sks/dump
+    cd /var/lib/sks/dump
+    wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
+    --no-host-directories http://keyserver.mattrude.com/dump/current/
 
 Many hours later, check that all the pieces downloaded correctly by comparing their checksums
 against the list published by the dump provider:
 
-{% highlight bash %}
-md5sum -c metadata-sks-dump.txt
-{% endhighlight %}
+    md5sum -c metadata-sks-dump.txt
 
 ## Import the downloaded databases files
 There are two ways to do this: either a full build (which reads in the dump you just downloaded
@@ -139,13 +124,11 @@ run so this might take a while.
 You need to be in the basedir when running this and the dumps have to be in a sub-directory
 called `dump` (which they should be if you followed the steps above), so:
 
-{% highlight bash %}
-cd /var/lib/sks
-{% endhighlight %}
+    cd /var/lib/sks
 
-{% highlight bash %}
-/usr/local/bin/sks_build.sh
-{% endhighlight %}
+Then run the build
+
+    /usr/local/bin/sks_build.sh
 
 On the next screen, choose **2**.
 
