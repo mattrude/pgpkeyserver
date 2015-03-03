@@ -16,12 +16,16 @@ To build a production SKS Server, you must...
 * [Import the downloaded databases files](#import-the-downloaded-databases-files)
 * [Configure your web-server](#configure-your-web-server)
 * [Start the SKS Daemon](#start-the-sks-daemon)
+* [Configure your web-server](#configure-your-web-server)
+* [Install the SKS webpage on your server](#install-the-sks-webpage-on-your-server)
+* [Start the SKS Daemon](#start-the-sks-daemon)
+* [Patches for the sks-keyserver software](#patches-for-the-sks-keyserver-software)
 
 ## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
 {% highlight bash %}
-apt-get -y install gcc ocaml libdb6.0-dev gnupg wget
+apt-get -y install gcc ocaml libdb6.0-dev gnupg nginx wget
 {% endhighlight %}
 
 After installing the required software, you need to download SKS
@@ -53,6 +57,12 @@ Next copy the **Makefile.local.unused** to **Makefile.local** and change `ldb-4.
 {% highlight bash %}
 cp Makefile.local.unused Makefile.local
 sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
+{% endhighlight %}
+
+If you would like to upgrade your sks install to sks 1.1.5+ with ECC support, you can apply the patch quick with the following command:
+
+{% highlight bash %}
+curl -sL "https://bitbucket.org/skskeyserver/sks-keyserver/commits/40280f59d0f503da1326972757168aa42335573f/raw/" |patch -p1
 {% endhighlight %}
 
 Last, build the software
@@ -227,6 +237,21 @@ http {
     }
 }
 {% endhighlight %}
+
+## Install the SKS webpage on your server
+
+Now we need to install a webpage so visitors are able to interact with your new keyserver via their web browser.  The sks-keyserver project has 3 older sites that come with the default install, these sites may be found [in the source](https://bitbucket.org/skskeyserver/sks-keyserver/src/40280f59d0f503da1326972757168aa42335573f/sampleWeb/?at=default) on bitbucket.
+
+There are obviously meny options besides the three provided by sks-keyserver.  Were going to install [pgpkeyserver-lite](https://github.com/mattrude/pgpkeyserver-lite), a example of this site may be found on [keys.therudes.com](http://keys.therudes.com/).  The install process is pretty straightforward, we will download the tarball, extract it, drop into the html directory we setup above (`/var/www/html`), and lastly update the infromation on the site to reflect your setup.
+
+**Download & extract the tarball**
+
+    curl -Ls https://github.com/mattrude/pgpkeyserver-lite/tarball/master -o pgpkeyserver-lite.tgz && \
+    mkdir /var/www/html && tar -xzf pgpkeyserver-lite.tgz --directory /var/www/html --strip 1
+
+**Modify the site**
+
+After downloading and extracting the tarball, you need to modify the site to reflect the setup of your keyserver.  There are two sections that need to be replaced. first you need to replace all instances of `###ENTERNAMEHERE###` with your own name. Next, replace all instances of `###ENTERPUBLICKEYHERE###` with your public key. Or you may of course modify the site in anyway you wish.
 
 ## Start the SKS Daemon
 
