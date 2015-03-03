@@ -161,6 +161,10 @@ If all goes smoothly you&#39;ll end up with `KDB` and `PTree` directories in `/v
 
 ## Configure your web-server
 
+Inorder to be part of the [sks pool](https://sks-keyservers.net/status/), among other things, you need to route your sks traffic threw a web proxy.  If you followed these instructions you should have already installed the nginx software on your server, all you should have to do is copy the below config into the `/etc/nginx/nginx.conf` file on your server and change the IP addresses to meeting your setup.
+
+You will need to change `--IPv4-Address--` to be your IPv4 IP address, and if you have one, change `--IPv6-Address--` to be your IPv6 address.  If you do not have a IPv6 address on your server, you should remove that line from the configuraton.
+
 **/etc/nginx/nginx.conf**
 {% highlight config %}
 #/etc/nginx/nginx.conf
@@ -220,6 +224,10 @@ http {
     }
 }
 {% endhighlight %}
+
+Once you have copied this file into `/etc/nginx/nginx.conf`, you need to restart nginx by running the following command.
+
+    service nginx restart
 
 ## Install the SKS webpage on your server
 
