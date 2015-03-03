@@ -54,8 +54,11 @@ if [ `ps -eaf |grep "sks " |grep -v 'grep sks' |wc -l` == "0" ]; then
     fi
 
     cd $PREDIR/
-    rm -f current
-    ln -s $OUTDIR current
+    if [ ! -d current ]; then
+        mkdir current
+    fi
+    umount current
+    mount --bind $OUTDIR current
 else
     echo "Unable run backup, SKS is still running."
     exit 1
