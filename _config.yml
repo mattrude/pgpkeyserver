@@ -19,6 +19,8 @@ date: YYYY-MM-DD HH:MM
 exclude:
 - README.md
 - css/syntax.less
+- css/site.less
+- css/small.less
 
 gems:
 - jekyll-sitemap
@@ -28,7 +30,7 @@ gems:
 - jekyll-last-modified-at
 
 jekyll-press:
-  exclude: 'robots.txt, contact.txt, make-dns-cert.c' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+  exclude: 'robots.txt, contact.txt, contact-ecc.txt' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
   js_options: {}      # js minifier options
   css_options: {}     # css minifier options
   html_options: {}    # html minifier options
