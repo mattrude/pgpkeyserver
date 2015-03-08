@@ -15,6 +15,10 @@ Below you will find my list of help files and guides for using PGP on your clien
 
 ## External Guides
 
+### What is PGP and why should I use it?
+
+* <a href="https://whyencryptemail.net/" target="_blank">It's not you, it's me: Why and how to encrypt email you send</a>
+
 ### Installed PGP Client Software
 
 * <a href="http://www.enigmail.net" target="_blank">EnigMail Project</a> client for <a href="https://www.mozilla.org/thunderbird/" target="_blank">Thunderbird</a> (Windows/Mac)
