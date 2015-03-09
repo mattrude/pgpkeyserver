@@ -5,8 +5,9 @@ Below you will find my pgp key fingerprint and other contact infromation.
 
 RSA PGP Key infromation:
     uid = Matt Rude <matt@mattrude.com>
-    pub = 4096R/27143AFFDD23BF73 2014-06-21
-    fingerprint = AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73
+    pub = rsa2048/95B0761F 2015-03-02
+    sub = rsa2048/BC158061 2015-03-02 [expires: 2016-03-01]
+    fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
 
 ECC PGP Key infromation:
     uid = Matt Rude <m@mattrude.com>
@@ -25,7 +26,7 @@ Keybase: mattrude
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iF4EARMIAAYFAlThYG0ACgkQAxTNhQMwXzWzIAD9EmLpcCE2AG1Qw0hCnHPOwiNi
-yoJfdBNg+5hfs6B8qJMA+gNc3q9f7rbwYB4lqojvDy+cQ8TdCz1p23ByZ17VRvZa
-=6yqS
+iF4EARMIAAYFAlT9tcMACgkQAxTNhQMwXzX/TQD/YC+9E5gWKHOKWHJDlQc+DTe5
+moaUUTgJ5fHhMSBc34cA/3EP1kFHYYKAeKY2W14vTxVadce0nqU0bJ6Q8LavFlUS
+=daEB
 -----END PGP SIGNATURE-----

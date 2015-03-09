@@ -5,15 +5,16 @@ title: Contact Me
 permalink: /contact/
 ---
 
-This site is maintained by Matt Rude ([0x27143affdd23bf73]({{ site.url }}/d/0x27143affdd23bf73)). If you would like to report any problems or bugs, please send a email the email address listed in one of my public keys, or use my <a href="#" onclick="javascript:window.open('https://encrypt.to/matt', '_blank', 'toolbar=no, scrollbars=no, resizable=yes, width=800, height=600');">secure contact form</a>.
+This site is maintained by Matt Rude ([0xc4909ee495b0761f]({{ site.url }}/d/0xc4909ee495b0761f)). If you would like to report any problems or bugs, please send a email the email address listed in one of my public keys, or use my <a href="#" onclick="javascript:window.open('https://encrypt.to/matt', '_blank', 'toolbar=no, scrollbars=no, resizable=yes, width=800, height=600');">secure contact form</a>.
 
 ### My Public PGP Key Information
 
 **My Default RSA Key:**
 
     uid = Matt Rude
-    pub = 4096R/27143AFFDD23BF73 2014-06-21
-    fingerprint = AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73
+    pub = rsa2048/95B0761F 2015-03-02
+    sub = rsa2048/BC158061 2015-03-02 [expires: 2016-03-01]
+    fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
 
 **My Elliptic Curve Cryptography (ECC) Key:**
 
