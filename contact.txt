@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Below you will find my pgp key fingerprint and other contact infromation.
+Below you will find my pgp key fingerprint and other contact information.
 
 RSA PGP Key infromation:
     uid = Matt Rude <matt@mattrude.com>
@@ -15,28 +15,22 @@ ECC PGP Key infromation:
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
 Website: http://mattrude.com
-Personal Wiki: https://wiki.mattrude.com
 Keyserver: https://keyserver.mattrude.com
+Personal-wiki: https://wiki.mattrude.com
 
-Twitter: mdrude
-Facebook: mattrude
-Github:  mattrude
-Keybase: mattrude
+Github: https://github.com/mattrude
+Twitter: https://twitter.com/mdrude
+Facebook: https://www.facebook.com/mattrude
+Instagram: https://instagram.com/mattdrude
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQIcBAEBCAAGBQJU/bXNAAoJECcUOv/dI79zmeEP/Ao+LAPISsbYmC1X0qM9cdr5
-j1KKU6qytqb3nhzn9wfgfzyrqWr3GaxHeU+Jnuh+mro32lzTvxtPuhUTlpB8YLPS
-SAgnRM9WHN6rlfsWv9zNC2sXh2sqenBiUlG/GwNTjz7Jer9hd55A45TNh+ssRKat
-wzMd2hOXLWq8LKUTSwdMBEKnq4eYgE3w8uHLwbhFCp9ablOS9Rtxe3Tt7x/vd8Y0
-vo4N1BfqGJGS4mkrRt/oVOneHBkmx4ZX6apQTjImUC/IChMWRaDvyQLjxiWabAQK
-Ps/k4tuGGXGggILfqo49x3lCCEUxbsCJP6Fbh4jSwBsve0xFRiRagIMCybnx8HYn
-HGR5LJt/yexrBsxQVUQFzBuKW9R0zEo5wN9IKKC9HhF9UdgXFbTCuPRPMZgF0uve
-6XulRG4YHBWzBCvRqMSCdISRprtT/UTIDpnDgxoNE+I2S4xiTT4zv8XW+6g2efNc
-ULP/Drmt8cRUJRoRoHubecEH1t8djZ+UgY1zDimS9pcuYdVDJh0LGSgNh690YBC6
-0bD20Z1y/XDOgDSd9V4bNE3JeEDVjNNdFssom0H6+m5DclMpq4FVCMnnsK8XG9lr
-80lh+lSc8fpOVGRs4nSqQ9QLzXh89O+m3i/JzptC/UOqj79EwVgws1dQBmW2qQ5s
-azLDdydqHq7TlcAKqu/7
-=llFk
+iQEcBAEBCAAGBQJU/chGAAoJEMSQnuSVsHYfumsH/1NZMGqMPgWnP5vKYQz4HsMn
+6GL6g5/aqgizRoe8MW3vvMkUQepNIbVZ9nHhtvFtQb7KYYHy60Bxl7Y68DLbGgtY
+d1PszYG3WPWZVSPE2x7u4xNBhLVDmBDXeRJI+8umpRO+MdNOtfNxGJEwekdk4KEf
+xK7Trhm6si6sd/A75wNjVxeNhHNEz2QhwVohXDwofwUivaFvjEsyKxF8NNEO7DB8
+K4pg3ivrOzTVK3yYNPzfi6g8r9CZtlzK3sb0ljgta2Yo2BYXAZr1CuIpniZOpKOV
+HHwCJ4zQM3I7V/49PZLCijAhNOWIbcz2HuEoTQbqctJ5MYDRTXnZkAwOpF39Z6g=
+=O54U
 -----END PGP SIGNATURE-----

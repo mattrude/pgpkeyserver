@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Below you will find my pgp key fingerprint and other contact infromation.
+Below you will find my pgp key fingerprint and other contact information.
 
 RSA PGP Key infromation:
     uid = Matt Rude <matt@mattrude.com>
@@ -15,18 +15,18 @@ ECC PGP Key infromation:
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
 Website: http://mattrude.com
-Personal Wiki: https://wiki.mattrude.com
 Keyserver: https://keyserver.mattrude.com
+Personal-wiki: https://wiki.mattrude.com
 
-Twitter: mdrude
-Facebook: mattrude
-Github:  mattrude
-Keybase: mattrude
+Github: https://github.com/mattrude
+Twitter: https://twitter.com/mdrude
+Facebook: https://www.facebook.com/mattrude
+Instagram: https://instagram.com/mattdrude
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iF4EARMIAAYFAlT9tcMACgkQAxTNhQMwXzX/TQD/YC+9E5gWKHOKWHJDlQc+DTe5
-moaUUTgJ5fHhMSBc34cA/3EP1kFHYYKAeKY2W14vTxVadce0nqU0bJ6Q8LavFlUS
-=daEB
+iF4EARMIAAYFAlT9yEYACgkQAxTNhQMwXzUNewEA1kOuokeSmtO/fGaNvCm8dewx
+eSpg/RmS6Zju/jCD/xQBAKf+rTjId3mQ3Q8g7g6gswXAwu6enDeBFBaAD+7rwbTy
+=DGw4
 -----END PGP SIGNATURE-----
