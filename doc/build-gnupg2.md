@@ -1,13 +1,13 @@
 ---
 layout: default
-title: GnuPG 2.1.2 Build Instructions
+title: GnuPG 2.1.6 Build Instructions
 permalink: /guides/build-gnupg2/
-description: My GnuPG 2.1.2 build for a Ubuntu 14.04 LTS.
+description: My GnuPG 2.1.6 build for a Ubuntu 14.04 LTS.
 tags: PGP, GnuPG
 ---
 
-# GnuPG 2.1.2 Build Instructions
-Below you is my build instructions for [GnuPG 2.1.2](https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html) released on 12-Feb-2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
+# GnuPG 2.1.6 Build Instructions
+Below you is my build instructions for [GnuPG 2.1.6](https://lists.gnupg.org/pipermail/gnupg-announce/2015q3/000370.html) released on 01-Jul-2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
 
 ## Install the needed depends
     apt-get -y install libgnutls-dev pinentry-qt bzip2 make
@@ -48,10 +48,10 @@ Below you is my build instructions for [GnuPG 2.1.2](https://lists.gnupg.org/pip
     cd npth-1.1 && ./configure && make && make install && cd ../
 
 ## Install GnuPG 2.1
-    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.2.tar.bz2 && \
-    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.2.tar.bz2.sig && \
-    gpg --verify gnupg-2.1.2.tar.bz2.sig && tar -xjf gnupg-2.1.2.tar.bz2 && \
-    cd gnupg-2.1.2 && ./configure && make && make install && echo $?
+    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.6.tar.bz2 && \
+    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.6.tar.bz2.sig && \
+    gpg --verify gnupg-2.1.6.tar.bz2.sig && tar -xjf gnupg-2.1.6.tar.bz2 && \
+    cd gnupg-2.1.6 && ./configure && make && make install && echo $?
 
 ## Finishing the build
     echo "/usr/local/lib" > /etc/ld.so.conf.d/gpg2.conf && ldconfig -v
