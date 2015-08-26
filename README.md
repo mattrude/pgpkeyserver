@@ -68,7 +68,7 @@ Since Jekyll only needs to be installed on your build system. Below are a few qu
 #### Installing Ruby on Ubuntu
 On Ubuntu 14.04 LTS, you first need ruby installed on your setup, we will also install the development kit.
 
-    apt-get install git g++ ruby ruby-dev
+    apt-get update; apt-get install -y git g++ ruby ruby-dev
 
 Next install the needed gems and Jekyll
 
@@ -94,8 +94,6 @@ After installing Ruby via the [Ruby Installer](http://rubyinstaller.org/download
 1. Download the Development Kit from http://rubyinstaller.org/downloads/
 1. Extract the contact into a location easy accessible to your command prompt.
 1. Open a command prompt, change into the directory that you extracted the content of the Development Kit to and run the command: `rake devkit sfx=1`.
-
-#### Installing Ruby on OSX
 
 ## License
 
