@@ -1,32 +1,40 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Below you will find my pgp key fingerprint and other contact information.
+This document contains my personal contact information, personal websites,
+social media profile, and PGP public key IDs and fingerprints.
 
-RSA PGP Key infromation:
+* Name: Matt Rude
+* Email: matt@mattrude.com
+* XMPP: matt@mattrude.com
+* Website: http://mattrude.com
+* Keyserver: https://keyserver.mattrude.com
+* Personal wiki: https://wiki.mattrude.com
+
+My Social Media Profile
+
+* Github: https://github.com/mattrude
+* Twitter: https://twitter.com/mdrude
+* Facebook: https://facebook.com/mattrude
+* Instagram: https://instagram.com/mattdrude
+
+RSA PGP Key information:
+
     uid = Matt Rude <matt@mattrude.com>
     pub = rsa2048/95B0761F 2015-03-02
-    sub = rsa2048/BC158061 2015-03-02 [expires: 2016-03-01]
+    sub = rsa2048/BC158061 2015-03-02
     fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
 
-ECC PGP Key infromation:
+ECC PGP Key information:
+
     uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
-Website: http://mattrude.com
-Keyserver: https://keyserver.mattrude.com
-Personal-wiki: https://wiki.mattrude.com
-
-Github: https://github.com/mattrude
-Twitter: https://twitter.com/mdrude
-Facebook: https://www.facebook.com/mattrude
-Instagram: https://instagram.com/mattdrude
-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iF4EARMIAAYFAlT9yEYACgkQAxTNhQMwXzUNewEA1kOuokeSmtO/fGaNvCm8dewx
-eSpg/RmS6Zju/jCD/xQBAKf+rTjId3mQ3Q8g7g6gswXAwu6enDeBFBaAD+7rwbTy
-=DGw4
+iF4EARMIAAYFAlXPg8wACgkQAxTNhQMwXzVh8wEAk01NVa5UPTnEsvylZlTDC0G7
++ousPT6RrjtJOoO6kfUBALxNraBvJkFMuHG+eEg7fmbE06z2PeHD9sSeyykJeSjo
+=GcPo
 -----END PGP SIGNATURE-----

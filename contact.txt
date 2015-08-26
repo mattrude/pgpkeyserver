@@ -1,36 +1,44 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Below you will find my pgp key fingerprint and other contact information.
+This document contains my personal contact information, personal websites,
+social media profile, and PGP public key IDs and fingerprints.
 
-RSA PGP Key infromation:
+* Name: Matt Rude
+* Email: matt@mattrude.com
+* XMPP: matt@mattrude.com
+* Website: http://mattrude.com
+* Keyserver: https://keyserver.mattrude.com
+* Personal wiki: https://wiki.mattrude.com
+
+My Social Media Profile
+
+* Github: https://github.com/mattrude
+* Twitter: https://twitter.com/mdrude
+* Facebook: https://facebook.com/mattrude
+* Instagram: https://instagram.com/mattdrude
+
+RSA PGP Key information:
+
     uid = Matt Rude <matt@mattrude.com>
     pub = rsa2048/95B0761F 2015-03-02
-    sub = rsa2048/BC158061 2015-03-02 [expires: 2016-03-01]
+    sub = rsa2048/BC158061 2015-03-02
     fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
 
-ECC PGP Key infromation:
+ECC PGP Key information:
+
     uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
-Website: http://mattrude.com
-Keyserver: https://keyserver.mattrude.com
-Personal-wiki: https://wiki.mattrude.com
-
-Github: https://github.com/mattrude
-Twitter: https://twitter.com/mdrude
-Facebook: https://www.facebook.com/mattrude
-Instagram: https://instagram.com/mattdrude
-
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2
 
-iQEcBAEBCAAGBQJU/chGAAoJEMSQnuSVsHYfumsH/1NZMGqMPgWnP5vKYQz4HsMn
-6GL6g5/aqgizRoe8MW3vvMkUQepNIbVZ9nHhtvFtQb7KYYHy60Bxl7Y68DLbGgtY
-d1PszYG3WPWZVSPE2x7u4xNBhLVDmBDXeRJI+8umpRO+MdNOtfNxGJEwekdk4KEf
-xK7Trhm6si6sd/A75wNjVxeNhHNEz2QhwVohXDwofwUivaFvjEsyKxF8NNEO7DB8
-K4pg3ivrOzTVK3yYNPzfi6g8r9CZtlzK3sb0ljgta2Yo2BYXAZr1CuIpniZOpKOV
-HHwCJ4zQM3I7V/49PZLCijAhNOWIbcz2HuEoTQbqctJ5MYDRTXnZkAwOpF39Z6g=
-=O54U
+iQEcBAEBCAAGBQJVz4PMAAoJEMSQnuSVsHYfSEUIAJKBZe1vJRE+rl/FueMUJK06
+lLTYcTxeoDJmR5UowFYIuHe3GfwJMOP3cQ/EgQEI5pG/v+qFgIhkB0s5zAXR41Up
+RFG4mIDLJdgSa3tFhvoo02OeuqhSrLvjbN4gv5ZD7nO7ndnuvXgK4Y9d1yGFW+fi
+8s4sDj2s7NN5BgtzGtl4oa/r+10d8GZz+Q7M7y+fy8pkSHhKwolj79BQfvECKPAe
+VsgQrnU3HEhjSkFf9ZjRPL5AENeQ6YNWJpu3/q/N9QLJFtTj1BhkizHN6h6DgFIH
+1tapl4qZ+dHGZS547Mw2Nt8O8oLBfQvqHi77jxatxGKp1IA1ZKnijmYCVvqFEjo=
+=bdRs
 -----END PGP SIGNATURE-----
