@@ -27,6 +27,8 @@ Quoted from [RFC 4880](http://tools.ietf.org/html/rfc4880):
 
 ## About the Server Pool
 
+This server is running a modified version of [sks-keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/), version 1.1.5+, found on my private [git repository](http://code.mattrude.com/openpgp/sks-keyserver). The servers are physically located in New York City, New York, USA in the [DigitalOcean](https://www.digitalocean.com/?refcode=4b3eee7ba20c) NYC3 East Coast datacenter.
+
 The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your keyserver software to use is **pool.sks-keyservers.net**, or perhaps **subset.pool.sks-keyservers.net**. Folks will understand and expect that choice.
 
 This server is running [SKS](https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home), the Synchronizing Key Server.
@@ -38,7 +40,7 @@ The available pools are listed below:
 * **subset.pool.sks-keyservers.net** - Servers that are running the lastest version of sks
 * **ipv4.pool.sks-keyservers.net** - Servers with an IPv4 IP address
 * **ipv6.pool.sks-keyservers.net** - Servers with an IPv6 IP address
-* **na.pool.sks-keyservers.net** - Servers located in North Aamerica
+* **na.pool.sks-keyservers.net** - Servers located in North America
 * **eu.pool.sks-keyservers.net** - Servers located in Europe
 * **oc.pool.sks-keyservers.net** - Servers located in Oceania
 
