@@ -25,15 +25,15 @@ Quoted from [RFC 4880](http://tools.ietf.org/html/rfc4880):
 * [Email Self-defense](https://emailselfdefense.fsf.org/en/) - A teaching site to learn how and why you should use PGP for your electronic communication.
 * [Wikipedia - Pretty Good Privacy](http://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
+## About this Server
+
+This server is running a modified version of [sks-keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/), version 1.1.5+, found on my private [git repository](http://code.mattrude.com/openpgp/sks-keyserver). The server is physically located in New York City, New York, USA at the [DigitalOcean](https://www.digitalocean.com/?refcode=4b3eee7ba20c) NYC3 East Coast datacenter.
+
 ## About the Server Pool
 
-This server is running a modified version of [sks-keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/), version 1.1.5+, found on my private [git repository](http://code.mattrude.com/openpgp/sks-keyserver). The servers are physically located in New York City, New York, USA in the [DigitalOcean](https://www.digitalocean.com/?refcode=4b3eee7ba20c) NYC3 East Coast datacenter.
+This server is a member of [sks-keyserver.net](https://sks-keyservers.net/status/) pgp keyserver pools. The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your pgp software to use is **pool.sks-keyservers.net**, or perhaps **subset.pool.sks-keyservers.net**.
 
-The main [hkp](http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00) pool which you should configure your keyserver software to use is **pool.sks-keyservers.net**, or perhaps **subset.pool.sks-keyservers.net**. Folks will understand and expect that choice.
-
-This server is running [SKS](https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Home), the Synchronizing Key Server.
-
-The available pools are listed below:
+The available pools this server is a memeber of are listed below:
 
 * **pool.sks-keyservers.net** - The main pool
 * **p80.pool.sks-keyservers.net** - Servers with port 80 open for HKP access
