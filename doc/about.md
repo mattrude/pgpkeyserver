@@ -27,7 +27,7 @@ Quoted from [RFC 4880](http://tools.ietf.org/html/rfc4880):
 
 ## About this Server
 
-This server is running a modified version of [sks-keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/), version 1.1.5+, found on my private [git repository](http://code.mattrude.com/openpgp/sks-keyserver). The server is physically located in New York City, New York, USA at the [DigitalOcean](https://www.digitalocean.com/?refcode=4b3eee7ba20c) NYC3 East Coast datacenter.
+This server is running a modified version of [sks-keyserver](https://bitbucket.org/skskeyserver/sks-keyserver/), version 1.1.5+, found on my private [git repository](http://code.mattrude.com/openpgp/sks-keyserver), more information about this fork can be found on the [source](https://keyserver.mattrude.com/source/) page. The server is physically located in New York City, New York, USA at the [DigitalOcean](https://www.digitalocean.com/?refcode=4b3eee7ba20c) NYC3 East Coast datacenter.
 
 ## About the Server Pool
 
