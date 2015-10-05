@@ -18,6 +18,8 @@ date: YYYY-MM-DD HH:MM
 
 exclude:
 - README.md
+- CONTRIBUTING.md
+- LICENSE
 - css/syntax.less
 - css/site.less
 - css/small.less
