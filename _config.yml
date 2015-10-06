@@ -7,6 +7,9 @@ name: "keyserver.mattrude.com"
 baseurl: ""
 destination: "/var/www/html"
 
+owner_name: "Matt Rude"
+owner_pgpkey: "0xc4909ee495b0761f"
+
 # Analytics settings
 google_analytics_id: UA-9532791-9
 
