@@ -16,5 +16,3 @@ That is it! The keyserver will process your request immediately. If you like, yo
 <p>Enter ASCII-armored PGP key here:</p>
 
 {% include form-submit.html %}
-
-**Notice:** When you submit a key to this server via that web interface or via HKP, that key will be migrated around the pool to the diffrent servers in the pool.  That key will then be stored on each of those servers in addition to this server.
