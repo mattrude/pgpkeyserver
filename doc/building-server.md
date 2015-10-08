@@ -99,7 +99,7 @@ existing SKS server. Currently the only known source is:
 * <a href="http://keyserver.borgnet.us/dump">http://keyserver.borgnet.us/dump</a> - Generated every Sunday
 
 ### Download Keydump
-The keydump is about 6.3GB as of Oct 2014, so fetching it will take a long time. It&#39;s
+The keydump is about 7.3GB as of Oct 2015, increasing at a rate of about one gigabyte per year, so fetching it will take a long time. It&#39;s
 divided into a bunch of individual numbered files so you&#39;ll need to fetch all of them. Because
 I&#39;m too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
