@@ -49,6 +49,8 @@ A simple script would be
         rewrite ^/search/(.*) /pks/lookup?search=$1;
         rewrite ^/g/(.*) /pks/lookup?op=get&search=$1;
         rewrite ^/get/(.*) /pks/lookup?op=get&search=$1;
+        rewrite ^/k/(.*) /pks/lookup?op=get&search=$1;
+        rewrite ^/key/(.*) /pks/lookup?op=get&search=$1;
         rewrite ^/d/(.*) /pks/lookup?op=get&options=mr&search=$1;
         rewrite ^/download/(.*) /pks/lookup?op=get&options=mr&search=$1;
 
