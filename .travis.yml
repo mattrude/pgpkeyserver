@@ -3,10 +3,10 @@ before_install:
   - gem install bundler
   - gem install kramdown
   - gem install rouge
-  - gem install jekyll 
-  - gem install jekyll-less 
+  - gem install jekyll
+  - gem install jekyll-less
   - gem install therubyracer
-  - gem install jekyll-press 
+  - gem install jekyll-press
   - gem install jekyll-sitemap
   - gem install jekyll-redirect-from
   - gem install jekyll-last-modified-at
@@ -15,3 +15,4 @@ rvm:
   - 1.9.3
   - 2.0.0
   - 2.1.1
+  - 2.1.2
