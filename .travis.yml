@@ -12,7 +12,6 @@ before_install:
   - gem install jekyll-last-modified-at
 script: jekyll build -d _site
 rvm:
-  - 1.9.3
   - 2.0.0
   - 2.1.2
   - 2.2.1
