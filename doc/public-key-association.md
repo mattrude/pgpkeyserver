@@ -9,7 +9,7 @@ redirect_from:
   - /pka/
 ---
 
-# Publishing A Public PGP Key via DNS
+## Publishing A Public PGP Key via DNS: <small>Public Key Association</small>
 
 A keyserver is not the only way to publish your public pgp key.
 
