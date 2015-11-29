@@ -8,7 +8,9 @@ tags: dane, pgp, gpg, GnuPG, DNS
 
 ## Publishing A Public PGP Key via DNS: <small>DANE Cert Records</small>
 
-This document will walk you threw building a OpenPGP dane [dns] record.  
+This document will walk you threw building a OpenPGP [dane dns](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities) record.
+
+This setup assumes you already have [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) setup on the domain you wish to add DANE to.  DNSSEC is a set of extensions to DNS which provide to DNS clients (resolvers) origin authentication of DNS data, authenticated denial of existence, and data integrity, but not availability or confidentiality.  This means you are able to use the records provided by DNSSEC with confidence that the record created by the domain owner.
 
 ## Creating the DNS Record
 
