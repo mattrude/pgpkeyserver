@@ -3,14 +3,16 @@ layout: default
 title: OpenPGP DNS Dane Cert Records How-to
 permalink: /guides/dns-dane-cert-records/
 description: OpenPGP DNS DANE certificates allows you to publish your OpenPGP key to your DNS record.
-tags: dane, pgp, gpg, GnuPG, DNS
+tags: dane, pgp, gpg, GnuPG, DNS, DNSSEC
 ---
 
 ## Publishing A Public PGP Key via DNS: <small>DANE Cert Records</small>
 
 This document will walk you threw building a OpenPGP [dane dns](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities) record.
 
-This setup assumes you already have [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) setup on the domain you wish to add DANE to.  DNSSEC is a set of extensions to DNS which provide to DNS clients (resolvers) origin authentication of DNS data, authenticated denial of existence, and data integrity, but not availability or confidentiality.  This means you are able to use the records provided by DNSSEC with confidence that the record created by the domain owner.
+In order to fully create and test the records, you will need GnuPG version 2.1.9 or greater. If you are running Ubuntu, you may follow my guide on [building GnuPG 2.1]({{site.url}}/guides/build-gnupg2/).  Using [method 2](#method-2-using-web-methods) below, you do not need GnuPG 2.1.9+ to create the record, but you will not be able to test it.
+
+This setup assumes you already have [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) setup on the domain you wish to add DANE to.  DNSSEC is a set of extensions to DNS which provide the DNS clients origin authentication of DNS data, authenticated denial of existence, and data integrity, but not availability or confidentiality.  This means you are able to use the records provided by DNSSEC with confidence that the record created by the domain owner.
 
 ## Creating the DNS Record
 
@@ -56,7 +58,7 @@ You should receive an output similar to the text below.
 
 ## Testing the DNS DANE Certificate
 
-Using GnuPG 2.1.9+, you may run the following command to download and import the key to your key ring.
+Using GnuPG 2.1+, you may run the following command to download and import the key to your key ring.
 
     gpg2 --auto-key-locate clear,dane -v --locate-key matt@mattrude.com
 
@@ -81,3 +83,5 @@ The output should be something similar to the text below.
 [gushi](http://www.gushi.org/make-dns-cert/HOWTO.html),
 [gnupg](https://lists.gnupg.org/pipermail/gnupg-users/2015-November/054725.html),
 [ietf](http://tools.ietf.org/html/rfc6698),
+
+* Building GnuPG 2.1.9+ - [Gist](https://gist.github.com/mattrude/3883a3801613b048d45b)
