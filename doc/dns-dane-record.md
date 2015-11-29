@@ -22,7 +22,6 @@ GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/00
 
 You should receive an output similar to the text below.
 
-    # gpg2 --print-dane-records -k m@mattrude.com
     ;; pub  nistp256/03305F35 2015-02-15
     ;;      Key fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
     ;; uid  Matt Rude <m@mattrude.com>
