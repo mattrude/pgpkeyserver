@@ -13,7 +13,7 @@ redirect_from:
 
 A keyserver is not the only way to publish your public pgp key.
 
-One method of publishing public pgp keys, other then on a keyserver, is to use a <abbr title="Dynamic Name Server">DNS</abbr> record with a <abbr title="Public Key Association">PKA</abbr> (Public Key Association) entry. PKA is a simple way of storing the look up infromation for your public key in a DNS `TXT` record. PKA allows a user to send encrypted data to a email address by query the DNS server, caching the key&#039;s fingerprint, downloading the public key from the provided URL and validaing the key using the cached fingerprint.
+One method of publishing public pgp keys, other then on a keyserver, is to use a <abbr title="Dynamic Name Server">DNS</abbr> record with a <abbr title="Public Key Association">PKA</abbr> (Public Key Association) entry. PKA is a simple way of storing the look up information for your public key in a DNS `TXT` record. PKA allows a user to send encrypted data to a email address by query the DNS server, caching the key&#039;s fingerprint, downloading the public key from the provided URL and validating the key using the cached fingerprint.
 
 ## Creating the DNS Record
 
@@ -35,7 +35,7 @@ Using your `Key fingerprint`, remove the spaces and add the content to the below
 
 <pre>v=pka1;fpr=AE7384272B91AD635902320B27143AFFDD23BF73;uri=http://mattrude.com/keys/0xDD23BF73.asc</pre>
 
-And add this to your DNS server as a `TXT` field.  The pointer of the record should be the user section of your email address followed by `_pka` (ie: `matt._pka.mattrude.com`). 
+And add this to your DNS server as a `TXT` field.  The pointer of the record should be the user section of your email address followed by `_pka` (ie: `matt._pka.mattrude.com`).
 
 The full BIND DNS entry would be
 
