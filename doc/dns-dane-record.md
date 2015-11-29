@@ -25,8 +25,6 @@ There are multiple ways to create a OpenPGP DANE DNS Record, below we will talk 
 ### Method 1: Using GnuPG 2.1.9+
 GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) and greater has a nice little function, `--print-dane-records` that prints the dane record for you.
 
-
-
     gpg2 --print-dane-records -k m@mattrude.com
 
 You should receive an output similar to the text below.
@@ -54,9 +52,10 @@ You should receive an output similar to the text below.
         7d3f4159bfdd3f72cb81cc4ecbf1c18e73
         )
 
-#### The Finle DNS Record
+#### The Finale DNS Record
 
     62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3._openpgpkey IN TYPE61 \# 433 (98520454e11f3413082a8648ce3d0301070203045add655ecef45f6c8eccdab7e3e844d3f7f5a2fc4b62410efd1e9f34efb7c63830478e7f93c593db4110b3cd19d175c10cce1ec630d567a265f5b0484b0d3c58b41a4d6174742052756465203c6d406d617474727564652e636f6d3e887e041313080026050254e11f34021b03050905a39a80050b09080702061508090a0b0203160201021e01021780000a09100314cd8503305f356da50100e0182d1397a9034bdb77dfe13b2a020fd5309023fe71671d6655745c19c9f0c000ff6417963dc6d1baec2dd320969e7410d15b976c1da3e9ff01684a40983ba07b15b8560454e11f3412082a8648ce3d030107020304a048456ab44f987d2711e3c4e067d863ada5a5fbd1824a14fd80d9622d5450041974175c2067571ef03a26e620f472056839b6d3132396858b847b0bb52ba41c03010807886704181308000f050254e11f34021b0c050905a39a80000a09100314cd8503305f35fc2000fe2a81e6357fc29a33a3985564eccea99f78f181e3dc4ca27d020f0088a8265d8f0100e7d33a6508279fc9aa300a4416ba247d3f4159bfdd3f72cb81cc4ecbf1c18e73)
+
 ### Method 2: Using Web Methods
 
 * https://www.huque.com/bin/openpgpkey
