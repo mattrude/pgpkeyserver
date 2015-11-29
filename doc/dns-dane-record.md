@@ -14,11 +14,13 @@ This document will walk you threw building a OpenPGP dane [dns] record.
 
 There are multiple ways to create a OpenPGP DANE DNS Record, below we will talk about the two may ways.
 
-### Using GnuPG 2.1.9+
+### Method 1: Using GnuPG 2.1.9+
 
-GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) and greater has a nice little function `--print-dane-records` that prints the dane record for you.
+GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) and greater has a nice little function, `--print-dane-records` that prints the dane record for you.
 
-    gpg2 --print-dane-records -k user@example.com
+
+
+    gpg2 --print-dane-records -k m@mattrude.com
 
 You should receive an output similar to the text below.
 
@@ -46,7 +48,7 @@ You should receive an output similar to the text below.
         )
 
 
-### Using Web Methods
+### Method 2: Using Web Methods
 
 * https://www.huque.com/bin/openpgpkey
 
@@ -58,7 +60,7 @@ Using GnuPG 2.1.9+, you may run the following command to download and import the
 
 The output should be something similar to the text below.
 
-<small><i>Note: the "unknown" in the "uid" line is due to the trust level of the key, and since we just downloaded it, there is no trust yet.</i></small>
+<small><i>Note: The "unknown" in the "uid" line, in the text below, is due to the trust level of the key, and since we just downloaded it, there is no trust yet.</i></small>
 
     gpg: using PGP trust model
     gpg: pub  nistp256/03305F35 2015-02-15  Matt Rude <m@mattrude.com>
