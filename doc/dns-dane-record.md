@@ -7,19 +7,19 @@ tags: dane, pgp, gpg, GnuPG, DNS, DNSSEC
 ---
 
 ## Publishing A Public PGP Key via DNS: <small>DANE Cert Records</small>
+This document will walk you threw building a OpenPGP [DANE DNS](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities) record.
 
-This document will walk you threw building a OpenPGP [dane dns](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities) record.
+A OpenPGP DANE DNS record allows other users to download and validate your public OpenPGP key from your domain's DNS server.  In conjunction with DNSSEC this allows the users to know with a increased level of confidence that the key retrieved is the same public key that you published without modification.
 
-In order to fully create and test the records, you will need GnuPG version 2.1.9 or greater. If you are running Ubuntu, you may follow my guide on [building GnuPG 2.1]({{site.url}}/guides/build-gnupg2/).  Using [method 2](#method-2-using-web-methods) below, you do not need GnuPG 2.1.9+ to create the record, but you will not be able to test it.
+## Requirements
+In order to fully create and test the records using [method 1](#method-1-using-gnupg-219) below, you will need GnuPG version 2.1.9 or greater. If you are running Ubuntu, you may follow my guide on [building GnuPG 2.1]({{site.url}}/guides/build-gnupg2/).  Using [method 2](#method-2-using-web-methods) below, you will not need GnuPG 2.1.9+ to create the record, but you will not be able to test your new record.
 
 This setup assumes you already have [DNSSEC](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions) setup on the domain you wish to add DANE to.  DNSSEC is a set of extensions to DNS which provide the DNS clients origin authentication of DNS data, authenticated denial of existence, and data integrity, but not availability or confidentiality.  This means you are able to use the records provided by DNSSEC with confidence that the record created by the domain owner.
 
 ## Creating the DNS Record
-
 There are multiple ways to create a OpenPGP DANE DNS Record, below we will talk about the two may ways.
 
 ### Method 1: Using GnuPG 2.1.9+
-
 GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) and greater has a nice little function, `--print-dane-records` that prints the dane record for you.
 
 
@@ -57,7 +57,6 @@ You should receive an output similar to the text below.
 * https://www.huque.com/bin/openpgpkey
 
 ## Testing the DNS DANE Certificate
-
 Using GnuPG 2.1+, you may run the following command to download and import the key to your key ring.
 
     gpg2 --auto-key-locate clear,dane -v --locate-key matt@mattrude.com
