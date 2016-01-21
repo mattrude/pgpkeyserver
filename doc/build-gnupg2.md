@@ -1,13 +1,13 @@
 ---
 layout: default
-title: GnuPG 2.1.9 Build Instructions
+title: GnuPG 2.1.10 Build Instructions
 permalink: /guides/build-gnupg2/
-description: My GnuPG 2.1.9 build for a Ubuntu 14.04 LTS.
+description: My GnuPG 2.1.10 build for a Ubuntu 14.04 LTS.
 tags: PGP, GnuPG
 ---
 
-# GnuPG 2.1.9 Build Instructions
-Below you is my build instructions for [GnuPG 2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) released on 10-Oct-2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
+# GnuPG 2.1.10 Build Instructions
+Below you is my build instructions for [GnuPG 2.1.10](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000381.html) released on 4-Dec-2015. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
 
 ## Install the needed depends
     apt-get -y install libgnutls-dev pinentry-qt bzip2 make
@@ -30,10 +30,10 @@ Below you is my build instructions for [GnuPG 2.1.9](https://lists.gnupg.org/pip
     cd libgcrypt-1.6.4 && ./configure && make && make install && cd ../
 
 ## Installing libassuan
-    wget ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.3.0.tar.bz2 && \
-    wget ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.3.0.tar.bz2.sig && \
-    gpg --verify libassuan-2.3.0.tar.bz2.sig && tar -xjf libassuan-2.3.0.tar.bz2 && \
-    cd libassuan-2.3.0 && ./configure && make && make install && cd ../
+    wget ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.4.2.tar.bz2 && \
+    wget ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-2.4.2.tar.bz2.sig && \
+    gpg --verify libassuan-2.4.2.tar.bz2.sig && tar -xjf libassuan-2.4.2.tar.bz2 && \
+    cd libassuan-2.4.2 && ./configure && make && make install && cd ../
 
 ## Installing libksba
     wget ftp://ftp.gnupg.org/gcrypt/libksba/libksba-1.3.3.tar.bz2 && \
@@ -48,10 +48,10 @@ Below you is my build instructions for [GnuPG 2.1.9](https://lists.gnupg.org/pip
     cd npth-1.2 && ./configure && make && make install && cd ../
 
 ## Install GnuPG 2.1
-    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.9.tar.bz2 && \
-    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.9.tar.bz2.sig && \
-    gpg --verify gnupg-2.1.9.tar.bz2.sig && tar -xjf gnupg-2.1.9.tar.bz2 && \
-    cd gnupg-2.1.9 && ./configure && make && make install && echo $?
+    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.10.tar.bz2 && \
+    wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.10.tar.bz2.sig && \
+    gpg --verify gnupg-2.1.10.tar.bz2.sig && tar -xjf gnupg-2.1.10.tar.bz2 && \
+    cd gnupg-2.1.10 && ./configure && make && make install && echo $?
 
 ## Finishing the build
     echo "/usr/local/lib" > /etc/ld.so.conf.d/gpg2.conf && ldconfig -v

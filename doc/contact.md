@@ -22,7 +22,7 @@ This site is maintained by Matt Rude ([0xc4909ee495b0761f]({{ site.url }}/k/0xc4
     pub = nistp256/03305F35 2015-02-15
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
-Or, you may validate my keys using one of my DANE or [PKA]({{ site.url }}/guides/public-key-association/) DNS records.
+Or, you may validate my keys using one of my [DANE]({{ site.url }}/guides/dns-dane-cert-records/) or [PKA]({{ site.url }}/guides/public-key-association/) DNS records.
 
 ### Signed Contact Information
 

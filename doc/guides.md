@@ -8,7 +8,8 @@ Below you will find my list of help files and guides for using PGP on your clien
 
 ## Internal Guides
 
-* [Publish A Public PGP Key via DNS]({{ site.url }}/guides/public-key-association/)
+* [Publish A Public PGP Key via DNS: Public Key Association]({{ site.url }}/guides/public-key-association/)
+* [Publish A Public PGP Key via DNS: DANE Cert Records]({{ site.url }}/guides/dns-dane-cert-records/)
 * [SKS Key Server Dump Process]({{ site.url }}/guides/dump-process/)
 * [How to build a SKS Keyserver]({{ site.url }}/guides/building-server/)
 * [Build GnuPG 2.1 "modern" on Ubuntu]({{ site.url }}/guides/build-gnupg2/)
