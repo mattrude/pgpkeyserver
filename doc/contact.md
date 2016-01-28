@@ -5,7 +5,9 @@ title: Contact Me
 permalink: /contact/
 ---
 
-This site is maintained by Matt Rude ([0xc4909ee495b0761f]({{ site.url }}/k/0xc4909ee495b0761f)). If you would like to report any problems or bugs, please send a email or XMPP messsage to the email address listed in one of my public keys, or use my <a href="#" onclick="javascript:window.open('https://encrypt.to/matt', '_blank', 'toolbar=no, scrollbars=no, resizable=yes, width=800, height=600');">secure contact form</a>.
+This site is maintained by Matt Rude ([0xc4909ee495b0761f]({{ site.url }}/k/0xc4909ee495b0761f)). If you would like to report any problems or bugs, please send a email or XMPP messsage to the email address listed in one of my public keys.
+
+If you are thankful for this service, please consider donating some funds to the cause. My bitcoin address is `1211xFABAc7W4QELfaGFvEqzUhVF2zbm33`.
 
 ### My Public PGP Key Information
 

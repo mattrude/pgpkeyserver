@@ -10,6 +10,7 @@ Below you will find my list of help files and guides for using PGP on your clien
 
 * [Publish A Public PGP Key via DNS: Public Key Association]({{ site.url }}/guides/public-key-association/)
 * [Publish A Public PGP Key via DNS: DANE Cert Records]({{ site.url }}/guides/dns-dane-cert-records/)
+* [A Practical Uses for a One-Time Pad]({{ site.url }}/guides/one-time-pad/)
 * [SKS Key Server Dump Process]({{ site.url }}/guides/dump-process/)
 * [How to build a SKS Keyserver]({{ site.url }}/guides/building-server/)
 * [Build GnuPG 2.1 "modern" on Ubuntu]({{ site.url }}/guides/build-gnupg2/)
@@ -28,5 +29,5 @@ Below you will find my list of help files and guides for using PGP on your clien
 
 ### Webmail PGP Clients
 
-* <a href="https://whiteout.io/" target="_blank">whiteout.io</a> a chrome webmail client
+* <a href="" target="_blank">Mailvelope</a> an extension/addon for Chrome and Firefox webmail client.
 * <a href="https://https://github.com/google/end-to-end" target="_blank">Google: end-to-end</a> a chrome webmail PGP extension (my build of <a href="https://chrome.google.com/webstore/detail/end-to-end/knnhngcdkplmpmlendkfgjlgnemecpdh" target="_blank">End-To-End</a> on the Chrome web store)
