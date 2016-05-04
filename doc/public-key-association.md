@@ -25,11 +25,13 @@ This key/file must be accessible via a public URL on the domain the email addres
 
 Next you need to get your key&#039;s fingerprint, to do so, list your public key with the `--fingerprint` flag.
 
-<pre>$ gpg --fingerprint --list-keys 0xDD23BF73
+<pre>
+$ gpg --fingerprint --list-keys 0xDD23BF73
 
 pub   4096R/DD23BF73 2014-06-19 [expires: 2020-06-19]
       Key fingerprint = <strong>AE73 8427 2B91 AD63 5902  320B 2714 3AFF DD23 BF73</strong>
-uid                  Matt Rude <matt@mattrude.com></pre>
+uid                  Matt Rude &lt;matt@mattrude.com&gt;
+</pre>
 
 Using your `Key fingerprint`, remove the spaces and add the content to the below line, with the URL for the above key.
 
