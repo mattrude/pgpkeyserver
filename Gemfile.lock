@@ -1,5 +1,5 @@
 GEM
-  remote: https://api.rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
@@ -142,7 +142,7 @@ GEM
     kramdown (1.10.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
-    libv8 (3.16.14.15-x86-linux)
+    libv8 (3.16.14.15)
     liquid (3.0.6)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
@@ -164,7 +164,7 @@ GEM
     net-dns (0.8.0)
     nokogiri (1.6.7.2)
     octokit (4.3.0)
-      sawyer (>= 0.5.3, ~> 0.7.0)
+      sawyer (~> 0.7.0, >= 0.5.3)
     public_suffix (1.5.3)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -198,7 +198,6 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     ref (2.0.0)
-    libv8 (> 0.0.1)
     rouge (1.10.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
@@ -228,7 +227,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-linux
 
 DEPENDENCIES
   github-pages
@@ -241,3 +239,6 @@ DEPENDENCIES
   rails
   rouge
   therubyracer
+
+BUNDLED WITH
+   1.12.5
