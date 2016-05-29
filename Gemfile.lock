@@ -155,7 +155,6 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.0.0)
     minitest (5.9.0)
     multi_css (0.1.0)
       css_press
