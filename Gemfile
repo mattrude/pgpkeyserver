@@ -1,6 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+gem "rails"
+gem "rouge"
+gem "kramdown"
+gem "therubyracer"
 gem "jekyll-press"
 gem "jekyll-sitemap"
 gem "jekyll-less"
