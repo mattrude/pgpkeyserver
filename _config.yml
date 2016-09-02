@@ -5,7 +5,7 @@ description: ""
 url: "//keyserver.mattrude.com"
 name: "keyserver.mattrude.com"
 baseurl: ""
-destination: "/var/www/html"
+destination: "/var/www/keyserver.mattrude.com"
 
 owner_name: "Matt Rude"
 owner_pgpkey: "0xc4909ee495b0761f"
@@ -29,8 +29,8 @@ exclude:
 
 gems:
 - jekyll-sitemap
-- jekyll-less
-- jekyll-press
+#- jekyll-less
+#- jekyll-press
 - jekyll-redirect-from
 - jekyll-last-modified-at
 
