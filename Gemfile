@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "jekyll"
 gem "jekyll-press"
 gem "jekyll-sitemap"
 gem "jekyll-less"
