@@ -1,6 +1,14 @@
 language: ruby
-script: jekyll build -d _site
+sudo: false
+before_install:
+  - gem install rouge
+  - gem install json
+  - gem install bundler
+  - gem install kramdown
+  - gem install therubyracer
+  - gem install jekyll
+install: bundle install
+script: bundle exec jekyll build -d _site && bundle exec htmlproofer htmlproofer --url-swap "https\://therudes.com/:/,https\://therudes.com:/" ./_site
 rvm:
-  - 2.0.0
-  - 2.1.2
-  - 2.2.1
+  - 2.3.1
+  - 2.3.3
