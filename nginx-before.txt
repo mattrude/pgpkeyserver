@@ -8,11 +8,28 @@ sitemap: false
 {% include menu.html %}
 {% include title.html %}
 <div class="container">
-    <p>This page contains dumps to allow you to create your <a href='{{ site.url }}/guides/building-server/'>own pgp keyserver</a>.</p>
+<div class="row">
+  <div class="col-md-6">
+    <p>This page contains dumps to allow you to create your <a href='{{ site.url }}/guides/building-server/'>own keyserver</a>.</p>
     <ul>
         <li>The below dumps are created by the <a href='{{ site.url }}/guides/dump-process/'>sks-dump-script.sh</a> script.</li>
-        <li>Dumps are created at 8:00 UTC (2 am CST), each day of the week.</li>
-        <li>All times below are in the UTC time zone.</li>
+        <li>Dumps are created at <b>8:00 UTC</b> (2am CST)</li>
+        <li>Dumps are created each day of the week.</li>
+        <li>All times below are in the <b>UTC</b> time zone.</li>
+        <li>See the <a href='{{ site.url }}/dump/current/README.txt'>README.txt</a> file within each dump folder for more information about each build.</li>
     </ul>
-    <p>Use the below command to download all the current dump files.</p>
-    <pre>wget -crp -e robots=off --level=1 --cut-dirs=3 -nH -A pgp,txt http://keyserver.mattrude.com/dump/current/</pre>
+  </div>
+
+  <div class="col-md-6 col-pull-right">
+    <div class="alert alert-info">
+      <h3><center>FTP Download</center></h3>
+      <p>You may instead download my <b>FTP</b> server found at <a href="ftp://keyserver.mattrude.com">ftp://keyserver.mattrude.com</a>.</p>
+      <p>Use the following command:</p> <pre style="font-size:0.85em;">wget -m -nH --cut-dirs=3 ftp://keyserver.mattrude.com/current</pre>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <p><strong>Use the below command to download all the current dump files.</strong></p>
+    <pre>wget -crp -e robots=off --level=1 --cut-dirs=3 -nH -A pgp,txt https://keyserver.mattrude.com/dump/current/</pre>
+  </div>
+  </div>
