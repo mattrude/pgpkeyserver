@@ -1,0 +1,481 @@
+body {
+  color: black;
+  background: #ffffff;
+  font-family: "lucida grande", Calibri, "segoe UI", "lucida sans unicode", "Droid Sans", "DejaVu Sans", "bitstream vera sans", verdana, arial, helvetica, sans-serif;
+  margin: 0;
+  font-size: 1em;
+}
+#content {
+  color: black;
+  background: #ffffff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 1em;
+  line-height: 1.3em;
+  text-align: left;
+  max-width: 800px;
+  min-width: 240px;
+  position: relative;
+}
+#header h4 {
+  -webkit-margin-before: -0.8em;
+  -webkit-margin-after: 1.0em;
+}
+#title h1 {
+  text-align: left;
+  margin-bottom: 8px;
+  padding: 2px;
+  padding-top: 10px;
+  border-bottom: 1px solid #CCC;
+  line-height: 1;
+}
+#title i {
+  color: #A9A9A9;
+  font-size: 0.8em;
+}
+h2 {
+  font-weight: normal;
+  margin-bottom: 8px;
+  padding: 2px;
+  padding-top: 10px;
+  border-bottom: 1px solid #CCC;
+}
+a {
+  text-decoration: none;
+  color: #0078e7;
+}
+a,
+a:visited {
+  color: #0078e7;
+  background: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0078e7;
+}
+#footer {
+  font-size: 80%;
+  border-top: 1px solid #CCC;
+}
+.footer-left {
+  text-align: left;
+  float: left;
+  width: 49%;
+}
+.footer-right {
+  display: block;
+  text-align: right;
+  float: right;
+  width: 49%;
+}
+img {
+  border-width: 0px;
+}
+.center {
+  text-align: center;
+}
+.big {
+  font-size: larger;
+}
+.small {
+  font-size: small;
+}
+.quote {
+  max-width: 75%;
+  text-align: center;
+}
+div.code,
+p code {
+  font-family: Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
+  font-size: 14px;
+  background-color: #eee;
+  border: 1px solid #999;
+  padding: 0 2px;
+  margin: 0 2px;
+}
+div#sksoutput pre,
+div#sksoutput code {
+  font-size: 12px;
+}
+pre,
+pre.code {
+  font-family: Monaco, Consolas, 'Lucida Console', "Droid Sans Mono", "DejaVu Sans Mono", Courier, monospace;
+  font-size: 14px;
+  width: auto;
+  overflow: auto;
+  background-color: #eee;
+  color: inherit;
+  border: 1px solid #999;
+  line-height: 1.3em;
+  padding: 5px;
+}
+pre.code {
+  border: 0;
+}
+fieldset {
+  border: 1px dotted #bedce7;
+  padding: 10px 15px;
+  color: inherit;
+}
+h1 a {
+  text-decoration: none;
+}
+h4 small {
+  line-height: 1;
+  color: #777;
+}
+#form {
+  display: table;
+}
+#form.extract {
+  max-width: 430px;
+  margin: 0 auto;
+}
+#form.extract .options {
+  border: 1px solid #CCC;
+  display: inline-block;
+  float: left;
+  min-height: 120px;
+  padding: 5px;
+  margin: 5px 0;
+}
+#form.extract .key {
+  width: 418px;
+  border: 1px solid #CCC;
+  padding: 5px;
+}
+#form.extract .key .extract-field {
+  float: right;
+  width: 300px;
+}
+#form.extract .key .extract-field-label {
+  text-align: right;
+  width: 100px;
+}
+#form.extract .checkboxs input {
+  margin: 0;
+}
+#form.extract .radio {
+  margin-left: 5px;
+}
+#form.extract label {
+  margin-bottom: 3px;
+  display: inline-block;
+}
+#form.extract label.checkbox,
+#form.extract label.key {
+  width: 165px;
+  margin: 5px;
+}
+#form.extract label.checkbox,
+#form.extract label input {
+  text-align: right;
+}
+#form.extract label.extract-field-label.fingerprint,
+#form.extract label.extract-field-label.hash,
+#form.extract label.extract-field-label.exact,
+#form.extract label.extract-field-label.mr {
+  text-align: right;
+  width: 165px;
+  margin-right: 5px;
+}
+#form.extract div.buttons {
+  float: right;
+  padding-right: 10px;
+}
+#form.submit {
+  width: 550px;
+  margin: 0 auto;
+}
+#form.submit textarea {
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 0px;
+}
+#form.submit input {
+  float: right;
+  margin-right: 5px;
+}
+#menu {
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  font-size: 0.9em;
+  margin: 5px 0 20px 0;
+  padding-left: 5px;
+  line-height: 1.5em;
+}
+#menu a {
+  font-weight: bold;
+}
+#menu-sub {
+  font-size: 0.8em;
+  margin: -20px 0 20px 0;
+  padding: 5px 10px;
+  line-height: 1em;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+#news ul {
+  -webkit-padding-start: 0px;
+}
+#news li {
+  list-style-type: none;
+}
+#news h2 {
+  padding: 0px;
+  border-bottom: none;
+}
+.highlight {
+  background: #ffffff;
+}
+.highlight .c {
+  color: blue;
+  font-weight: bold;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .k {
+  font-weight: bold;
+}
+.highlight .o {
+  font-weight: bold;
+}
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  font-weight: bold;
+}
+.highlight .kd {
+  font-weight: bold;
+}
+.highlight .kp {
+  font-weight: bold;
+}
+.highlight .kr {
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .m {
+  color: #009999;
+}
+.highlight .s {
+  color: #dd1144;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .nb {
+  color: #0086b3;
+}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .nv {
+  color: #008080;
+}
+.highlight .ow {
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .sb {
+  color: #dd1144;
+}
+.highlight .sc {
+  color: #dd1144;
+}
+.highlight .sd {
+  color: #dd1144;
+}
+.highlight .s2 {
+  color: #dd1144;
+}
+.highlight .se {
+  color: #dd1144;
+}
+.highlight .sh {
+  color: #dd1144;
+}
+.highlight .si {
+  color: #dd1144;
+}
+.highlight .sx {
+  color: #dd1144;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #dd1144;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .il {
+  color: #009999;
+}
+@media (max-width: 600px) {
+  #form.submit {
+    width: 99%;
+  }
+  .footer-left .small-hide {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  #content {
+    max-width: 100%;
+  }
+  #form {
+    width: 100%;
+  }
+  #form.extract {
+    width: 100%;
+  }
+  #form.extract .key {
+    float: none;
+    display: table;
+    width: 95%;
+  }
+  #form.extract .key .extract-field {
+    float: none;
+    width: 90%;
+    padding: 0 5px;
+  }
+  #form.extract .key .extract-field-label {
+    text-align: left;
+  }
+  #form.extract .checkboxs input {
+    float: left;
+  }
+  #form.extract .options {
+    width: 95%;
+  }
+  #form.extract .radio {
+    margin-left: 0px;
+  }
+  #form.extract label.extract-field-label.fingerprint,
+  #form.extract label.extract-field-label.hash,
+  #form.extract label.extract-field-label.exact,
+  #form.extract label.extract-field-label.mr {
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 0px;
+  }
+  #form.submit {
+    width: 99%;
+  }
+}
+
+h1 {
+  line-height: 1em;
+}

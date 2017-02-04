@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8">
+    <title>PGP Public Keyserver</title>
+    
+    
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <link rel="canonical" href="//keyserver.mattrude.com/">
+    <link rel="shortcut icon" href="//keyserver.mattrude.com/favicon.ico"/>
+    <link rel="stylesheet" href="//keyserver.mattrude.com/css/main.css">
+</head>
+<body>
+    <div id="content">
+
+<div id="header">
+    <h1>PGP Public Keyserver</h1>
+    <h4><small>node: </small>keyserver.mattrude.com</h4>
+</div>
+    <div id="menu">
+        <a href="//keyserver.mattrude.com">Home</a> |
+        <a href="//keyserver.mattrude.com/about/">About</a> | 
+        <a href="//keyserver.mattrude.com/contact/">Contact</a> | 
+        <a href="//keyserver.mattrude.com/doc/extracting/">Extracting keys</a> |
+        <a href="//keyserver.mattrude.com/doc/submitting/">Submitting keys</a> |
+        <a href="//keyserver.mattrude.com/doc/faq/">FAQ</a> | 
+        <a href="//keyserver.mattrude.com/guides/">How-To</a> | 
+        <a href="//keyserver.mattrude.com/news/">News</a> |
+        <a href="//keyserver.mattrude.com/dump/">DB Dumps</a> | 
+        <a href="//keyserver.mattrude.com/stats/">Statistics</a>
+    </div>
+    <p>This page contains dumps to allow you to create your <a href='//keyserver.mattrude.com/stats/guides/building-server/'>own pgp keyserver</a>.</p>
+    <ul>
+        <li>The below dumps are created by the <a href='//keyserver.mattrude.com/guides/dump-process/'>sks-dump-script.sh</a> script.</li>
+        <li>Dumps are created at 8:00 UTC (2 am CST), each day of the week.</li>
+        <li>All times below are in the UTC time zone.</li>
+    </ul>
+    <code><pre style="font-size:0.8em;">wget -crp -e robots=off --level=1 --cut-dirs=3 -nH -A pgp,txt http://keyserver.mattrude.com/dump/current/</pre></code>
