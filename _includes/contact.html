@@ -23,7 +23,7 @@ fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35</code></pre></d
 <p>A signed copy of this infromation may be found <a href="//{{ site.url }}/contact.txt">here</a>, or using my <a href="//{{ site.url }}/k/0x0314CD8503305F35">ECC key</a>, may be found <a href="//{{ site.url }}/contact-ecc.txt">here</a>. You may validate these files by running the below commands:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>curl -s https://keyserver.mattrude.com/contact.txt |gpg --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
-curl -s https://keyserver.mattrude.com/contact-ecc.txt |gpg2 --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
+curl -s https://keyserver.mattrude.com/contact-ecc.txt |gpg --keyserver-options auto-key-retrieve --auto-key-locate pka --verify
 </code></pre>
 </div>
 
