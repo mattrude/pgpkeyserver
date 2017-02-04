@@ -2,10 +2,10 @@
 title: PGP Public Keyserver
 email: matt@mattrude.com
 description: ""
-url: "//demo.keyserver.mattrude.com"
-name: "demo.keyserver.mattrude.com"
+url: "//keyserver.mattrude.com"
+name: "keyserver.mattrude.com"
 baseurl: ""
-destination: "/var/www/demo.keyserver.mattrude.com"
+destination: "/var/www/keyserver.mattrude.com"
 
 owner_name: "Matt Rude"
 owner_pgpkey: "0xc4909ee495b0761f"
