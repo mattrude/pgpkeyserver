@@ -10,6 +10,5 @@ before_install:
 install: bundle install
 script: bundle exec jekyll build -d _site && bundle exec htmlproofer htmlproofer --internal-domains "keyserver.mattrude.com" ./_site
 rvm:
-  - 2.1.1
   - 2.2.0
   - 2.3.1
