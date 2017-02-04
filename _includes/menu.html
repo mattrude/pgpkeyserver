@@ -1,25 +1,26 @@
-    <div id="menu">
-        <a href="{{ site.url }}">Home</a> |
-        <a href="{{ site.url }}/about/">About</a> | 
-        <a href="{{ site.url }}/contact/">Contact</a> | 
-        <a href="{{ site.url }}/doc/extracting/">Extracting keys</a> |
-        <a href="{{ site.url }}/doc/submitting/">Submitting keys</a> |
-        <a href="{{ site.url }}/doc/faq/">FAQ</a> | 
-        <a href="{{ site.url }}/guides/">How-To</a> | 
-        {% for post in site.posts limit: 1 %}
-            <a href="{{ site.url }}/news/">News</a> |
-        {% endfor %}
-        <a href="{{ site.url }}/dump/">DB Dumps</a> | 
-        <a href="{{ site.url }}/stats/">Statistics</a>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse"
+        type="button"><span class="sr-only">Toggle navigation</span> <span class=
+        "icon-bar"></span> <span class="icon-bar"></span> <span class=
+        "icon-bar"></span></button> <a class="navbar-brand" href="{{ site.url }}">OpenPGP keyserver</a>
+      </div>
+          <div class="navbar-collapse collapse" id="navbar">
+          {% if page.url == "/" %}
+            <ul class="nav navbar-nav">
+          {% for section in site.data.frontpage %}
+          <li>
+            <a href="#{{ section.slug }}">{{ section.name }}</a>
+          </li>
+          {% endfor %}
+            </ul>
+          {% endif %}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ site.url }}/dump/">Dumps</a></li>
+                <li><a href="{{ site.url }}/stats/">Statistics</a></li>
+            </ul>
+        </div>
     </div>
-    {% if page.url contains 'guides' %}
-    <div id="menu-sub">
-        <a href="{{ site.url }}/guides/"><strong>Guides:</strong></a>
-        <a href="{{ site.url }}/guides/dns-dane-cert-records/">DANE Certs</a> |
-        <a href="{{ site.url }}/guides/public-key-association/">Public Key Association</a> |
-        <a href="{{ site.url }}/guides/one-time-pad/">OTP</a> |
-        <a href="{{ site.url }}/guides/dump-process/">Keyserver Dump Process</a> |
-        <a href="{{ site.url }}/guides/building-server/">Building a SKS Keyserver</a> | 
-        <a href="{{ site.url }}/guides/build-gnupg2/">Build GnuPG 2.1</a>
-    </div>
-    {% endif %}
+  </nav>
+

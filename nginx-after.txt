@@ -1,28 +1,7 @@
-		<!-- Starting Footer Section -->
-		<div id="footer">
-			<div class="footer-left">
-				<p><a href="//keyserver.mattrude.com">Home</a> | <a href="//keyserver.mattrude.com/source/">Source</a> | <a href="//keyserver.mattrude.com/contact/">Contact</a><span class="small-hide"> | <a href="//keyserver.mattrude.com/changelog/">Changelog</a></span></p>
-			</div>
-			<div class="footer-right">
-				<p>Copyright &copy; 2017 by <a href="//keyserver.mattrude.com/k/0xc4909ee495b0761f">Matt Rude</a></p>
-			</div>
-		</div>
-	</div>
+---
+permalink: /nginx-after.txt
+sitemap: false
+---
+
 </div>
-
-  <!-- Google Analytics (http://google.com/analytics) -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-9532791-9', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-
-</body>
-</html>
-
+{% include footer.html %}

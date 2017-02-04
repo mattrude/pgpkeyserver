@@ -1,17 +1,23 @@
-                {% if page.url contains 'guides' %}
-                    <div id="modifydate" style="font-size:0.8em;text-align:right"><small>Modified: {{ page.last_modified_at | date: '%d-%b-%Y'}}</small></div>
-                {% endif %}
-		<!-- Starting Footer Section -->
-		<div id="footer">
-			<div class="footer-left">
-				<p><a href="{{ site.url }}">Home</a> | <a href="{{ '/source/' | prepend: site.url }}">Source</a> | <a href="{{ '/contact/' | prepend: site.url }}">Contact</a><span class="small-hide"> | <a href="{{ '/changelog/' | prepend: site.url }}">Changelog</a></span></p>
-			</div>
-			<div class="footer-right">
-				<p>Copyright &copy; {{ site.time | date: "%Y" }} by <a href="{{ site.url }}/k/{{ site.owner_pgpkey }}">{{ site.owner_name }}</a></p>
-			</div>
-		</div>
+{% if page.url contains 'guides' %}
+<div class="container">
+    <div class="pull-right"><small>Modified: {{ page.last_modified_at | date: '%d-%b-%Y'}}</small></div>
+</div>
+{% endif %}
+    <!-- Starting Footer Section -->
+<div id="footer" class="container" style="padding-top: 10px;">
+	<div class="pull-left">
+            <p><a href="{{ site.url }}">Home</a> | <a href="{{ '/source/' | prepend: site.url }}">Source</a> | <a href="{{ '/changelog/' | prepend: site.url }}">Changelog</a></span></p>
+	</div>
+	<div class="pull-right">
+          {% if page.url == "/" %}
+            <p>Provided as a public service by <a href="#contact">Matt Rude</a>.</p>
+          {% else %}
+            <p>Provided as a public service by <a href="{{ site.url }}/#contact">Matt Rude</a>.</p>
+          {% endif %}
 	</div>
 </div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 {% include analytics.html %}
 </body>
 </html>

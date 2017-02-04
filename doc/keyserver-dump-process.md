@@ -1,16 +1,14 @@
 ---
 layout: default
-title: Keyserver Dump Process
+title: SKS Keyserver Dump Process
 permalink: /guides/dump-process/
 description: A simple script to export a sks keyserver dump database
 tags: sks, sks-keyserver, sks server dump, PGP, GnuPG
 ---
 
-# SKS Keyserver Dump Process
-
 This script is intended to be ran from cron, since sks requires the db process to be stopped before a dump can be started.  
 
-    0 0 * * * /usr/local/bin/sks-dump-script.sh &
+<pre>0 0 * * * /usr/local/bin/sks-dump-script.sh &</pre>
 
 ## Key Server Dump Script
 
@@ -20,13 +18,15 @@ This script is intended to be ran from cron, since sks requires the db process t
 # This script will stop the sks server, dump its contents to
 # the $PREDIR, then restart the sks server.
 
-COUNT="10000"
-SKSDATE=`date +%Y-%m-%d`
-USER="debian-sks"
+COUNT="20000"
 INDIR="/var/lib/sks"
-PREDIR="/external/sks-dump"
+PREDIR="/var/www/sks-dump"
+
+export TZ='UTC'
+USER="debian-sks"
+RUNDATE=`date -u`
+SKSDATE=`date +%Y-%m-%d`
 OUTDIR="$PREDIR/$SKSDATE"
-TZ='UTC'
 
 for DEL in `ls -1t $PREDIR |grep -v 'current' |tail -n +7`
 do
@@ -36,14 +36,12 @@ done
 
 /usr/sbin/service sks stop
 sleep 2
-if [ `ps -eaf |grep "sks " |grep -v 'grep sks' |wc -l` == "0" ]; then
-    mkdir -p $INDIR
-    chown -R $USER:$USER $INDIR
+if [ `ps -eaf |grep "sks " |grep -v 'grep' |wc -l` == "0" ]; then
     cd $INDIR
 
     rm -rf $OUTDIR && mkdir -p $OUTDIR && \
     chown -R $USER:$USER $PREDIR && \
-    sudo -u $USER /usr/local/bin/sks dump $COUNT $OUTDIR/ sks-dump
+    sudo -u $USER /usr/local/bin/sks dump $COUNT $OUTDIR sks-dump
 
     if [ `ps -eaf |grep "sks " |grep -v 'grep sks' |wc -l` == 0 ]; then
         chown -R $USER:$USER $INDIR
@@ -67,11 +65,11 @@ fi
 SIZE=`du -shc $OUTDIR |grep 'total' |awk '{ print $1 }'`
 DCOUNT=`grep "#Key-Count" $OUTDIR/metadata-sks-dump.txt |awk '{ print $2 }'`
 FILES=`grep "#Files-Count" $OUTDIR/metadata-sks-dump.txt |awk '{ print $2 }'`
-echo "This is the PGP key server dump from keyserver.mattrude.com created: `date -u`
+echo "This is the PGP key server dump from keyserver.mattrude.com created: $RUNDATE
 
 On a linux/unix system, you may download this directory via the following command:
 
-wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 --no-host-directories http://keyserver.mattrude.com/dump/current/
+wget -c -r -p -e robots=off --level=1 --cut-dirs=3 --no-host-directories -A pgp,txt http://keyserver.mattrude.com/dump/$SKSDATE/
 
 These files were created with the following command: sks dump $COUNT $SKSDATE/ sks-dump
 

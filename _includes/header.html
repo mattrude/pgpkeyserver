@@ -7,8 +7,29 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}"/>
+    {% if page.url contains "/guides/" %}
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.url }}">
+    {% endif %}
+    <style type="text/css">
+    html,body {
+      width: 100%;
+      min-height: 100%;
+      height:auto !important; 
+      height: 100%;
+      overflow-y: auto;
+      overflow: auto;
+    }
+    .fill {
+      min-height: 100%;
+      height:auto !important; 
+      height: 100%;
+    }
+    </style>
+<!--
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+-->
 </head>
-<body>
-    <div id="content">
+  <body data-spy="scroll" data-target=".navbar" data-offset="70">

@@ -1,0 +1,54 @@
+<h2 id="what-is-pgp">What is PGP?</h2>
+
+<p><strong>PGP</strong> (<b>P</b>retty <strong>G</strong>ood <strong>P</strong>rivacy) is a method of encrypting and signing data (for example an email) in a secure “<em>end to end</em>” way.  This means, the message is encrypted on your computer, using the recipient’s public key, in a way that the e-mail server has no knowledge of the content of the message.  The recipient of the message then decrypts the message on their own computer using their private key.</p>
+
+<p>Quoted from <a href="http://tools.ietf.org/html/rfc4880">RFC 4880</a>:</p>
+
+<blockquote>
+  <p>OpenPGP software uses a combination of strong public-key and
+symmetric cryptography to provide security services for electronic
+communications and data storage.  These services include
+confidentiality, key management, authentication, and digital
+signatures.  This document specifies the message formats used in
+OpenPGP.</p>
+</blockquote>
+
+<h3 id="pgp-resources">PGP Resources</h3>
+
+<ul>
+  <li><a href="https://gnupg.org/">GnuPG Homepage</a> - The main location for the OpenPGP Standard</li>
+  <li><a href="http://www.pgp.com/">PGP Inc.</a> - This historical home of PGP, but has since been sold to Symantec.</li>
+  <li><a href="https://emailselfdefense.fsf.org/en/">Email Self-defense</a> - A teaching site to learn how and why you should use PGP for your electronic communication.</li>
+  <li><a href="http://en.wikipedia.org/wiki/Pretty_Good_Privacy">Wikipedia - Pretty Good Privacy</a></li>
+</ul>
+
+<h2 id="about-this-server">About this Server</h2>
+
+<p>This server is running a modified version of <a href="https://bitbucket.org/skskeyserver/sks-keyserver/">sks-keyserver</a>, version 1.1.6, found on my private <a href="http://code.mattrude.com/openpgp/sks-keyserver">git repository</a>, more information about this fork can be found on the <a href="https://keyserver.mattrude.com/source/">source</a> page. The server is physically located in New York City, New York, USA at the <a href="https://www.digitalocean.com/?refcode=4b3eee7ba20c">DigitalOcean</a> NYC3 East Coast datacenter.</p>
+
+<h2 id="about-the-server-pool">About the Server Pool</h2>
+
+<p>This server is a member of <a href="https://sks-keyservers.net/status/">sks-keyserver.net</a> pgp keyserver pools. The main <a href="http://tools.ietf.org/html/draft-shaw-openpgp-hkp-00">hkp</a> pool which you should configure your pgp software to use is <strong>pool.sks-keyservers.net</strong>, or perhaps <strong>subset.pool.sks-keyservers.net</strong>.</p>
+
+<p>The available pools this server is a memeber of are listed below:</p>
+
+<ul>
+  <li><strong>pool.sks-keyservers.net</strong> - The main pool</li>
+  <li><strong>p80.pool.sks-keyservers.net</strong> - Servers with port 80 open for HKP access</li>
+  <li><strong>subset.pool.sks-keyservers.net</strong> - Servers that are running the lastest version of sks</li>
+  <li><strong>ipv4.pool.sks-keyservers.net</strong> - Servers with an IPv4 IP address</li>
+  <li><strong>ipv6.pool.sks-keyservers.net</strong> - Servers with an IPv6 IP address</li>
+  <li><strong>na.pool.sks-keyservers.net</strong> - Servers located in North America</li>
+  <li><strong>eu.pool.sks-keyservers.net</strong> - Servers located in Europe</li>
+  <li><strong>oc.pool.sks-keyservers.net</strong> - Servers located in Oceania</li>
+</ul>
+
+<p>More information may be found on the SKS Keyservers <a href="https://sks-keyservers.net/overview-of-pools.php">Pools Overview Page</a>.</p>
+
+<h2 id="about-this-service">About this Service</h2>
+
+<p>This service may be withdrawn at any time and without notice to end-users. (Peers will be notified). End-users should use a pool definition above, such as <strong>pool.sks-keyservers.net</strong> which will alias into an operational pool.</p>
+
+<p><em><strong>Note:</strong> This service is provided free, to the public, in the hopes that it might prove useful. <strong>No warranty is provided</strong>, nor any offer of continuing service or access.</em></p>
+
+<p><em>By using this service, you <strong>MUST</strong> understand that presence of data in the keyserver (pools) in no way connotes trust. Anyone can generate a key, with any name or email address, and upload it. All security and trust comes from evaluating security at the “object level”, via PGP <a href="http://en.wikipedia.org/wiki/Web_of_trust">Web-Of-Trust</a> signatures. This keyserver makes it possible to retrieve keys, looking them up via various indices, but the collection of keys in this public pool is KNOWN to contain malicious and fraudulent keys. It is the common expectation of server operators that users understand this and use software which, like all known common OpenPGP implementations, evaluates trust accordingly. This expectation is so common that it is not normally explicitly stated.</em></p>
