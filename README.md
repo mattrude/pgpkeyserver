@@ -54,6 +54,14 @@ A simple script would be
         rewrite ^/d/(.*) /pks/lookup?op=get&options=mr&search=$1;
         rewrite ^/download/(.*) /pks/lookup?op=get&options=mr&search=$1;
 
+        location /dump {
+            alias /var/www/sks-dump;
+            autoindex on;
+            autoindex_exact_size off;
+            add_before_body /nginx-before.txt;
+            add_after_body /nginx-after.txt;
+        }
+
         location /pks {
             proxy_pass         http://127.0.0.1:11371;
             proxy_pass_header  Server;
