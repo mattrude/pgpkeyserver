@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-This document contains my personal contact information, personal websites,
-social media profile, and PGP public key IDs and fingerprints.
+This document contains my personal contact information, personal
+websites, social media profiles, and PGP public keys and fingerprints.
 
 * Name: Matt Rude
 * Email: matt@mattrude.com
 * XMPP: matt@mattrude.com
-* Website: http://mattrude.com
+* Website: https://mattrude.com
 * Keyserver: https://keyserver.mattrude.com
 * Personal wiki: https://wiki.mattrude.com
 
@@ -17,6 +17,11 @@ My Social Media Profile
 * Twitter: https://twitter.com/mdrude
 * Facebook: https://facebook.com/mattrude
 * Instagram: https://instagram.com/mattdrude
+
+XMPP OMEMO Public Key:
+
+    a4b88aca f63e1f05 6f8fd700 7847baf3
+    3f653098 64d478a7 d7387c88 fd8fb834
 
 RSA PGP Key information:
 
@@ -32,13 +37,13 @@ ECC PGP Key information:
     fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v2
 
-iQEcBAEBCAAGBQJVz4PMAAoJEMSQnuSVsHYfSEUIAJKBZe1vJRE+rl/FueMUJK06
-lLTYcTxeoDJmR5UowFYIuHe3GfwJMOP3cQ/EgQEI5pG/v+qFgIhkB0s5zAXR41Up
-RFG4mIDLJdgSa3tFhvoo02OeuqhSrLvjbN4gv5ZD7nO7ndnuvXgK4Y9d1yGFW+fi
-8s4sDj2s7NN5BgtzGtl4oa/r+10d8GZz+Q7M7y+fy8pkSHhKwolj79BQfvECKPAe
-VsgQrnU3HEhjSkFf9ZjRPL5AENeQ6YNWJpu3/q/N9QLJFtTj1BhkizHN6h6DgFIH
-1tapl4qZ+dHGZS547Mw2Nt8O8oLBfQvqHi77jxatxGKp1IA1ZKnijmYCVvqFEjo=
-=bdRs
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAliXl6gACgkQxJCe5JWw
+dh+Dfgf/fmnJRMNyu7Id8m6hK6DAtpQP2a4pzK6rPuwAq6M2AehJaeKi+U7oKUwo
+Xol+LB2CAX5NU/cjutoFZMdwPKTKlA5V3jtAWJUA/p0KBxi+MHC2qY7d0vikWc/a
+j5oR1SRMNA2WGYeCYMgYvb99GvJwh8BHRxbSZ+7zkmonCfkkyOWCy6b0B8t2JiSk
+4wUfin/IbY1naTUv6fp3gavV58nBZvXDXSGmBYyBPGSkoVRQypPGyQTJsDTSZv2h
+Pr1nAxEROQZcHUfrwVvnXp52+mMH7K1Wq+hLfPFBk2HLlvxQGWl/9iJRGkVNFPqv
+y3MqGX1t8AN2tE7OmR3xpEP5A4UcVw==
+=bJUx
 -----END PGP SIGNATURE-----
