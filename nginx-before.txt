@@ -22,7 +22,7 @@ sitemap: false
 
   <div class="col-md-6 col-pull-right">
     <div class="alert alert-info">
-      <h3><center>FTP Download</center></h3>
+      <h3><center><span class="glyphicon glyphicon-download" style="font-size:0.8em;"></span> <strong>FTP Download</strong></center></h3>
       <p>You may instead download my <b>FTP</b> server found at <a href="ftp://keyserver.mattrude.com">ftp://keyserver.mattrude.com</a>.</p>
       <p>Use the following command:</p> <pre style="font-size:0.85em;">wget -m -nH --cut-dirs=3 ftp://keyserver.mattrude.com/current</pre>
     </div>
