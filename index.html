@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: frontpage
 ---
 
+{% include title.html %}
+{% include menu.html %}
 {% include welcome.html %}
-
 {% for section in site.data.frontpage %}
 <!-- The {{ section.name }} section -->
 <div class="container offsetanchor" id="{{ section.slug }}">

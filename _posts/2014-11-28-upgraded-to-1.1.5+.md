@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: changelog
 title: Upgraded to SKS Keyserver 1.1.5+
 date: 2014-11-28 18:00
 category: Changelog

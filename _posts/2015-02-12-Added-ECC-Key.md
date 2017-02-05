@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: changelog
 title: Added GnuPG 2.1 Build Guide
 date: 2015-01-11 18:00
 category: Changelog

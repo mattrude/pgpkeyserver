@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: changelog
 title: Moved Server to Digital Ocean
 date: 2015-10-03 17:00
 category: Changelog

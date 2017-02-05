@@ -6,7 +6,6 @@ description: My GnuPG 2.1.11 build for a Ubuntu 14.04 LTS.
 tags: PGP, GnuPG
 ---
 
-# GnuPG 2.1.11 Build Instructions
 Below you is my build instructions for [GnuPG 2.1.11](https://lists.gnupg.org/pipermail/gnupg-announce/2016q1/000383.html) released on 26-Jan-2016. These instructions are built for a [Ubuntu](http://www.ubuntu.com/server) 14.04 LTS server.
 
 ## Install the needed depends

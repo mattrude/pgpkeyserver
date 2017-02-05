@@ -9,8 +9,6 @@ redirect_from:
   - /pka/
 ---
 
-## Publishing A Public PGP Key via DNS: <small>Public Key Association</small>
-
 A keyserver is not the only way to publish your public pgp key.
 
 One method of publishing public pgp keys, other then on a keyserver, is to use a <abbr title="Dynamic Name Server">DNS</abbr> record with a <abbr title="Public Key Association">PKA</abbr> (Public Key Association) entry. PKA is a simple way of storing the look up information for your public key in a DNS `TXT` record. PKA allows a user to send encrypted data to a email address by query the DNS server, caching the key&#039;s fingerprint, downloading the public key from the provided URL and validating the key using the cached fingerprint.

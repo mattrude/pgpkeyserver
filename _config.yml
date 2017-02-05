@@ -15,7 +15,8 @@ owner_pgpkey: "0xc4909ee495b0761f"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+#permalink: pretty
+permalink: /changelog/:year-:month-:day-:title/
 highlighter: rouge
 date: YYYY-MM-DD HH:MM
 

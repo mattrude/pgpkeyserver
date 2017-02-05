@@ -14,22 +14,27 @@
     <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.url }}">
     {% endif %}
     <style type="text/css">
-    html,body {
-      width: 100%;
-      min-height: 100%;
-      height:auto !important; 
-      height: 100%;
-      overflow-y: auto;
-      overflow: auto;
-    }
-    .fill {
-      min-height: 100%;
-      height:auto !important; 
-      height: 100%;
-    }
+        html,body {
+          height: 100%;
+        }
+        #wrap {
+          min-height: 100%;
+          height: auto !important;
+          height: 100%;
+          margin: 0 auto 0px;
+        }
+        #push,#footer {
+          height: 60px;
+        }
+        #footer {
+          background-color: #f5f5f5;
+        }
+        .container .credit {
+            margin: 20px 0;
+        }
     </style>
 <!--
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
 -->
 </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="70">
+<body data-spy="scroll" data-target=".navbar" data-offset="70">

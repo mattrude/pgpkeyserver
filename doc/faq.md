@@ -1,10 +1,8 @@
 ---
 layout: default
-title: FAQ
+title: Frequently Asked Questions
 permalink: /doc/faq/
 ---
-
-# Frequently Asked Questions
 
 Below you will find questions pertaining to this server (and perhaps other sks-keyservers).
 
