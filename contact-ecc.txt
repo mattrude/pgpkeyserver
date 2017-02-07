@@ -1,24 +1,32 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
+# Contact Information of Matt Rude
+
 This document contains my personal contact information, personal
 websites, social media profiles, and PGP public keys and fingerprints.
 
+## Addresses and Websites
+
 * Name: Matt Rude
+* Location: Minneapolis, Minnesota, USA
 * Email: matt@mattrude.com
 * XMPP: matt@mattrude.com
 * Website: https://mattrude.com
 * Keyserver: https://keyserver.mattrude.com
 * Personal wiki: https://wiki.mattrude.com
 
-My Social Media Profile
+## Social Media Profile
 
 * Github: https://github.com/mattrude
 * Twitter: https://twitter.com/mdrude
+* Keybase: https://keybase.io/mattrude
 * Facebook: https://facebook.com/mattrude
 * Instagram: https://instagram.com/mattdrude
 
-XMPP OMEMO Public Key:
+## Public Keys
+
+XMPP OMEMO Public fingerprint:
 
     a4b88aca f63e1f05 6f8fd700 7847baf3
     3f653098 64d478a7 d7387c88 fd8fb834
@@ -38,8 +46,8 @@ ECC PGP Key information:
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWJeXqQAKCRADFM2FAzBf
-NbrpAP9KSyq2DPSppl6+yqgeLW+qLHfqcORCD+CC+RdYSVPBwQEAmUX5NDC4Q3/I
-/SFNQiItAkh0RhVCSlAfUOKo/6zcZiw=
-=Mvvt
+iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWJmFPAAKCRADFM2FAzBf
+NbnDAQDNJ3+vxJhffVBBKD+fdf4ORmWGxUd+kl/4rAqCfEGajAD/b6d++was4t8i
+eX2GhopT4k8KKVOXyq6q50ai2qHdhG0=
+=HAYK
 -----END PGP SIGNATURE-----
