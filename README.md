@@ -4,6 +4,8 @@
 
 This repsitory holds the source for a [SKS PGP Key Server](https://sks-keyservers.net/) website similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).  This is only the HTML source code for the supporting documention site for the PGP server, not the PGP Keyserver software used on the server.
 
+If you are building your own sks-keyserver, and would like to diplay a nice frontend for it, please look at the [pgpkeyserver-lite](https://github.com/mattrude/pgpkeyserver-lite) project for a simple frontend site.
+
 ## Jekyll
 
 [Jekyll](http://jekyllrb.com/) is a static site generator built in [Ruby on Rails](http://rubyonrails.org/). With this approach, you are able to build a high power build site, using a low power, very stable webserver running a static site.
