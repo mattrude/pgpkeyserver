@@ -45,7 +45,10 @@ A simple script would be
         server_name pgp.ipfire.org;
         server_name keys.gnupg.net;
         root /var/www/keyserver.mattrude.com;
-
+        
+        error_page 404 /404.html;
+        error_page 502 /502.html;
+        
         rewrite ^/stats /pks/lookup?op=stats;
         rewrite ^/s/(.*) /pks/lookup?search=$1;
         rewrite ^/search/(.*) /pks/lookup?search=$1;
