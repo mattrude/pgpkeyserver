@@ -32,4 +32,4 @@ sitemap: false
     <p><strong>Use the below command to download all the current dump files.</strong></p>
     <pre>wget -crp -e robots=off --level=1 --cut-dirs=3 -nH -A pgp,txt https://keyserver.mattrude.com/dump/current/</pre>
   </div>
-  </div>
+</div>
