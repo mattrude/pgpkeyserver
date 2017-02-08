@@ -1,4 +1,6 @@
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+{% if page.url == "/" %}
+  <nav id="mainNav" class="navbar-inverse navbar navbar-fixed-top affix-top">{% else %}
+  <nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top affix-top">{% endif %}
     <div class="container">
     <div class="row">
       <div class="navbar-header">

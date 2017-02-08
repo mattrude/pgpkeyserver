@@ -27,7 +27,7 @@ There are multiple ways to create a OpenPGP DANE DNS Record, below we will talk 
 ### Method 1: Using GnuPG 2.1.9+
 GnuPG version [2.1.9](https://lists.gnupg.org/pipermail/gnupg-announce/2015q4/000380.html) and greater has a nice little function, `--print-dane-records` that prints the dane record for you.
 
-    gpg2 --print-dane-records -k m@mattrude.com
+    gpg2 --export-options export-dane --export m@mattrude.com
 
 You should receive an output similar to the text below.
 

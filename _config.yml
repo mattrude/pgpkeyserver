@@ -1,8 +1,8 @@
 # Site settings
-title: PGP Public Keyserver
+title: OpenPGP Keyserver
 email: matt@mattrude.com
 description: ""
-url: "//keyserver.mattrude.com"
+url: "https://keyserver.mattrude.com"
 name: "keyserver.mattrude.com"
 baseurl: ""
 destination: "/var/www/keyserver.mattrude.com"
