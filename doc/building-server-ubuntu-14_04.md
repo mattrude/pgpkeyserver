@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Building a PGP SKS Keyserver
-permalink: /guides/building-server/
+title: Building a PGP SKS Keyserver on Ubuntu 14.04 LTS
+permalink: /guides/building-server/ubuntu-14/
 ---
 
 <div class="alert alert-warning">
-  <strong>Notice!</strong> This page is written with Ubuntu 16.04 LTS in mind, please see the <a href='/guides/building-server/ubuntu-14/'>Ubuntu 14.04 LTS</a> version of this document.
+  <strong>Notice!</strong> This page is written with Ubuntu 14.04 LTS in mind, please see the <a href='/guides/building-server/'>Ubuntu 16.04 LTS</a> version of this document.
 </div>
 
-A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks keyserver](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks keyserver on [Ubuntu](http://www.ubuntu.com/) 16.04 LTS.
+A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks keyserver](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks keyserver on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS.
 
 ## Building your own PGP SKS Server
 Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a pretty straight forward project if you are use to running servers.
@@ -26,16 +26,16 @@ To build a production SKS Server, you must...
 * [Patches for the sks-keyserver software](#patches-for-the-sks-keyserver-software)
 
 ## Building the SKS Daemon
-The following is for [Ubuntu](http://www.ubuntu.com/) 16.04 LTS
+The following is for [Ubuntu](http://www.ubuntu.com/) 14.04 LTS
 
-    apt-get -y install gcc ocaml libdb-dev gnupg nginx wget
+    apt-get -y install gcc ocaml libdb6.0-dev gnupg nginx wget
 
 After installing the required software, you need to download SKS
 
     gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x0B7F8B60E3EDFAE3
-    wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.6.tgz
-    wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.6.tgz.asc
-    gpg --keyid-format long --verify sks-1.1.6.tgz.asc
+    wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz
+    wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.5.tgz.asc
+    gpg --keyid-format long --verify sks-1.1.5.tgz.asc
 
 The output of the last command should be
 
@@ -47,13 +47,17 @@ gpg: Good signature from "SKS Keyserver Signing Key"
 
 Now, untar the software
 
-    tar -xzf sks-1.1.6.tgz
-    cd sks-1.1.6
+    tar -xzf sks-1.1.5.tgz
+    cd sks-1.1.5
 
-Next copy the **Makefile.local.unused** to **Makefile.local** and change `ldb-4.6` to `ldb-5.3` for Ubuntu.
+Next copy the **Makefile.local.unused** to **Makefile.local** and change `ldb-4.6` to `ldb-6.0` for Ubuntu.
 
     cp Makefile.local.unused Makefile.local
-    sed -i 's/ldb\-4.6/ldb\-5.3/' Makefile.local
+    sed -i 's/ldb\-4.6/ldb\-6.0/' Makefile.local
+
+If you would like to upgrade your sks install to sks 1.1.5+ with ECC support, you can apply the patch quick with the following command:
+
+    curl -sL "https://bitbucket.org/skskeyserver/sks-keyserver/commits/40280f59d0f503da1326972757168aa42335573f/raw/" |patch -p1
 
 Last, build the software
 
@@ -103,10 +107,10 @@ The keydump is about 7.3GB as of Oct 2015, increasing at a rate of about one gig
 divided into a bunch of individual numbered files so you&#39;ll need to fetch all of them. Because
 I&#39;m too lazy to spend 8 hours sitting there doing it manually I did it like this:
 
-    mkdir -p /var/lib/sks/dump
+    mkdir /var/lib/sks/dump
     cd /var/lib/sks/dump
-    wget -crp -e robots=off --level=1 --cut-dirs=3 -nH \
-    -A pgp,txt https://keyserver.mattrude.com/dump/current/
+    wget -c -r -p -e robots=off --timestamping --level=1 --cut-dirs=3 \
+    --no-host-directories http://keyserver.mattrude.com/dump/current/
 
 Many hours later, check that all the pieces downloaded correctly by comparing their checksums
 against the list published by the dump provider:
@@ -287,3 +291,7 @@ exit 0
 {% endhighlight %}
 
 ## Patches for the sks-keyserver software
+
+### SKS-Keyserver v1.1.5
+
+* [sks-1.1.5-download-txt.patch](https://gist.github.com/mattrude/709b2726ceb9d2d3386b) - Patch to change the downloadable "pgpkey.asc" file to a txt file, viewable in a web browser. ([example](http://keyserver.mattrude.com/pks/lookup?search=0x27143affdd23bf73&options=mr&op=get)) - [download](https://gist.githubusercontent.com/mattrude/709b2726ceb9d2d3386b/raw/sks-1.1.5-download-txt.patch)
