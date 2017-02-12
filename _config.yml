@@ -19,7 +19,7 @@ owner_instagram: "mattdrude"
 owner_website: "https://mattrude.com"
 
 # Analytics settings
-#google_analytics_id: UA-9532791-9
+google_analytics_id: UA-9532791-9
 
 # Build settings
 markdown: kramdown
@@ -39,9 +39,8 @@ exclude:
 - css/small.less
 
 gems:
-- jekyll-sitemap
-#- jekyll-less
 #- jekyll-press
+- jekyll-sitemap
 - jekyll-redirect-from
 - jekyll-last-modified-at
 

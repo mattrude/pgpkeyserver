@@ -69,7 +69,7 @@ echo "This is the PGP key server dump from keyserver.mattrude.com created: $RUND
 
 On a linux/unix system, you may download this directory via the following command:
 
-wget -c -r -p -e robots=off --level=1 --cut-dirs=3 --no-host-directories -A pgp,txt http://keyserver.mattrude.com/dump/$SKSDATE/
+wget -crp -e robots=off -l1 --no-parent --cut-dirs=3 -nH -A pgp,txt https://keyserver.mattrude.com/dump/$SKSDATE/
 
 These files were created with the following command: sks dump $COUNT $SKSDATE/ sks-dump
 
