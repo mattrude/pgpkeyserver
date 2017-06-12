@@ -26,19 +26,25 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
 ## Public Keys
 
-XMPP OMEMO Public fingerprint:
+XMPP OMEMO Public fingerprints:
+ 
+    2211712a f24bfcaa 3c078673 e493ce03
+    2b8bb3df 8e6d727d 813b5234 f148b219
 
     a4b88aca f63e1f05 6f8fd700 7847baf3
     3f653098 64d478a7 d7387c88 fd8fb834
 
-RSA PGP Key information:
+    776DCE9B 34AFFC32 4E5CACAA D6AA7DBC
+    A9DF8BF4 E3D6C4FC 188850EC 0D9EC30B
+
+RSA OpenPGP Key information:
 
     uid = Matt Rude <matt@mattrude.com>
     pub = rsa2048/95B0761F 2015-03-02
     sub = rsa2048/BC158061 2015-03-02
     fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
 
-ECC PGP Key information:
+ECC OpenPGP Key information:
 
     uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
@@ -46,12 +52,12 @@ ECC PGP Key information:
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAliZit8ACgkQxJCe5JWw
-dh/Iygf+IvB+lvdgeCGruP/TOow9OClYKsf+ZNFonmTShpwv9RE1MVmriAyKaTXy
-p5W7zif4zXxgCobOqNw33YQHT2mdSJCYlC585UVKXdAn7wcesrdO3MSSd7ETgNLn
-j0WlDBGVA2/qP9jVrqaYJU1ZIs9ENwmeiw5ZHJHgZzE5njAN9ic7MvEg7bJah/+l
-D9LAgqpIfnpuwyPlWFloxVyrrJgUTEAt+EH0tKS6TUTxcq/xN1yI+XreiJ9fZTk+
-cEvvJeLgrcA4GY6Om3bIBMM0cOG4NgEhMIs/iWbOzoNWTY2IdVrGSN5ch/BqvE5A
-Sr24HqiezVybkRZLJHoJdZEnzcMXtg==
-=98Ia
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlk+23MACgkQxJCe5JWw
+dh/jKQf+Oa4zKDa1wllRotLoAtCV0ex/yQPT7jQZq520YsHZkhR5/IBj0oRhP9KK
+W8AHRU/zhxZQEJiBur1i1UnznPpWHyXahBuX0iggK9iUHmsM14bldI8E7fiofMrf
+oL5ko2v0TISzTdHue+QxJS94WmMrnkzYr9HlRuCKwJ7xuZwZ3Jp9ydiu4iWU06nc
+w0PgHsL88rg1TMt4jgfm4XKUwAuXwV1dgP1BP6eqQKHc9I5Q2ZKFdQHk2K74iAG8
+kbsZSbXVTmRFJ0pc1BajD0Vy1zfejJE8mlFd6ZwzXEdY+tRb/BroJZ/Mj1nXfCVR
+9CmJyhuc5dCgP/A3O/o9MMz4LkZguQ==
+=9j8M
 -----END PGP SIGNATURE-----
