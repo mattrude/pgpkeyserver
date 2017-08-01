@@ -76,7 +76,6 @@ A simple script would be
         }
     }
 
-
 ### Installing Jekyll
 Since Jekyll only needs to be installed on your build system. Below are a few quick how-to's how setting up your build system.
 
