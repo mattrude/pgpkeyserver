@@ -3,8 +3,9 @@ Hash: SHA256
 
 # Contact Information of Matt Rude
 
-This document contains my personal contact information, personal
-websites, social media profiles, and PGP public keys and fingerprints.
+This document contains my personal contact information,
+personal websites, social media profiles, and PGP public
+keys and XMPP OMEMO fingerprints.
 
 ## Addresses and Websites
 
@@ -28,12 +29,12 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
 ### XMPP OMEMO Public fingerprints:
 
-* Phone (Primary)
+* Phone (Primary) - (JID: matt@mattrude.com)
  
     2211712a f24bfcaa 3c078673 e493ce03
     2b8bb3df 8e6d727d 813b5234 f148b219
 
-* Laptop
+* Laptop - (JID: matt@mattrude.com)
 
     776dce9b 34affc32 4e5cacaa d6aa7dbc
     a9df8bf4 e3d6C4fc 188850ec 0d9ec30b
@@ -44,19 +45,18 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
     uid = Matt Rude <matt@mattrude.com>
     pub = rsa2048/95B0761F 2015-03-02
-    sub = rsa2048/BC158061 2015-03-02
-    fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
+    fingerprint = 71FD 20E3 2815 8C32 2133 FBBE C490 9EE4 95B0 761F
 
 * ECC OpenPGP Key information:
 
     uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
-    fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
+    fingerprint = 77F1 D65B 5FF0 54DC 9286 6078 0314 CD85 0330 5F35
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdnTAAKCRADFM2FAzBf
-Nc+HAP9+aRQgHeSFg0nu5DAPmqrGcxac3fPO5g3SO5UFoPhtywD+Iq3dcYqs7LpM
-uDHYpcvMB/i0Gop6RZUhiMOgpNzpphM=
-=62Vw
+iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdocgAKCRADFM2FAzBf
+NZUpAPsHjJS5hP+g3RBDW8N5d/zhEAO4WMLkyybmEtJKBiVtyQEA7ivjA4n2RK0d
+R1W1JdZFUKAM2hA2vyonAMwJss8QxTA=
+=RwqY
 -----END PGP SIGNATURE-----

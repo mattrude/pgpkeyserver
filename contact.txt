@@ -3,8 +3,9 @@ Hash: SHA256
 
 # Contact Information of Matt Rude
 
-This document contains my personal contact information, personal
-websites, social media profiles, and PGP public keys and fingerprints.
+This document contains my personal contact information,
+personal websites, social media profiles, and PGP public
+keys and XMPP OMEMO fingerprints.
 
 ## Addresses and Websites
 
@@ -28,12 +29,12 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
 ### XMPP OMEMO Public fingerprints:
 
-* Phone (Primary)
+* Phone (Primary) - (JID: matt@mattrude.com)
  
     2211712a f24bfcaa 3c078673 e493ce03
     2b8bb3df 8e6d727d 813b5234 f148b219
 
-* Laptop
+* Laptop - (JID: matt@mattrude.com)
 
     776dce9b 34affc32 4e5cacaa d6aa7dbc
     a9df8bf4 e3d6C4fc 188850ec 0d9ec30b
@@ -44,23 +45,22 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
     uid = Matt Rude <matt@mattrude.com>
     pub = rsa2048/95B0761F 2015-03-02
-    sub = rsa2048/BC158061 2015-03-02
-    fingerprint = 71FD 20E3 2815 8C32 2133  FBBE C490 9EE4 95B0 761F
+    fingerprint = 71FD 20E3 2815 8C32 2133 FBBE C490 9EE4 95B0 761F
 
 * ECC OpenPGP Key information:
 
     uid = Matt Rude <m@mattrude.com>
     pub = nistp256/03305F35 2015-02-15
-    fingerprint = 77F1 D65B 5FF0 54DC 9286  6078 0314 CD85 0330 5F35
+    fingerprint = 77F1 D65B 5FF0 54DC 9286 6078 0314 CD85 0330 5F35
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3Z0wACgkQxJCe5JWw
-dh+OqAgAghF83IObycp3pg0Z6Uw6uzykONhkvHzGmjTQoijb5CCFQGQBDCQvrMee
-jz4YRzx3SbpImS+y6CDNDZBjEj2odj0cjUKCNKNDR3WEX6gyWHshZWA0Sh7jWXMQ
-4bYUmACvdhi+XoEBJD2cy6Oc88rs7fz0ghAD8fW+SvHWO8MgDVDUmQGp+6mrMa7O
-A07di5tPplTNXxM4eTqaIH5r9AR/QjkxhmTMZeVSf3W0S4Q15pP+PCkNx4xH2cOG
-J5PpgAnvN3lhn6BmBUbkvbgGeRChxpfrrKEmug3RIXs8ADWU1ey3TCnbt2r0zaDW
-pThr+e0/6N1A5TWOCGbu4bFpmaUSPg==
-=nBlR
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3aHIACgkQxJCe5JWw
+dh8URAf9F2hLbB0BLOUdYhnjC65HQiJvZg8gIVfNVFTjMgIxpfWjdiLQKxCMZxY/
+7EXkvvHVD2/GDO/I3rQJJ/7eWw2laJFai90NAwSbTHWth4Qtn077760TXN1EqMIA
+lhwxoz7pqxkVU68ED+xLJfJZ5BD2BWNk3fl1RVv/GsHSE8R9JGteho7JrBg0vNPR
+eAPRNJHzA32ybjFnB3GDoEDro8vfimGzzUfe1qAbv4g0GdiTCm27e4wyH/HEg8Km
+ZllfYZrIbor2hryFiNnx9ig9/S+/2e/5wmIxzHdiQxt96gCYMCDxGzysGkaRXP3a
+Kxh6PHqgd+dkaq+Lg0JjdFKAWLxnhg==
+=V049
 -----END PGP SIGNATURE-----
