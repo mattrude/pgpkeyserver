@@ -19,8 +19,8 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 * Laptop (2016-12-02)
 
-    776DCE9B 34AFFC32 4E5CACAA D6AA7DBC
-    A9DF8BF4 E3D6C4FC 188850EC 0D9EC30B
+    776dce9b 34affc32 4e5cacaa d6aa7dbc
+    a9df8bf4 e3d6C4fc 188850ec 0d9ec30b
 
 ### Unused Old Public Keys
 
@@ -31,12 +31,12 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3ZsUACgkQxJCe5JWw
-dh/Q9AgAkD+ijvq2bQfSLY4j65g997EXrQP5tcwqFEpT+IF+0sktUI9U+0e1lGGj
-0tQz7EAlVXQZtTrdi/FA1Lu1D31ZB2IZ4mli+Jsitu3Eu5isNRL0vvX31f0g6KsP
-v3csptjeIJaIK0vXXUb2qupZJkKBUBsNXckcUtkr8kA68yJtfwQnWt+ix18d5zLJ
-5zMvDj18rfISFaPBLqPf9nWp7UWuc0tKkuipWLTHuUFHGoHyOl2gEyXyZr0GcsmL
-n8zBJV1A7ldCNfkahM8Yx9CBB12NhG1oVydkwCEUiD/e3JfKMIjpR6NQjMUG+8P/
-02oIbOzBckzdLTmBnX/aoENAGpSr1Q==
-=afkY
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3Z0wACgkQxJCe5JWw
+dh8HEAf+KamrO9UFAPOMoT9FHPGIEnasyv5piblF53rZSD/Gvmdl5UWN32yhdgrM
+SibxfWOC3GGZXXnVCZMKiW/bdChZDwkuxBoASD6jGaD9kcgxVEQIxoWjsBp9vnm1
+1iKqTr7huDyWZzdbi/yItm67ZygaDsBaIAWdrH452DpuizAWhrqPSKNd8ET2+sjQ
+AwgK3wWYsqDABs0bNC1vrxe93a8NxIDBleh+8mUEg9SxTpvQiSCneSuFA7EulZ3h
+kaXwkXFQ9FD07LTVcGDomc6LIcFxRe7JVZ0Bk7i6rPEMjEIsW5paWGt9L5zs9Rij
+KKVMzgSsymkos4/6dRhN7Nizyu04Mg==
+=GHxN
 -----END PGP SIGNATURE-----
