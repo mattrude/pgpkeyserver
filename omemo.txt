@@ -31,12 +31,12 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3ZjYACgkQxJCe5JWw
-dh9tNwf9EFi8/HFCKKirreEkaAEAy3vt3AR9YyUtEoQMYH9+/BZscpfi6CTzUUUU
-eHlTatI8gcH7nvQdOjz35ARk2P5dLyVYoF2fNN4HSrKLGsxZvpYW/gvL53A/c3im
-+Oi43onAn4pSAZ/uMlBuYr29qF0WQjgyls4cCq5zsviUUYTXbnXFOqz09EczoFr6
-D5I85TOG69w9EPacQAasH7j/iXiS7jxfSdTmQHQAiGUIUWpr8MvamCFzJCJQptlj
-lmG/tCPYs7btP5sSoljP+GZfulraruHAonDVeCU3iXRN01FaeWd1jynlmz6giIuj
-GmZfHrhSi3HqnasV0KYKYMr+hJql2A==
-=y+iT
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3ZsUACgkQxJCe5JWw
+dh/Q9AgAkD+ijvq2bQfSLY4j65g997EXrQP5tcwqFEpT+IF+0sktUI9U+0e1lGGj
+0tQz7EAlVXQZtTrdi/FA1Lu1D31ZB2IZ4mli+Jsitu3Eu5isNRL0vvX31f0g6KsP
+v3csptjeIJaIK0vXXUb2qupZJkKBUBsNXckcUtkr8kA68yJtfwQnWt+ix18d5zLJ
+5zMvDj18rfISFaPBLqPf9nWp7UWuc0tKkuipWLTHuUFHGoHyOl2gEyXyZr0GcsmL
+n8zBJV1A7ldCNfkahM8Yx9CBB12NhG1oVydkwCEUiD/e3JfKMIjpR6NQjMUG+8P/
+02oIbOzBckzdLTmBnX/aoENAGpSr1Q==
+=afkY
 -----END PGP SIGNATURE-----
