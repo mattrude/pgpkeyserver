@@ -35,8 +35,8 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
 * Laptop
 
-    a4b88aca f63e1f05 6f8fd700 7847baf3
-    3f653098 64d478a7 d7387c88 fd8fb834
+    776dce9b 34affc32 4e5cacaa d6aa7dbc
+    a9df8bf4 e3d6C4fc 188850ec 0d9ec30b
 
 ### OpenPGP Public Keys
 
@@ -55,8 +55,8 @@ websites, social media profiles, and PGP public keys and fingerprints.
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbXBogAKCRADFM2FAzBf
-NRjkAP0V47lo4LYiH4gNM2WBhrmgvzeh7GWxeNkU+dR+/GOF1QD+JR5jZMcZwYP3
-023SN6zeK3aAamxIs6JYknkCVTURBd4=
-=fLmf
+iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdmNgAKCRADFM2FAzBf
+NduKAP48p5XJ/xRN+gAH553/yjGhzn0cgBERQ0NxOnLr8R8NdAD/Y5jyWUMD+baU
+b09SX1gs9hiCLp/AamB6rUQqZvw67bY=
+=nVPH
 -----END PGP SIGNATURE-----

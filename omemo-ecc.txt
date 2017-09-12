@@ -11,7 +11,7 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 ## Below are my OMEMO  Public Keys.
 
-* Android Phone (2017-06-07)
+* Phone (Primary) (2017-06-07)
 
     2211712a f24bfcaa 3c078673 e493ce03
     2b8bb3df 8e6d727d 813b5234 f148b219
@@ -22,16 +22,17 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
     776DCE9B 34AFFC32 4E5CACAA D6AA7DBC
     A9DF8BF4 E3D6C4FC 188850EC 0D9EC30B
 
-### Unused Public Keys
+### Unused Old Public Keys
 
 * Android Phone (2016-10-12 to 2017-06-07)
 
     a4b88aca f63e1f05 6f8fd700 7847baf3
     3f653098 64d478a7 d7387c88 fd8fb834
+
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbXBogAKCRADFM2FAzBf
-NY17AQCSiq5klBBpOpW506RZzEEuq7woTC5AbgTaT1k5Wcx4IAD+KEEC23WBedEn
-+kL82IRLph6bYpFma/2EUGvzVJ9iXDU=
-=U6u/
+iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdmNgAKCRADFM2FAzBf
+NSQJAP49qyrZispkgYGuYM8RvSbL9MIxCqHhwzS00K+m99CmaAD+KeXNQS7SjDE8
+UCAtkCFZsCIeNuOfiQqQ+v7ZF/F7Og4=
+=Xyh1
 -----END PGP SIGNATURE-----

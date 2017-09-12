@@ -11,7 +11,7 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 ## Below are my OMEMO  Public Keys.
 
-* Android Phone (2017-06-07)
+* Phone (Primary) (2017-06-07)
 
     2211712a f24bfcaa 3c078673 e493ce03
     2b8bb3df 8e6d727d 813b5234 f148b219
@@ -22,20 +22,21 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
     776DCE9B 34AFFC32 4E5CACAA D6AA7DBC
     A9DF8BF4 E3D6C4FC 188850EC 0D9EC30B
 
-### Unused Public Keys
+### Unused Old Public Keys
 
 * Android Phone (2016-10-12 to 2017-06-07)
 
     a4b88aca f63e1f05 6f8fd700 7847baf3
     3f653098 64d478a7 d7387c88 fd8fb834
+
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm1waIACgkQxJCe5JWw
-dh9z8wf/aGbQCtDMaIZu5G0j5WjRnM0yeh/1Ptc+0z+wxX+mvQvpA5aUjkmbg7vp
-j2yTcoDUfUglvPkvW/UMnEV+8LBRtDhjEkF0Dykq5FvSGa3Uc074E2vuWHtws3j8
-CQupVM3ttommEa5DWFzzHDr1E4OT+QBGTjrdkLDFohpjltBflI/wF1438RR7f6oK
-pbn1eGIB3Tx+rq/Bv1aSP08U+rrrT7hSAkI6ZxJIZkr2Ds5lppWE3hhrDaCby7pC
-78xbeQYFFUrXydKnBic4L35G0lwzFrJWC9FuwUKkbYSuHIq5rxiI/nsQomdplnq9
-cxkPf9fPAgLeYX1YU/ZOeazwrWMmaQ==
-=z6cX
+iQEzBAEBCAAdFiEEcf0g4ygVjDIhM/u+xJCe5JWwdh8FAlm3ZjYACgkQxJCe5JWw
+dh9tNwf9EFi8/HFCKKirreEkaAEAy3vt3AR9YyUtEoQMYH9+/BZscpfi6CTzUUUU
+eHlTatI8gcH7nvQdOjz35ARk2P5dLyVYoF2fNN4HSrKLGsxZvpYW/gvL53A/c3im
++Oi43onAn4pSAZ/uMlBuYr29qF0WQjgyls4cCq5zsviUUYTXbnXFOqz09EczoFr6
+D5I85TOG69w9EPacQAasH7j/iXiS7jxfSdTmQHQAiGUIUWpr8MvamCFzJCJQptlj
+lmG/tCPYs7btP5sSoljP+GZfulraruHAonDVeCU3iXRN01FaeWd1jynlmz6giIuj
+GmZfHrhSi3HqnasV0KYKYMr+hJql2A==
+=y+iT
 -----END PGP SIGNATURE-----
