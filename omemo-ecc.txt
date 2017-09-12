@@ -9,15 +9,15 @@ Ratchet and PEP which can be freely used and implemented by anyone.
 The protocol has been audited by a third party. More information
 about OMEMO on XMPP can be found at https://conversations.im/omemo
 
-## Below are my OMEMO  Public Keys.
+## Below are my OMEMO Public Keys for JID matt@mattrude.com.
 
-* Phone (Primary) (2017-06-07)
+* Phone (Primary) (2017-06-07) - (JID: matt@mattrude.com)
 
     2211712a f24bfcaa 3c078673 e493ce03
     2b8bb3df 8e6d727d 813b5234 f148b219
 
 
-* Laptop (2016-12-02)
+* Laptop (2016-12-02) - (JID: matt@mattrude.com)
 
     776dce9b 34affc32 4e5cacaa d6aa7dbc
     a9df8bf4 e3d6C4fc 188850ec 0d9ec30b
@@ -31,8 +31,8 @@ about OMEMO on XMPP can be found at https://conversations.im/omemo
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdocgAKCRADFM2FAzBf
-NUpiAQCfwa1WSIa8GHqEiGWtuZubVryNkCQs8wr/MDlRM+n/nAD/emlabc3++Qoj
-zPd1vVWzX2FkxCUBa7Nifju1htXhPu8=
-=mU8w
+iHUEARMIAB0WIQR38dZbX/BU3JKGYHgDFM2FAzBfNQUCWbdpBAAKCRADFM2FAzBf
+NUIyAP43NbcSzzcWb80LC8WpVDGBCVXlERoV7TFIZyUV3+hVawEA7BgkaiYNnG66
+Fq8MPVz1x8lbgxbMRHqpdHVNH2GEz7E=
+=To17
 -----END PGP SIGNATURE-----
