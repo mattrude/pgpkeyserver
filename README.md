@@ -1,6 +1,6 @@
 # PGP Keyserver Site Source
 
-[![Build Status](https://travis-ci.org/mattrude/pgpkeyserver.svg?branch=master)](https://travis-ci.org/mattrude/pgpkeyserver) [![GitHub license](https://img.shields.io/github/license/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/tag/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/tags) [![GitHub commits since](https://img.shields.io/github/commits-since/mattrude/pgpkeyserver/v0.2.0.svg)](https://github.com/mattrude/pgpkeyserver/compare/v0.1.1...master) [![Open Issues](https://img.shields.io/github/issues-raw/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/issues) [![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)](http://github.com/mattrude/pgpkeyserver)
+[![Build Status](https://travis-ci.org/mattrude/pgpkeyserver.svg?branch=master)](https://travis-ci.org/mattrude/pgpkeyserver) [![GitHub license](https://img.shields.io/github/license/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/blob/master/LICENSE) [![GitHub tag](https://img.shields.io/github/tag/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/tags) [![GitHub commits since](https://img.shields.io/github/commits-since/mattrude/pgpkeyserver/v0.2.0.svg)](https://github.com/mattrude/pgpkeyserver/compare/v0.1.1...master) [![Open Issues](https://img.shields.io/github/issues-raw/mattrude/pgpkeyserver.svg)](https://github.com/mattrude/pgpkeyserver/issues) [![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)](http://github.com/mattrude/pgpkeyserver)
 
 This repsitory holds the source for a [SKS PGP Key Server](https://sks-keyservers.net/) website similer to [keyserver.mattrude.com](http://keyserver.mattrude.com).  This is only the HTML source code for the supporting documention site for the PGP server, not the PGP Keyserver software used on the server.
 
@@ -115,7 +115,7 @@ After installing Ruby via the [Ruby Installer](http://rubyinstaller.org/download
                     Version 3, 29 June 2007
 
     OpenPGP Key Server Website for keyserver.mattrude.com
-    Copyright (C) 2012-2017 Matt Rude <matt@mattrude.com>
+    Copyright (C) 2012-2018 Matt Rude <matt@mattrude.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
