@@ -38,7 +38,7 @@ exclude:
 - css/site.less
 - css/small.less
 
-gems:
+plugins:
 #- jekyll-press
 - jekyll-sitemap
 - jekyll-redirect-from
