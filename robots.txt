@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /dump/*/
+Disallow: /search/
+Disallow: /s/
+Disallow: /key/
+Disallow: /dump/current/
 Disallow: /pks/
 
 Sitemap: https://keyserver.mattrude.com/sitemap.xml 

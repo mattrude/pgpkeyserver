@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Building a PGP SKS Keyserver
-permalink: /guides/building-server/
+permalink: /guides/building-server/ubuntu-16/
 ---
 
 <div class="alert alert-warning">
-  <strong>Notice!</strong> This page is written with Ubuntu 18.04 LTS in mind, please see the <a href='/guides/building-server/ubuntu-16/'>Ubuntu 16.04 LTS</a> or <a href='/guides/building-server/ubuntu-14/'>Ubuntu 14.04 LTS</a> versions of this document.
+  <strong>Notice!</strong> This page is written with Ubuntu 16.04 LTS in mind, please see the <a href='/guides/building-server/ubuntu-16/'>Ubuntu 16.04 LTS</a> or <a href='/guides/building-server/ubuntu-14/'>Ubuntu 14.04 LTS</a> versions of this document.
 </div>
 
-A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks keyserver](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks keyserver on [Ubuntu](http://www.ubuntu.com/) 18.04 LTS.
+A Key Server is used to distribute [PGP/GPG](http://en.wikipedia.org/wiki/Pretty_Good_Privacy) keys between different users.  One of the most popular key servers for use with pgp/gpg is the [sks keyserver](https://bitbucket.org/skskeyserver/sks-keyserver). This document will walk you through downloading, installing, and setting up a sks keyserver on [Ubuntu](http://www.ubuntu.com/) 16.04 LTS.
 
 ## Building your own PGP SKS Server
 Building a [SKS](https://bitbucket.org/skskeyserver/sks-keyserver) server is a pretty straight forward project if you are use to running servers.
@@ -26,7 +26,7 @@ To build a production SKS Server, you must...
 * [Patches for the sks-keyserver software](#patches-for-the-sks-keyserver-software)
 
 ## Building the SKS Daemon
-The following is for [Ubuntu](http://www.ubuntu.com/) 18.04 LTS
+The following is for [Ubuntu](http://www.ubuntu.com/) 16.04 LTS
 
     apt-get -y install gcc ocaml libdb-dev gnupg nginx wget
 
