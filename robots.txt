@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /search/
-Disallow: /s/
 Disallow: /key/
 Disallow: /dump/current/
 Disallow: /pks/
