@@ -1,66 +1,21 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <title>PGP Public Keyserver | Error: 502 | Schedule Maintenance</title>
-  <meta name='viewport' content='width=device-width'>
-  <meta name='description' content=''>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <style>td, th {padding: 5px;}</style>
-  <link rel='shortcut icon' href='https://keyserver.mattrude.com/favicon.ico'/>
-</head>
-<body data-spy='scroll' data-target='.navbar' data-offset='70'>
-  <nav class='navbar navbar-inverse navbar-fixed-top'>
-    <div class='container'>
-      <div class='navbar-header'>
-        <button class='navbar-toggle collapsed' data-target='#navbar' data-toggle='collapse' type='button'>
-          <span class='sr-only'>Toggle navigation</span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-          <span class='icon-bar'></span>
-        </button>
-        <a class='navbar-brand' href='https://keyserver.mattrude.com'>OpenPGP keyserver</a>
-      </div>
-      <div class='navbar-collapse collapse' id='navbar'>
-        <ul class='nav navbar-nav navbar-right'>
-          <li><a href='https://keyserver.mattrude.com/dump/'>Dumps</a></li>
-          <li><a href='https://keyserver.mattrude.com/stats/'>Statistics</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class='container'>
-    <div class='page-header' id='banner' style='border-bottom: 0px;margin:80px 0 20px;'>
-      <div class="container">
-        <div class="page-header" id="banner" style="border-bottom:0;margin:80px 0 20px">
-          <div class="col-lg-12">
-            <h1 class="text-center"><strong>OpenPGP</strong>keyserver</h1>
-            <h2 class="text-center">Error: 502</h2>
-            <h3 class="text-center">Schedule Maintenance</h3>
-          </div>
-        </div>
-        <hr />
-        <br />
-        <div class="container text-center">
-          <div class="col-md-1"></div>
-          <div class="col-md-9" style="font-size:1.3em;">
-            <p>This OpenPGP Keyserver is currently unavailable do to schedule maintenance.</p>
-            <p>The key datebase service is currently shutdown to preform a full database 
-              <a href="https://keyserver.mattrude.com/dump/">Dump</a>.
-              This is done every day at 08:00 UTC and lasts for about 35 minutes.</p>
-          </div>
-        </div>
-        <br />
-      </div>
-    </div>
-    <div id='footer' class='container' style='padding-top: 10px;'>
-      <div class='pull-right'>
-        <p>Provided as a public service by <a href='https://keyserver.mattrude.com/#contact'>Matt Rude</a>.</p>
-      </div>
-    </div>
+---
+layout: errors
+title: Error 502 - Scheduled Maintenance
+---
+<!-- The Menu Section -->
+{% include menu.html %}
+<div id="wrap">
+  <div class="container"> <!-- {{ page.url }} -->
+    <div class="page-header" id="banner" style="border-bottom: 0px;margin:180px 0 20px;">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1><strong>OpenPGP</strong>keyserver</h1>
+          <h2>Error 502: Scheduled Maintenance</h2>
+          <p>This OpenPGP Keyserver is currently unavailable do to scheduled maintenance.</p>
+          <p>The key database service is currently shutdown to preform a full database <a href="https://keyserver.mattrude.com/dump/">dump</a>.
+            This is done every day at 08:00 UTC and lasts for about 35 minutes.</p>
+        </div><!--closing col-lg-12 class-->
+      </div><!--closing row class-->
+    </div><!--closing page-header class-->
   </div>
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>
