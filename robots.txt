@@ -1,4 +1,9 @@
+---
+path: /robots.txt
+---
+
 User-agent: *
+
 Disallow: /key/
 Disallow: /dump/current/
 Disallow: /pks/
@@ -9,4 +14,4 @@ Disallow: /download/
 Disallow: /get/
 Disallow: /search/
 
-Sitemap: https://keyserver.mattrude.com/sitemap.xml 
+Sitemap: {{ site.url }}/sitemap.xml
