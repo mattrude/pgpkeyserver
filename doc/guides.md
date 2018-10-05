@@ -9,6 +9,7 @@ Below you will find my list of help files and guides for using PGP on your clien
 ## Internal Guides
 
 * [Publish A Public PGP Key via DNS: Public Key Association]({{ site.url }}/guides/public-key-association/)
+* [OpenPGP Web Key Directory (WKD)]({{ site.url }}/guides/web-key-directory/)
 * [Publish A Public PGP Key via DNS: DANE Cert Records]({{ site.url }}/guides/dns-dane-cert-records/)
 * [A Practical Uses for a One-Time Pad]({{ site.url }}/guides/one-time-pad/)
 * [SKS Key Server Dump Process]({{ site.url }}/guides/dump-process/)
