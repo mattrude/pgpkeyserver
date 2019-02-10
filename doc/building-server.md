@@ -23,7 +23,6 @@ To build a production SKS Server, you must...
 * [Configure your web-server](#configure-your-web-server)
 * [Install the SKS webpage on your server](#install-the-sks-webpage-on-your-server)
 * [Start the SKS Daemon](#start-the-sks-daemon)
-* [Patches for the sks-keyserver software](#patches-for-the-sks-keyserver-software)
 
 ## Building the SKS Daemon
 The following is for [Ubuntu](http://www.ubuntu.com/) 18.04 LTS
@@ -32,7 +31,7 @@ The following is for [Ubuntu](http://www.ubuntu.com/) 18.04 LTS
 
 After installing the required software, you need to download SKS
 
-    gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x0B7F8B60E3EDFAE3
+    gpg --keyserver hkp://pool.sks-keyservers.net --trust-model always --recv-key 0x41259773973a612a
     wget https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.6.tgz
     wget  https://bitbucket.org/skskeyserver/sks-keyserver/downloads/sks-1.1.6.tgz.asc
     gpg --keyid-format long --verify sks-1.1.6.tgz.asc
@@ -60,6 +59,11 @@ Last, build the software
     make dep
     make all
     make install
+
+**Note:** There is a bug in the `sks_build.sh` file where it has the wrong location of the sks program.  To update,
+`sks_build.sh`, run the below command.
+
+    sed -i 's/sbin/local\/bin/g' /usr/local/bin/sks_build.sh
 
 ## Configure the sks-keyserver
 
@@ -113,7 +117,9 @@ against the list published by the dump provider:
 
     md5sum -c metadata-sks-dump.txt
 
+
 ## Import the downloaded databases files
+
 There are two ways to do this: either a full build (which reads in the dump you just downloaded
 and leaves you with a complete, self-contained database) or a fastbuild (which just references
 the dump and requires it to be left in place after the fastbuild is complete). I started doing
@@ -158,6 +164,48 @@ the floor and you may as well abort it and start again (after deleting the KDB a
 directories created by the aborted import).
 
 If all goes smoothly you&#39;ll end up with `KDB` and `PTree` directories in `/var/lib/sks`.
+
+### DB_CONFIG file
+
+Before starting the sks daemon, the `KDB` directory should have the `DB_CONFIG` file from the 
+source repository.  You may copy the file from the source directory or, you may copy the below
+file and place it in `/var/lib/sks/KDB`.
+
+**/var/lib/sks/KDB/DB_CONFIG**
+```
+#************************************************************************#
+#* DB_CONFIG - Sample Berkeley DB tunables for use with SKS             *#
+#*                                                                      *#
+#* Copyright (C) 2011, 2012, 2013  John Clizbe                          *#
+#*                                                                      *#
+#* This file is part of SKS.  SKS is free software; you can             *#
+#* redistribute it and/or modify it under the terms of the GNU General  *#
+#* Public License as published by the Free Software Foundation; either  *#
+#* version 2 of the License, or (at your option) any later version.     *#
+#*                                                                      *#
+#* This program is distributed in the hope that it will be useful, but  *#
+#* WITHOUT ANY WARRANTY; without even the implied warranty of           *#
+#* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU    *#
+#* General Public License for more details.                             *#
+#*                                                                      *#
+#* You should have received a copy of the GNU General Public License    *#
+#* along with this program; if not, write to the Free Software          *#
+#* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  *#
+#* USA or see <http://www.gnu.org/licenses/>.                           *#
+#************************************************************************#
+
+set_mp_mmapsize         268435456
+set_cachesize    0      134217728 1
+set_flags               DB_LOG_AUTOREMOVE
+set_lg_regionmax        1048576
+set_lg_max              104857600
+set_lg_bsize            2097152
+set_lk_detect           DB_LOCK_DEFAULT
+set_tmp_dir             /tmp
+set_lock_timeout        1000
+set_txn_timeout         1000
+mutex_set_max           65536
+```
 
 ## Configure your web-server
 
@@ -246,6 +294,76 @@ After downloading and extracting the tarball, you need to modify the site to ref
 
 ## Start the SKS Daemon
 
+There are two may ways of starting/stopping the sks daemons, via an init script and via a systemd script.
+
+You should only run ONE of the below systems, systemd or INIT, you should **NOT** run both at the same time!
+
+### Run via systemd Script
+
+The systemd scripts will automatically restart the sks daemons if they crash, and start them and close the correctly when the system boots or shutsdown.
+
+The full how-to may be found on the [Adding systemd services on a SKS-Keyserver](/guides/systemd-services/) page.
+
+#### Systemd Services Install
+
+First, download the needed service files and add them to your `/etc/systemd/system/` directory.  Note, these config assume the sks daemon lives at `/usr/local/bin/sks` if yours is in a diffrent spot, you will need to update both files to point to your install locaction.
+
+**/etc/systemd/system/sks-db.service**
+```bash
+[Unit]
+Description=SKS-Keyserver DB Instance
+After=network.target
+
+[Service]
+Type=simple
+User=debian-sks
+Group=debian-sks
+WorkingDirectory=/var/lib/sks
+ExecStart=/usr/local/bin/sks db
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+**/etc/systemd/system/sks-recon.service**
+```bash
+[Unit]
+Description=SKS-Keyserver Recon Instance
+Before=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=debian-sks
+Group=debian-sks
+WorkingDirectory=/var/lib/sks
+ExecStart=/usr/local/bin/sks recon
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### Systemd Services Setup
+
+After you have the services installed, you must enable the services.
+
+```bash
+systemctl daemon-reload
+systemctl enable sks-db.service
+systemctl enable sks-recon.service
+```
+
+### Run via INIT Script
+
+**Do NOT add this init script if you have already added the systemd scripts, they can not live on the same system at the same time.**
+
+You will can install this init script like you do any other.  Copy the below file into `/etc/init.d/sks` and make sure the file is executable,
+then run `service sks start` to start the service.
+
 **/etc/init.d/sks**
 {% highlight bash %}
 #! /bin/sh
@@ -285,5 +403,3 @@ esac
 
 exit 0
 {% endhighlight %}
-
-## Patches for the sks-keyserver software

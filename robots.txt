@@ -5,7 +5,7 @@ path: /robots.txt
 User-agent: *
 
 Disallow: /key/
-Disallow: /dump/current/
+Disallow: /dump/*/
 Disallow: /pks/
 Disallow: /d/
 Disallow: /g/

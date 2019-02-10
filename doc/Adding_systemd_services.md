@@ -4,8 +4,6 @@ title: Adding systemd services on a SKS-Keyserver
 permalink: /guides/systemd-services/
 ---
 
-# Adding systemd services for SKS-Keyserver on Ubuntu 18.04
-
 This page will walk you threw installing the sks-keyserver systemd services on a Ubuntu 18.04 LTS, thou it will most likely work with any systemd server.
 
 <div class="alert alert-warning" role="alert">
