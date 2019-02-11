@@ -33,7 +33,7 @@ table {
 }
 
 td,th {
-    padding: 0
+    padding: 5px;
 }
 
 * {
