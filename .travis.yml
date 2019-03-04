@@ -8,7 +8,8 @@ before_install:
   - gem install therubyracer
   - gem install jekyll
 install: bundle install
-script: bundle exec jekyll build -d _site && bundle exec htmlproofer htmlproofer --internal-domains "keyserver.mattrude.com" ./_site
+script: bundle exec jekyll build -d _site
 rvm:
   - 2.3.1
+  - 2.4.1
   - 2.5.1
