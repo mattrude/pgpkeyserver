@@ -15,13 +15,21 @@ Modern GnuPG has a new key discovery scheme - Web Key Directory. Compared to pre
 
 ## Creating the key file
 
-Start out by exporting your public key as an **binary** (not ASCII armored) public key, to a file on your webserver.
+### Setting up the Web Server
 
-<pre>$ gpg --export 0xDD23BF73 > /var/www/html/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
+Once complete the key/file must be accessible via special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
 
-The key/file must be accessible via special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
+For the key I will be using in this how-to the full URL is: `https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
 
-Hash value can be obtained by listing the key with `--with-wkd` option:
+So you must create the directory `.well-known/openpgpkey/hu/` inside the root of your html website.
+
+For example, if you use the default Ubuntu config, you may simply run the following command.
+
+    mkdir -p /var/www/html/.well-known/openpgpkey/hu
+
+### Finding the name
+
+After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
 
 <pre>
 $ gpg --list-keys --with-wkd 0xDD23BF73
@@ -29,16 +37,22 @@ pub   rsa4096 2014-06-21 [SCEA]
       AE7384272B91AD635902320B27143AFFDD23BF73
 uid           [ unknown] Matt Rude <matt@mattrude.com>
               <strong>d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</strong>@mattrude.com
-uid           [ unknown] keybase.io/mattrude <mattrude@keybase.io>
-              1idgzcdhugt49bmj1j1igmxpjz3w4h41@keybase.io
-uid           [ unknown] [jpeg image of size 12114]
 </pre>
+
+### Create the file
+Now that you have UID hash, you are ready to go.
+
+All you need to do is export your public key **binary** (not ASCII armored) file and place it as a correctly named file on your webserver.
+
+So assuming that the root of your webserver is at `/var/www/html/`, you will run the following command.
+
+<pre>$ gpg --export 0xDD23BF73 > /var/www/html/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
 
 For that key the full URL is:
 
 https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
 
-### Testing key discovery
+## Testing key discovery
 
 GnuPG can be instructed to force discovery of the key via WKD even if it is locally present:
 
@@ -49,8 +63,6 @@ gpg:               imported: 1
 pub   rsa4096 2014-06-21 [SCEA]
       AE7384272B91AD635902320B27143AFFDD23BF73
 uid           [ unknown] Matt Rude <matt@mattrude.com>
-uid           [ unknown] keybase.io/mattrude <mattrude@keybase.io>
-uid           [ unknown] [jpeg image of size 12114]
 </pre>
 
 If the key cannot be found via WKD or if it's in a wrong format (e.g. ASCII armored instead of binary) an error will be produced:
@@ -84,3 +96,4 @@ Use this key anyway? (y/N) <strong>y</strong></pre>
 
 * More information may be found at [GnuPG Wiki](https://wiki.gnupg.org/WKD)
 * The Web Key Directory Checkter found at [metacode.biz](https://metacode.biz/openpgp/web-key-directory)
+
