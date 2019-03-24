@@ -9,17 +9,38 @@ redirect_from:
   - /wkd/
 ---
 
-This document describes how to setup Web Key Directory for an OpenPGP key.
+## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
 
-Modern GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
+This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
 
-## Creating the key file
+<div class="alert alert-warning">
+  <strong>Notice!</strong>
+  WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
+</div>
 
-### Setting up the Web Server
+An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organisation maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practise bears the problem that the keyservers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
 
-Once complete the key/file must be accessible via special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
+GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
-For the key I will be using in this how-to the full URL is: `https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
+Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on your web server.  No other software is required to run on the web server.
+
+## Building the Web Key Directory Service
+
+### Setting up the DNS Record (Optional)
+<div class="alert alert-warning">
+  <strong>Notice!</strong>
+  The DNS SRV Records were removed in <a href="https://tools.ietf.org/rfcdiff?difftype=--hwdiff&url2=draft-koch-openpgp-webkey-service-07.txt">Draft 07</a> of the specification, may not work with all clients.
+</div>
+
+<pre>_openpgpkey._tcp.example.org.  IN  SRV 0 0 8443 wkd.example.org.</pre>
+
+The target (in the example "wkd.example.org") MUST be a sub-domain of the domain-part (here "example.org").  The recommended name for the sub-domain in the [specification](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service-06) is "wkd".
+
+### Setting up the File System
+
+Once complete the key/file must be accessible via a special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
+
+For the key I will be using in this how-to the full URL should be: `https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
 
 So you must create the directory `.well-known/openpgpkey/hu/` inside the root of your html website.
 
@@ -27,7 +48,36 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
     mkdir -p /var/www/html/.well-known/openpgpkey/hu
 
-### Finding the name
+### Setting up the Web Server
+
+#### On Nginx
+
+```
+    location ^~ /.well-known/openpgpkey {
+        default_type        "text/plain";
+        add_header          'Access-Control-Allow-Origin' '*' always;
+    }
+```
+
+#### On Apache
+
+```
+    <Directory "/.well-known/openpgpkey">
+        <IfModule mod_headers.c>
+            Header set Access-Control-Allow-Origin "*"
+        </IfModule>
+    </Directory>
+```
+
+#### On Lighttpd
+
+```
+    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )
+```
+
+## Building a Single Public Key File
+
+### Finding the hash to create the name with
 
 After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
 
@@ -40,6 +90,7 @@ uid           [ unknown] Matt Rude <matt@mattrude.com>
 </pre>
 
 ### Create the file
+
 Now that you have UID hash, you are ready to go.
 
 All you need to do is export your public key **binary** (not ASCII armored) file and place it as a correctly named file on your webserver.
@@ -94,6 +145,7 @@ Use this key anyway? (y/N) <strong>y</strong></pre>
 
 ## Other WKD Resources
 
+* OpenPGP Web Key Directory [Network Working Group Specification](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service)
 * More information may be found at [GnuPG Wiki](https://wiki.gnupg.org/WKD)
 * The Web Key Directory Checkter found at [metacode.biz](https://metacode.biz/openpgp/web-key-directory)
 

@@ -1,6 +1,6 @@
 <div class="col-md-5">
     <h3>Contact Information</h3>
-    <p>This site is maintained by Matt Rude (<a href="{{ site.url }}/d/0xd6343afdfab5a437">0xd6343afdfab5a437</a>). If you would like to report any problems or bugs, please send a email or XMPP messsage to the email address listed in one of my public keys.</p>
+    <p>This site is maintained by Matt Rude (<a href="https://mattrude.com/keys/{{ site.owner_pgpkey }}.asc">{{ site.owner_pgpkey }}</a>). If you would like to report any problems or bugs, please send a email or XMPP messsage to the email address listed in one of my public keys.</p>
 <!--
     <p>You may also see my profile on <a href="https://keybase.io/mattrude">keybase.io/mattrude</a>.</p>
 -->
@@ -10,17 +10,17 @@
       <li><b><a href="https://github.com/{{ site.owner_github }}" title="Github Profile Page"><i class="fa fa-github"></i></a></b></li>
       <li><b><a href="xmpp:{{ site.owner_xmpp }}" title="XMPP/Jabber ID"><i class="fa fa-commenting"></i></a></b></li>
       <li><b><a href="{{ site.owner_website }}" title="Website"><i class="fa fa-link"></i></a></b></li>
-      <li><b><a href="https://therudes.com/keys/{{ site.owner_pgpkey }}.asc" title="PGP Public Key"><i class="fa fa-key"></i></a></b></li>
+      <li><b><a href="https://mattrude.com/keys/{{ site.owner_pgpkey }}.asc" title="PGP Public Key"><i class="fa fa-key"></i></a></b></li>
     </ul>
 </div>
 
 <div class="col-md-7">
     <h3 id="my-public-pgp-key-information">My Public PGP Key Information</h3>
     <p><strong>My Default Key:</strong></p>
-    <div class="highlighter-rouge"><pre class="highlight"><code>pub         ed25519/FAB5A437 2019-02-05 [SC] [expires: 2024-02-04]
-Fingerprint 7AA4 3EC0 E6D2 1C86 3BD0  3D1A D634 3AFD FAB5 A437
-uid         Matt Rude <matt@therudes.com>
-sub         cv25519/92F55977 2019-02-05 [E] [expires: 2024-02-04]</code></pre></div>
+    <div class="highlighter-rouge"><pre class="highlight"><code>pub   ed25519 2019-03-05 [SC] [expires: 2024-03-03]
+      1B99 1052 9DF4 FE1F E3C6  B037 94C3 2AC1 58AE A35C
+uid   Matt Rude <matt@mattrude.com>
+sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]</code></pre></div>
 
     <p>Or, you may validate my keys using one of my <a href="{{ site.url }}/guides/dns-dane-cert-records/">DANE</a> or <a href="{{ site.url }}/guides/public-key-association/">PKA</a> DNS records or via <a href="{{ site.url }}/guides/web-key-directory/" title="Web Key Directory">WKD</a>.</p></div>
 </div>

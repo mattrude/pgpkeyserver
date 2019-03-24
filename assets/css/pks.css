@@ -128,6 +128,9 @@ p {
     margin-left: auto
 }
 
+.uid { color: green; text-decoration: underline; }
+.warn { color: red; font-weight: bold; }
+
 @media(min-width: 768px) {
     .container {
         width:750px

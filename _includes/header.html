@@ -15,9 +15,6 @@
     {% if page.url contains "/graphs/" %}
     <meta http-equiv="refresh" content="300" />
     {% endif %}
-    {% if page.url contains "/guides/" %}
-    <style type="text/css">{% include syntax.css %}</style>
-    {% endif %}
-    <style type="text/css">{% include main.css %}</style>
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="70">
