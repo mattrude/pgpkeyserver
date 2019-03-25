@@ -18,7 +18,7 @@ This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
   WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
 </div>
 
-An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organisation maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practise bears the problem that the keyservers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
+An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organization maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practice bears the problem that the key-servers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
 
 GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
@@ -46,34 +46,32 @@ So you must create the directory `.well-known/openpgpkey/hu/` inside the root of
 
 For example, if you use the default Ubuntu config, you may simply run the following command.
 
-    mkdir -p /var/www/html/.well-known/openpgpkey/hu
+<pre>mkdir -p /var/www/html/.well-known/openpgpkey/hu</pre>
 
 ### Setting up the Web Server
 
 #### On Nginx
 
-```
+<pre>
     location ^~ /.well-known/openpgpkey {
         default_type        "text/plain";
         add_header          'Access-Control-Allow-Origin' '*' always;
     }
-```
+</pre>
 
 #### On Apache
 
-```
+<pre>
     <Directory "/.well-known/openpgpkey">
         <IfModule mod_headers.c>
             Header set Access-Control-Allow-Origin "*"
         </IfModule>
     </Directory>
-```
+</pre>
 
 #### On Lighttpd
 
-```
-    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )
-```
+<pre>setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
 ## Building a Single Public Key File
 
@@ -102,6 +100,18 @@ So assuming that the root of your webserver is at `/var/www/html/`, you will run
 For that key the full URL is:
 
 https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
+
+## Building a Group of Public Key Files
+
+Using the `generate-openpgpkey-hu` script, you can build your WKD from a GnuPG keyring you already have populated with keys.
+
+First you must download the `generate-openpgpkey-hu` script.
+<pre>curl -Las https://hg.intevation.de/gnupg/wkd-tools/raw-file/default/generate-openpgpkey-hu -o generate-openpgpkey-hu
+chmod 755 generate-openpgpkey-hu</pre>
+
+Once the script is downloaded and the permissions are set correctly, you are ready to start.
+
+
 
 ## Testing key discovery
 
@@ -148,4 +158,3 @@ Use this key anyway? (y/N) <strong>y</strong></pre>
 * OpenPGP Web Key Directory [Network Working Group Specification](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service)
 * More information may be found at [GnuPG Wiki](https://wiki.gnupg.org/WKD)
 * The Web Key Directory Checkter found at [metacode.biz](https://metacode.biz/openpgp/web-key-directory)
-
