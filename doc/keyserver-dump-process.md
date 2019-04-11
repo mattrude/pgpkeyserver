@@ -15,6 +15,9 @@ This script is intended to be ran from cron, since sks requires the db process t
 {% highlight bash %}
 #!/bin/bash
 
+# Author: Matt Rude <matt@mattrude.com>
+# Source: https://keyserver.mattrude.com/guides/dump-process/
+#
 # This script will stop the sks server, dump its contents to
 # the $PREDIR, then restart the sks server.
 

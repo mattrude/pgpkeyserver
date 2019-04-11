@@ -24,13 +24,13 @@ sitemap: false
   <div class="col-md-6 col-pull-right">
     <div class="alert alert-info">
       <h3><center><span class="glyphicon glyphicon-download" style="font-size:0.8em;"></span> <strong>FTP Download</strong></center></h3>
-      <p>You may instead download my <b>FTP</b> server found at <a href="ftp://ks0.mattrude.com">ftp://keyserver.mattrude.com</a>.</p>
+      <p>You may instead download my <b>FTP</b> server found at <a href="ftp://keyserver.mattrude.com">ftp://keyserver.mattrude.com</a>.</p>
       <p>Use the following command:</p> <pre style="font-size:0.85em;">wget -m -nH --cut-dirs=3 ftp://keyserver.mattrude.com/current</pre>
     </div>
   </div>
 
   <div class="col-md-12">
     <p><strong>Use the below command to download all the current dump files.</strong></p>
-    <pre>wget -crp -e robots=off -l1 --no-parent --cut-dirs=3 -nH -A pgp,txt https://ks0.mattrude.com/dump/current/</pre>
+    <pre>wget -crp -e robots=off -l1 --no-parent --cut-dirs=3 -nH -A pgp,txt https://keyserver.mattrude.com/dump/current/</pre>
   </div>
 </div>
