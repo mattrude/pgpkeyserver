@@ -38,8 +38,9 @@ exclude:
 - css/site.less
 - css/small.less
 
+plugins_dir: ./_plugins
 plugins:
-#- jekyll-press
+#- jekyll-minifier
 - jekyll-sitemap
 - jekyll-redirect-from
 - jekyll-last-modified-at

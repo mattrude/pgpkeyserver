@@ -11,12 +11,12 @@ redirect_from:
 
 ## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
 
-This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
-
 <div class="alert alert-warning">
   <strong>Notice!</strong>
   WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
 </div>
+
+This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
 
 An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organization maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practice bears the problem that the key-servers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
 
@@ -25,16 +25,6 @@ GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous s
 Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on your web server.  No other software is required to run on the web server.
 
 ## Building the Web Key Directory Service
-
-### Setting up the DNS Record (Optional)
-<div class="alert alert-warning">
-  <strong>Notice!</strong>
-  The DNS SRV Records were removed in <a href="https://tools.ietf.org/rfcdiff?difftype=--hwdiff&url2=draft-koch-openpgp-webkey-service-07.txt">Draft 07</a> of the specification, may not work with all clients.
-</div>
-
-<pre>_openpgpkey._tcp.example.org.  IN  SRV 0 0 8443 wkd.example.org.</pre>
-
-The target (in the example "wkd.example.org") MUST be a sub-domain of the domain-part (here "example.org").  The recommended name for the sub-domain in the [specification](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service-06) is "wkd".
 
 ### Setting up the File System
 
