@@ -4,8 +4,8 @@ email: matt@mattrude.com
 description: ""
 url: "https://keyserver.mattrude.com"
 name: "keyserver.mattrude.com"
-baseurl: ""
 destination: "/var/www/keyserver.mattrude.com"
+baseurl: ""
 
 owner_name: "Matt Rude"
 owner_email: "matt@mattrude.com"
