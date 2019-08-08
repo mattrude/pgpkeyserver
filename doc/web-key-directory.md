@@ -134,11 +134,11 @@ After you have created the WKD directory, you need to create a policy file.  Thi
 **On Apache**
 
 <pre>
-    <Directory "/.well-known/openpgpkey">
-        <IfModule mod_headers.c>
+    &lt;Directory "/.well-known/openpgpkey"&gt;
+        &lt;IfModule mod_headers.c&gt;
             Header set Access-Control-Allow-Origin "*"
-        </IfModule>
-    </Directory>
+        &lt;/IfModule&gt;
+    &lt;/Directory&gt;
 </pre>
 
 **On Lighttpd**
