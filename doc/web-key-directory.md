@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Publish A Public PGP Key via HTTPS&colon; Web Key Directory (WKD)
+displaytitle: Publishing A Public Key via HTTPS&colon; <small>Web Key Directory (WKD)</small>
 permalink: /guides/web-key-directory/
 description: Web Key Directory (WKD) allows you to publish your OpenPGP key on your HTTPS server
 tags: [wkd, Web Key Directory, pgp, gpg, GnuPG]
@@ -9,22 +10,18 @@ redirect_from:
   - /wkd/
 ---
 
-## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
-
-<div class="alert alert-warning">
-  <strong>Notice!</strong>
-  WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
-</div>
-
 This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
 
 An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organization maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practice bears the problem that the key-servers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
 
 GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
-## Building the Web Key Directory Service
+<div class="alert alert-warning">
+  <strong>Notice!</strong>
+  WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
+</div>
 
-{% include toc.html html=content %}
+## Building the Web Key Directory Service
 
 Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on a web server.  No other software is required to run on the web server.
 
@@ -34,7 +31,7 @@ These two methods are fundamentally the same.
 
 The <b>Basic</b> method uses the domain address <code>https://example.com</code> while the <b>Advanced</b> method uses domain address like <code>https://openpgpkey.example.com</code>.
 
-### Method 1: BASIC WKD Service
+### Method 1: Basic WKD Service
 
 #### Setting up the File System
 
@@ -50,7 +47,7 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 #### Setting up the Web Server
 
-##### On Nginx
+**On Nginx**
 
 <pre>
     location ^~ /.well-known/openpgpkey {
@@ -59,7 +56,7 @@ For example, if you use the default Ubuntu config, you may simply run the follow
     }
 </pre>
 
-##### On Apache
+**On Apache**
 
 <pre>
     <Directory "/.well-known/openpgpkey">
@@ -69,13 +66,15 @@ For example, if you use the default Ubuntu config, you may simply run the follow
     </Directory>
 </pre>
 
-##### On Lighttpd
+**On Lighttpd**
 
 <pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
+### Method 2: Advanced  WKD Service
+
 ## Building a Single Public Key File
 
-### Finding the hash to create the name with
+### Finding the local-part hash
 
 After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
 
@@ -135,7 +134,7 @@ If the key cannot be found via WKD or if it's in a wrong format (e.g. ASCII armo
 gpg: error retrieving 'matt@mattrude.com' via WKD: No data
 </pre>
 
-## Importing a key via WKD
+**Importing a key via WKD**
 
 You may run the following command to import your key into your key ring. Just change **matt@mattrude.com** to the email address you wish to import.
 
@@ -155,6 +154,16 @@ in the user ID.  If you *really* know what you are doing,
 you may answer the next question with yes.
 
 Use this key anyway? (y/N) <strong>y</strong></pre>
+
+## Web Key Service (WKS)
+
+The Web Key Service (WKS) is a method for end users to send their public key via email to the WKD server.
+
+The WKS stores a file the named `submission-address` inside the WKD folder structure.  A users email client then checks for this file, downloads it, and should find an email address.  The email client then check the WKD site for the public key of the submission address.   Assumming it finds a public key, it downloads the public key, then sends the users public key to the submission address via an encrypted email.  
+
+Once the WKS receives the message, it stores the public key in the `pending` folder and sends an encrypted email back to the users email asking for them to confrim the request.
+
+Once the user confrims the request, an email is sent back to the WKS service that proccess the confrimation and moves the public key from the pending folder to the `hu` folder.  Once the public key is in the `hu` folder, other users may start downloading it via WKD.
 
 ## Other WKD Resources
 

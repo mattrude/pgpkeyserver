@@ -3,6 +3,12 @@
 {% include menu.html %}
 {% include title.html %}
 <div class="container">
-  {{ content }}
+    {% if page.displaytitle %}
+        <h1>{{ page.displaytitle }}</h1>
+    {% endif %}
+    <div class="page-toc" style="float:right;">
+        {% include toc.html html=content %}
+    </div>
+    {{ content }}
 </div>
 {% include footer.html %}
