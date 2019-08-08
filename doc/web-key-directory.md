@@ -33,6 +33,8 @@ The <b>Basic</b> method uses the domain address <code>https://example.com</code>
 
 ### Method 1: Basic WKD Service
 
+The basic method stories the public keys under the main domain name (ie. example.com), opposed to the advanced method that stores the keys under unique domain name (openpgpkey.example.com).
+
 #### Setting up the File System
 
 Once complete the key/file must be accessible via a special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
