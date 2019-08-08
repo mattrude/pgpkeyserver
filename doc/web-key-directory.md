@@ -26,17 +26,9 @@ Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly p
 
 ## Building the Web Key Directory Service
 
-### Setting up the DNS Record (Optional)
-<div class="alert alert-warning">
-  <strong>Notice!</strong>
-  The DNS SRV Records were removed in <a href="https://tools.ietf.org/rfcdiff?difftype=--hwdiff&url2=draft-koch-openpgp-webkey-service-07.txt">Draft 07</a> of the specification, may not work with all clients.
-</div>
+### Setting up the BASIC WKD Service
 
-<pre>_openpgpkey._tcp.example.org.  IN  SRV 0 0 8443 wkd.example.org.</pre>
-
-The target (in the example "wkd.example.org") MUST be a sub-domain of the domain-part (here "example.org").  The recommended name for the sub-domain in the [specification](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service-06) is "wkd".
-
-### Setting up the File System
+#### Setting up the File System
 
 Once complete the key/file must be accessible via a special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
 
@@ -48,9 +40,9 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 <pre>mkdir -p /var/www/html/.well-known/openpgpkey/hu</pre>
 
-### Setting up the Web Server
+#### Setting up the Web Server
 
-#### On Nginx
+##### On Nginx
 
 <pre>
     location ^~ /.well-known/openpgpkey {
@@ -59,17 +51,17 @@ For example, if you use the default Ubuntu config, you may simply run the follow
     }
 </pre>
 
-#### On Apache
+##### On Apache
 
 <pre>
     <Directory "/.well-known/openpgpkey">
-        <IfModule mod_headers.c>
+        $gt;IfModule mod_headers.c>
             Header set Access-Control-Allow-Origin "*"
-        </IfModule>
+        $gt;/IfModule>
     </Directory>
 </pre>
 
-#### On Lighttpd
+##### On Lighttpd
 
 <pre>setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
@@ -79,12 +71,12 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
 
-<pre>
-$ gpg --list-keys --with-wkd 0xDD23BF73
-pub   rsa4096 2014-06-21 [SCEA]
-      AE7384272B91AD635902320B27143AFFDD23BF73
-uid           [ unknown] Matt Rude <matt@mattrude.com>
+<pre> $ gpg --list-keys --with-wkd 0x94c32ac158aea35c
+pub   ed25519 2019-03-05 [SC] [expires: 2024-03-03]
+      1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
+uid           [ultimate] Matt Rude <matt@mattrude.com>
               <strong>d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</strong>@mattrude.com
+sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
 </pre>
 
 ### Create the file
@@ -95,7 +87,7 @@ All you need to do is export your public key **binary** (not ASCII armored) file
 
 So assuming that the root of your webserver is at `/var/www/html/`, you will run the following command.
 
-<pre>$ gpg --export 0xDD23BF73 > /var/www/html/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
+<pre>$ gpg --export 0x94c32ac158aea35c > /var/www/html/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
 
 For that key the full URL is:
 
@@ -111,19 +103,22 @@ chmod 755 generate-openpgpkey-hu</pre>
 
 Once the script is downloaded and the permissions are set correctly, you are ready to start.
 
-
-
 ## Testing key discovery
 
 GnuPG can be instructed to force discovery of the key via WKD even if it is locally present:
 
-<pre>$ gpg --auto-key-locate clear,wkd,nodefault --locate-key matt@mattrude.com
-gpg: key 27143AFFDD23BF73: public key "Matt Rude <matt@mattrude.com>" imported
+<pre>$ gpg -v --auto-key-locate clear,wkd,nodefault --locate-key matt@mattrude.com
+gpg: using pgp trust model
+gpg: pub  ed25519/94C32AC158AEA35C 2019-03-05  Matt Rude <matt@mattrude.com>
+gpg: key 94C32AC158AEA35C: public key "Matt Rude <matt@mattrude.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
-pub   rsa4096 2014-06-21 [SCEA]
-      AE7384272B91AD635902320B27143AFFDD23BF73
+gpg: auto-key-locate found fingerprint 1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
+gpg: <stront>automatically retrieved 'matt@mattrude.com' via WKD</strong>
+pub   ed25519 2019-03-05 [SC] [expires: 2024-03-03]
+      1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
 uid           [ unknown] Matt Rude <matt@mattrude.com>
+sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
 </pre>
 
 If the key cannot be found via WKD or if it's in a wrong format (e.g. ASCII armored instead of binary) an error will be produced:
