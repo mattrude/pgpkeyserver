@@ -7,7 +7,7 @@
         <h1>{{ page.displaytitle }}</h1>
     {% endif %}
     <div class="page-toc" style="float:right;">
-        {% include toc.html html=content %}
+        {% include toc.html html=content h_max=3 %}
     </div>
     {{ content }}
 </div>
