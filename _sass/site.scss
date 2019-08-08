@@ -34,8 +34,26 @@ h2 {
 }
 
 #guide {
+    h1 {
+        font-size: 2.6em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h4 {
+        font-size: 1.8em;
+    }
+    h5 {
+        font-size: 1.6em;
+    }
+    h6 {
+        font-size: 1.4em;
+    }
     h2,h3,h4 {
-        padding-top: 50px;
+        padding-top: 60px;
     }
     .page-toc {
         padding-left: 15px;
