@@ -17,11 +17,11 @@ An OpenPGP Web Key Directory is a method for users to discover the public key of
 GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
 <div class="alert alert-warning" style="display:flex;">
-  <strong>Notice!</strong>
+  <strong style="padding-right:5px;">Notice!</strong>
   WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
 </div>
 
-## Building the Web Key Directory Service
+## Building a Web Key Directory Service
 
 Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on a web server.  No other software is required to run on the web server.
 
@@ -45,11 +45,11 @@ So you must create the directory `.well-known/openpgpkey/hu/` inside the root of
 
 For example, if you use the default Ubuntu config, you may simply run the following command.
 
-<pre>mkdir -p /var/www/html/.well-known/openpgpkey/hu</pre>
+<pre>$ mkdir -p /var/www/html/.well-known/openpgpkey/hu</pre>
 
 After you have created the WKD directory, you need to create a policy file.  This file tells clients how your WKD service works.  Since we are creating a default setup, the file should be empty, so you can may just run.
 
-<pre>touch /var/www/mattrude.com/.well-known/openpgpkey/policy</pre>
+<pre>$ touch /var/www/mattrude.com/.well-known/openpgpkey/policy</pre>
 
 #### Setting up the Web Server
 
@@ -88,7 +88,7 @@ uid           [ultimate] Matt Rude <matt@mattrude.com>
 sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
 </pre>
 
-#### Create the file
+#### Creating the WKD file
 
 Now that you have UID hash, you are ready to go.
 
@@ -98,9 +98,7 @@ So assuming that the root of your webserver is at `/var/www/html/`, you will run
 
 <pre>$ gpg --export 0x94c32ac158aea35c > /var/www/html/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
 
-For that key the full URL is:
-
-https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
+For that key the full URL is: <code>https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</code>
 
 ### Method 2: Advanced WKD Service
 
@@ -114,15 +112,15 @@ So you must create the directory `.well-known/openpgpkey/mattrude.com/hu/` insid
 
 For example, if you use the default Ubuntu config, you may simply run the following command.
 
-<pre>mkdir -p /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu</pre>
+<pre>$ mkdir -p /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu</pre>
 
 After you have created the WKD directory, you need to create a policy file.  This file tells clients how your WKD service works.  Since we are creating a default setup, the file should be empty, so you can may just run.
 
-<pre>touch /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/policy</pre>
+<pre>$ touch /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/policy</pre>
 
 #### Setting up the Web Server
 
-##### On Nginx
+**On Nginx**
 
 <pre>
     location ^~ /.well-known/openpgpkey {
@@ -131,7 +129,7 @@ After you have created the WKD directory, you need to create a policy file.  Thi
     }
 </pre>
 
-##### On Apache
+**On Apache**
 
 <pre>
     &lt;Directory "/.well-known/openpgpkey"&gt;
@@ -141,7 +139,7 @@ After you have created the WKD directory, you need to create a policy file.  Thi
     &lt;/Directory&gt;
 </pre>
 
-##### On Lighttpd
+**On Lighttpd**
 
 <pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
@@ -157,7 +155,7 @@ uid           [ultimate] Matt Rude <matt@mattrude.com>
 sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
 </pre>
 
-#### Create the file
+#### Creating the WKD file
 
 Now that you have UID hash, you are ready to go.
 
@@ -167,9 +165,7 @@ So assuming that the root of your openpgpkey webserver is at `/var/www/mattrude.
 
 <pre>$ gpg --export 0x94c32ac158aea35c > /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
 
-For that key the full URL is:
-
-https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
+For that key the full URL is: <code>https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</code>
 
 ### Method 3: Building a Group of Files
 
