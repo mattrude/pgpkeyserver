@@ -41,6 +41,7 @@ exclude:
 plugins_dir: ./_plugins
 plugins:
 #- jekyll-minifier
+- jekyll-toc
 - jekyll-sitemap
 - jekyll-redirect-from
 - jekyll-last-modified-at

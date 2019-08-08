@@ -63,7 +63,7 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 ##### On Lighttpd
 
-<pre>setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
+<pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
 ## Building a Single Public Key File
 
