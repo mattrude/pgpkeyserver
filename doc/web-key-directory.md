@@ -16,7 +16,7 @@ An OpenPGP Web Key Directory is a method for users to discover the public key of
 
 GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
-<div class="alert alert-warning">
+<div class="alert alert-warning" style="display:flex;">
   <strong>Notice!</strong>
   WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
 </div>

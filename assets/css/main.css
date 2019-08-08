@@ -32,6 +32,10 @@ h5,
 h6 {
   padding-top: 50px;
 }
+.page-toc {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
 .page-toc ul {
   padding-inline-start: 20px;
 }
