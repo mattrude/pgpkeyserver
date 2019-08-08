@@ -4,10 +4,10 @@ title: Publish A Public PGP Key via HTTPS&colon; Web Key Directory (WKD)
 permalink: /guides/web-key-directory/
 description: Web Key Directory (WKD) allows you to publish your OpenPGP key on your HTTPS server
 tags: [wkd, Web Key Directory, pgp, gpg, GnuPG]
-toc: true
 redirect_from:
   - /web-key-directory/
   - /wkd/
+toc: true
 ---
 
 ## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
