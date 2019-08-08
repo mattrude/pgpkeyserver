@@ -11,12 +11,12 @@ redirect_from:
 
 ## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
 
-This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
-
 <div class="alert alert-warning">
   <strong>Notice!</strong>
   WKD lookup is implemented in GnuPG since v2.1.12. It is enabled by default since 2.1.23.
 </div>
+
+This document describes how to setup GnuPG Web Key Directory for an OpenPGP key.
 
 An OpenPGP Web Key Directory is a method for users to discover the public key of a new contact.  The user requests the public key from the contacts organization maintains.  This differs from a [Key Server]() where a the user looks up a key on a 3rd party server, the server provides all keys that match requested address and the user must determine which key to use.  This practice bears the problem that the key-servers are not able to give a positive confirmation that a key actually belongs to the mail addresses given in the key.  Further, there are often several keys matching a mail address and thus one needs to pick a key on good luck.
 
@@ -26,9 +26,13 @@ Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly p
 
 ## Building the Web Key Directory Service
 
+<<<<<<< HEAD
 ### Setting up the BASIC WKD Service
 
 #### Setting up the File System
+=======
+### Setting up the File System
+>>>>>>> 55c73e0a4d8941ed5c468ee70ad29e4d0662cc4d
 
 Once complete the key/file must be accessible via a special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
 

@@ -9,9 +9,9 @@
     {% if page.url != '/nginx-before.txt' %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     {% endif %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.url }}"/>
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.url }}" type="image/x-icon"/>
     {% if page.url contains "/graphs/" %}
     <meta http-equiv="refresh" content="300" />
     {% endif %}
