@@ -99,7 +99,7 @@ For that key the full URL is:
 https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
 
 ## Method 2: Advanced WKD Service
-## Method 3: Building a Group of Public Key Files
+## Method 3: Building a Group of Files
 
 Using the `generate-openpgpkey-hu` script, you can build your WKD from a GnuPG keyring you already have populated with keys.
 
