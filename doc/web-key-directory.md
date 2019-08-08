@@ -26,13 +26,9 @@ Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly p
 
 ## Building the Web Key Directory Service
 
-<<<<<<< HEAD
 ### Setting up the BASIC WKD Service
 
 #### Setting up the File System
-=======
-### Setting up the File System
->>>>>>> 55c73e0a4d8941ed5c468ee70ad29e4d0662cc4d
 
 Once complete the key/file must be accessible via a special URL constructed by appending `https://`, user domain, `/.well-known/openpgpkey/hu/` and a hash value.
 
