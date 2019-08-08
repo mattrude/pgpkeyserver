@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Building a PGP SKS Keyserver
+displaytitle: Building a PGP SKS Keyserver
 permalink: /guides/building-server/
 ---
 

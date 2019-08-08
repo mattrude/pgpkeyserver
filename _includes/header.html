@@ -15,6 +15,6 @@
     {% if page.url contains "/graphs/" %}
     <meta http-equiv="refresh" content="300" />
     {% endif %}
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.url }}">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="70">

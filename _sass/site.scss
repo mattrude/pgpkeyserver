@@ -32,14 +32,17 @@ h2 {
     float: right;
     width: 49%;
 }
-h2,h3,h4,h5,h6 {
-    padding-top: 50px;
-}
-.page-toc {
-    padding-left: 15px;
-    padding-bottom: 15px;
-    ul {
-        padding-inline-start: 20px;
+
+#guide {
+    h2,h3,h4,h5,h6 {
+        padding-top: 50px;
+    }
+    .page-toc {
+        padding-left: 15px;
+        padding-bottom: 15px;
+        ul {
+            padding-inline-start: 20px;
+        }
     }
 }
 
