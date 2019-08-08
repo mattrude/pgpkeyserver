@@ -159,11 +159,11 @@ Use this key anyway? (y/N) <strong>y</strong></pre>
 
 The Web Key Service (WKS) is a method for end users to send their public key via email to the WKD server.
 
-The WKS stores a file the named `submission-address` inside the WKD folder structure.  A users email client then checks for this file, downloads it, and should find an email address.  The email client then check the WKD site for the public key of the submission address.   Assumming it finds a public key, it downloads the public key, then sends the users public key to the submission address via an encrypted email.  
+The WKS stores a file the named `submission-address` inside the WKD folder structure.  A users email client then checks for this file, downloads it, and should find an email address.  The email client then check the WKD site for the public key of the submission address.   Assuming it finds a public key, it downloads the public key, then sends the users public key to the submission address via an encrypted email.  
 
-Once the WKS receives the message, it stores the public key in the `pending` folder and sends an encrypted email back to the users email asking for them to confrim the request.
+Once the WKS receives the message, it stores the public key in the `pending` folder and sends an encrypted email back to the users email asking for them to confirm the request.
 
-Once the user confrims the request, an email is sent back to the WKS service that proccess the confrimation and moves the public key from the pending folder to the `hu` folder.  Once the public key is in the `hu` folder, other users may start downloading it via WKD.
+Once the user confirms the request, an email is sent back to the WKS service that process the confirmation and moves the public key from the pending folder to the `hu` folder.  Once the public key is in the `hu` folder, other users may start downloading it via WKD.
 
 ## Other WKD Resources
 
