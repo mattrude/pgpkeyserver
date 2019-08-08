@@ -47,6 +47,10 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 <pre>mkdir -p /var/www/html/.well-known/openpgpkey/hu</pre>
 
+After you have created the WKD directory, you need to create a policy file.  This file tells clients how your WKD service works.  Since we are creating a default setup, the file should be empty, so you can may just run.
+
+<pre>touch /var/www/mattrude.com/.well-known/openpgpkey/policy</pre>
+
 #### Setting up the Web Server
 
 **On Nginx**
@@ -112,6 +116,10 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 <pre>mkdir -p /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu</pre>
 
+After you have created the WKD directory, you need to create a policy file.  This file tells clients how your WKD service works.  Since we are creating a default setup, the file should be empty, so you can may just run.
+
+<pre>touch /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/policy</pre>
+
 #### Setting up the Web Server
 
 **On Nginx**
@@ -127,9 +135,9 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 <pre>
     <Directory "/.well-known/openpgpkey">
-        $gt;IfModule mod_headers.c>
+        <IfModule mod_headers.c>
             Header set Access-Control-Allow-Origin "*"
-        $gt;/IfModule>
+        </IfModule>
     </Directory>
 </pre>
 
