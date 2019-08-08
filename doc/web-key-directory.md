@@ -4,6 +4,7 @@ title: Publish A Public PGP Key via HTTPS&colon; Web Key Directory (WKD)
 permalink: /guides/web-key-directory/
 description: Web Key Directory (WKD) allows you to publish your OpenPGP key on your HTTPS server
 tags: wkd, Web Key Directory, pgp, gpg, GnuPG
+toc: true
 redirect_from:
   - /web-key-directory/
   - /wkd/
@@ -22,11 +23,17 @@ An OpenPGP Web Key Directory is a method for users to discover the public key of
 
 GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous schemes that relied on DNS, WKD can be easily deployed on any HTTPS server.
 
-Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on your web server.  No other software is required to run on the web server.
-
 ## Building the Web Key Directory Service
 
-### Setting up the BASIC WKD Service
+Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on a web server.  No other software is required to run on the web server.
+
+There are two methods of key discovery described in network working group specification [section 3.1 (Key Discovery)](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service#section-3.1), the basic method and the advanced method.
+
+These two methods are fundamentally the same.
+
+The <b>Basic</b> method uses the domain address <code>https://example.com</code> while the Advanced method uses domain address like <code>https://openpgpkey.example.com</code>.
+
+### Method 1: BASIC WKD Service
 
 #### Setting up the File System
 
