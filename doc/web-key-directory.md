@@ -25,6 +25,8 @@ GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous s
 
 ## Building the Web Key Directory Service
 
+<div id="table-of-contents"> {% toc %} </div>
+
 Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on a web server.  No other software is required to run on the web server.
 
 There are two methods of key discovery described in network working group specification [section 3.1 (Key Discovery)](https://tools.ietf.org/html/draft-koch-openpgp-webkey-service#section-3.1), the basic method and the advanced method.
