@@ -122,7 +122,7 @@ After you have created the WKD directory, you need to create a policy file.  Thi
 
 #### Setting up the Web Server
 
-**On Nginx**
+##### On Nginx
 
 <pre>
     location ^~ /.well-known/openpgpkey {
@@ -131,7 +131,7 @@ After you have created the WKD directory, you need to create a policy file.  Thi
     }
 </pre>
 
-**On Apache**
+##### On Apache
 
 <pre>
     &lt;Directory "/.well-known/openpgpkey"&gt;
@@ -141,7 +141,7 @@ After you have created the WKD directory, you need to create a policy file.  Thi
     &lt;/Directory&gt;
 </pre>
 
-**On Lighttpd**
+##### On Lighttpd
 
 <pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
