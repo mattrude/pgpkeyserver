@@ -99,6 +99,70 @@ For that key the full URL is:
 https://mattrude.com/.well-known/openpgpkey/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
 
 ### Method 2: Advanced WKD Service
+
+#### Setting up the File System
+
+Once complete the key/file must be accessible via a special URL constructed by appending `https://openpgpkey`, user domain, `/.well-known/openpgpkey/mattrude.com/hu/` and a hash value.
+
+For the key I will be using in this how-to the full URL should be: `https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
+
+So you must create the directory `.well-known/openpgpkey/mattrude.com/hu/` inside the root of your html website.
+
+For example, if you use the default Ubuntu config, you may simply run the following command.
+
+<pre>mkdir -p /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu</pre>
+
+#### Setting up the Web Server
+
+**On Nginx**
+
+<pre>
+    location ^~ /.well-known/openpgpkey {
+        default_type        "text/plain";
+        add_header          'Access-Control-Allow-Origin' '*' always;
+    }
+</pre>
+
+**On Apache**
+
+<pre>
+    <Directory "/.well-known/openpgpkey">
+        $gt;IfModule mod_headers.c>
+            Header set Access-Control-Allow-Origin "*"
+        $gt;/IfModule>
+    </Directory>
+</pre>
+
+**On Lighttpd**
+
+<pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
+
+#### Finding the local-part hash
+
+After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
+
+<pre> $ gpg --list-keys --with-wkd 0x94c32ac158aea35c
+pub   ed25519 2019-03-05 [SC] [expires: 2024-03-03]
+      1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
+uid           [ultimate] Matt Rude <matt@mattrude.com>
+              <strong>d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</strong>@mattrude.com
+sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
+</pre>
+
+#### Create the file
+
+Now that you have UID hash, you are ready to go.
+
+All you need to do is export your public key **binary** (not ASCII armored) file and place it as a correctly named file on your webserver.
+
+So assuming that the root of your openpgpkey webserver is at `/var/www/mattrude.com/`, you will run the following command.
+
+<pre>$ gpg --export 0x94c32ac158aea35c > /var/www/openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht</pre>
+
+For that key the full URL is:
+
+https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht
+
 ### Method 3: Building a Group of Files
 
 Using the `generate-openpgpkey-hu` script, you can build your WKD from a GnuPG keyring you already have populated with keys.
