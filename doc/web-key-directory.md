@@ -7,7 +7,6 @@ tags: [wkd, Web Key Directory, pgp, gpg, GnuPG]
 redirect_from:
   - /web-key-directory/
   - /wkd/
-toc: true
 ---
 
 ## Publishing A Public PGP Key via HTTPS: <small>Web Key Directory (WKD)</small>
@@ -25,7 +24,7 @@ GnuPG has a new key discovery scheme - Web Key Directory. Compared to previous s
 
 ## Building the Web Key Directory Service
 
-<div id="table-of-contents"> {% toc %} </div>
+{% include toc.html html=content %}
 
 Web Key Directory is simply a lookup scheme that relies on HTTPS and correctly placed files on a web server.  No other software is required to run on the web server.
 
