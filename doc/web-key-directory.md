@@ -72,7 +72,7 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 <pre>    setenv.add-response-header = ( "Access-Control-Allow-Origin" => "*" )</pre>
 
-### Finding the local-part hash
+#### Finding the local-part hash
 
 After you have created the needed directories, you next need to find the hash of the UID you are going to use.  The simplest way of doing that is via the `--with-wkd` option.
 
@@ -84,7 +84,7 @@ uid           [ultimate] Matt Rude <matt@mattrude.com>
 sub   cv25519 2019-03-05 [E] [expires: 2024-03-03]
 </pre>
 
-### Create the file
+#### Create the file
 
 Now that you have UID hash, you are ready to go.
 
