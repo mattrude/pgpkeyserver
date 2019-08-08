@@ -1,45 +1,52 @@
+@charset "utf-8";
 body {
-  max-width: 1160px;
+    max-width: 1160px;
 }
-h2 small {
-  font-size: 100%;
+
+h2 {
+    small {
+        font-size:100%;
+    }
 }
+
 #footer {
-  font-size: 80%;
-  border-top: 1px solid #CCC;
+    font-size: 80%;
+    border-top: 1px solid #CCC;
+    .container {
+        padding: 10px 0 10px 0;
+    }
+    p {
+        margin:0;
+    }
 }
-#footer .container {
-  padding: 10px 0 10px 0;
-}
-#footer p {
-  margin: 0;
-}
+
 .footer-left {
-  text-align: left;
-  float: left;
-  width: 49%;
+    text-align: left;
+    float: left;
+    width: 49%;
 }
+
 .footer-right {
-  display: block;
-  text-align: right;
-  float: right;
-  width: 49%;
+    display: block;
+    text-align: right;
+    float: right;
+    width: 49%;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding-top: 50px;
+h2,h3,h4,h5,h6 {
+    padding-top: 50px;
 }
 .page-toc {
-  padding-left: 15px;
-  padding-bottom: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    ul {
+        padding-inline-start: 20px;
+    }
 }
-.page-toc ul {
-  padding-inline-start: 20px;
-}
-/* Downloaded from: https://github.com/mojombo/tpw/blob/master/css/syntax.css */
+
+
+
+
+// Downloaded from: https://github.com/mojombo/tpw/blob/master/css/syntax.css
 .highlight {
   background: #ffffff;
 }
@@ -235,55 +242,62 @@ h6 {
 .highlight .il {
   color: #009999;
 }
+
+
+
+// This is the small section
+
 @media (max-width: 600px) {
-  #form.submit {
-    width: 99%;
-  }
-  .footer-left .small-hide {
-    display: none;
-  }
+    #form {
+        &.submit {
+            width: 99%;
+        }
+    }
+    .footer-left {
+        .small-hide {
+            display: none;
+        }
+    }
 }
 @media (max-width: 500px) {
-  #content {
-    max-width: 100%;
-  }
-  #form {
-    width: 100%;
-  }
-  #form.extract {
-    width: 100%;
-  }
-  #form.extract .key {
-    float: none;
-    display: table;
-    width: 95%;
-  }
-  #form.extract .key .extract-field {
-    float: none;
-    width: 90%;
-    padding: 0 5px;
-  }
-  #form.extract .key .extract-field-label {
-    text-align: left;
-  }
-  #form.extract .checkboxs input {
-    float: left;
-  }
-  #form.extract .options {
-    width: 95%;
-  }
-  #form.extract .radio {
-    margin-left: 0px;
-  }
-  #form.extract label.extract-field-label.fingerprint,
-  #form.extract label.extract-field-label.hash,
-  #form.extract label.extract-field-label.exact,
-  #form.extract label.extract-field-label.mr {
-    text-align: left;
-    margin-left: 5px;
-    margin-right: 0px;
-  }
-  #form.submit {
-    width: 99%;
-  }
+    #content {
+        max-width: 100%;
+    }
+    #form {
+        width: 100%;
+        &.extract {
+            width: 100%;
+            .key {
+                float: none;
+                display: table;
+                width: 95%;
+                .extract-field {
+                    float: none;
+                    width: 90%;
+                    padding: 0 5px;
+                }
+                .extract-field-label {
+                    text-align: left;
+                }
+            }
+            .checkboxs input {
+                float: left;
+            }
+            .options {
+                width: 95%;
+            }
+            .radio {
+                margin-left: 0px;
+            }
+            label.extract-field-label.fingerprint, label.extract-field-label.hash, label.extract-field-label.exact, label.extract-field-label.mr {
+                text-align: left;
+                margin-left: 5px;
+                margin-right: 0px;
+            }
+        }
+        &.submit {
+            width: 99%;
+        }
+    }
 }
+
