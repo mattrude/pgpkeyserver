@@ -31,7 +31,7 @@ There are two methods of key discovery described in network working group specif
 
 These two methods are fundamentally the same.
 
-The <b>Basic</b> method uses the domain address <code>https://example.com</code> while the Advanced method uses domain address like <code>https://openpgpkey.example.com</code>.
+The <b>Basic</b> method uses the domain address <code>https://example.com</code> while the <b>Advanced</b> method uses domain address like <code>https://openpgpkey.example.com</code>.
 
 ### Method 1: BASIC WKD Service
 
