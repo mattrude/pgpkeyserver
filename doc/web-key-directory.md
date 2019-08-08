@@ -114,7 +114,7 @@ gpg: key 94C32AC158AEA35C: public key "Matt Rude <matt@mattrude.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
 gpg: auto-key-locate found fingerprint 1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
-gpg: <stront>automatically retrieved 'matt@mattrude.com' via WKD</strong>
+gpg: <strong>automatically retrieved 'matt@mattrude.com' via WKD</strong>
 pub   ed25519 2019-03-05 [SC] [expires: 2024-03-03]
       1B9910529DF4FE1FE3C6B03794C32AC158AEA35C
 uid           [ unknown] Matt Rude <matt@mattrude.com>
