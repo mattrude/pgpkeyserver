@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: docs
 title: Publish A Public PGP Key via HTTPS&colon; Web Key Directory (WKD)
 displaytitle: Publishing A Public Key via WKD&colon; <small>Web Key Directory</small>
 permalink: /guides/web-key-directory/
