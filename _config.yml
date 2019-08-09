@@ -1,7 +1,7 @@
 # Site settings
 title: OpenPGP Keyserver
 email: matt@mattrude.com
-description: ""
+description: "A SKS OpenPGP Keyserver"
 url: "https://keyserver.mattrude.com"
 name: "keyserver.mattrude.com"
 baseurl: ""
