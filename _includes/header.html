@@ -5,7 +5,7 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}{% endif %}
     {% if page.tags %}<meta name="keywords" content="{{ page.tags }}">{% else %}{% endif %}
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ page.description }}">
     {% if page.url != '/nginx-before.txt' %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     {% endif %}
