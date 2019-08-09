@@ -4,7 +4,6 @@ title: Publish A Public PGP Key via HTTPS&colon; Web Key Directory (WKD)
 displaytitle: Publishing A Public Key via WKD&colon; <small>Web Key Directory</small>
 permalink: /guides/web-key-directory/
 description: Web Key Directory (WKD) allows you to publish your OpenPGP key on your HTTPS server
-tags: [wkd, Web Key Directory, pgp, gpg, GnuPG]
 redirect_from:
   - /web-key-directory/
   - /wkd/
@@ -102,9 +101,11 @@ For that key the full URL is: <code>https://mattrude.com/.well-known/openpgpkey/
 
 ### Method 2: Advanced WKD Service
 
+The Advanced method is basically the same as the basic method, but has a different URL and URI structure.
+
 #### Setting up the File System
 
-Once complete the key/file must be accessible via a special URL constructed by appending `https://openpgpkey`, user domain, `/.well-known/openpgpkey/mattrude.com/hu/` and a hash value.
+Once complete the key/file must be accessible via a special URL constructed by appending `https://openpgpkey<example.com>/.well-known/openpgpkey/<example.com>/hu/` and a hash value.
 
 For the key I will be using in this how-to the full URL should be: `https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
 
