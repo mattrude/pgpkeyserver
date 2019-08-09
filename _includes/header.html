@@ -2,12 +2,12 @@
 <head>
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}{% endif %}
+    <meta name="description" content="{% if page.description %}{{ site.description }}{% else %}{{ site.description }}">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
     {% if page.tags %}<meta name="keywords" content="{{ page.tags }}">{% else %}{% endif %}
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ page.description }}">
     {% if page.url != '/nginx-before.txt' %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}{% endif %}">
     {% endif %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
