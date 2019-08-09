@@ -23,7 +23,6 @@ google_analytics_id: UA-9532791-9
 
 # Build settings
 markdown: kramdown
-#permalink: pretty
 permalink: /changelog/:year-:month-:day-:title/
 highlighter: rouge
 date: YYYY-MM-DD HH:MM
