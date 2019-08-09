@@ -48,7 +48,7 @@ For example, if you use the default Ubuntu config, you may simply run the follow
 
 After you have created the WKD directory, you need to create a policy file.  This file tells clients how your WKD service works.  Since we are creating a default setup, the file should be empty, so you can may just run.
 
-<pre>$ touch /var/www/mattrude.com/.well-known/openpgpkey/policy</pre>
+<pre>$ touch /var/www/html/.well-known/openpgpkey/policy</pre>
 
 #### Setting up the Web Server
 
@@ -103,9 +103,11 @@ For that key the full URL is: <code>https://mattrude.com/.well-known/openpgpkey/
 
 The Advanced method is basically the same as the basic method, but has a different URL and URI structure.
 
+
+
 #### Setting up the File System
 
-Once complete the key/file must be accessible via a special URL constructed by appending `https://openpgpkey<example.com>/.well-known/openpgpkey/<example.com>/hu/` and a hash value.
+Once complete the key/file must be accessible via a special URL constructed by appending `https://openpgpkey.<example.com>/.well-known/openpgpkey/<example.com>/hu/` and a hash value.
 
 For the key I will be using in this how-to the full URL should be: `https://openpgpkey.mattrude.com/.well-known/openpgpkey/mattrude.com/hu/d6tq6t4iirtg3qpyw1nyzsr5nsfcqrht`
 
