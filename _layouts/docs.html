@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% include header.html %}
+{% include menu.html %}
+{% include title.html %}
+<div id="guide" class="container">
+    {% if page.displaytitle %}
+        <h1>{{ page.displaytitle }}</h1>
+    {% endif %}
+    <div class="page-toc" style="float:right;">
+        {% include toc.html html=content h_max=4 %}
+    </div>
+    {{ content }}
+</div>
+{% include footer.html %}

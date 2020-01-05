@@ -1,3 +1,71 @@
+@charset "utf-8";
+body {
+    max-width: 1160px;
+}
+
+h2 {
+    small {
+        font-size:100%;
+    }
+}
+
+#footer {
+    font-size: 80%;
+    border-top: 1px solid #CCC;
+    .container {
+        padding: 10px 0 10px 0;
+    }
+    p {
+        margin:0;
+    }
+}
+
+.footer-left {
+    text-align: left;
+    float: left;
+    width: 49%;
+}
+
+.footer-right {
+    display: block;
+    text-align: right;
+    float: right;
+    width: 49%;
+}
+
+#guide {
+    h1 {
+        font-size: 2.6em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h4 {
+        font-size: 1.8em;
+    }
+    h5 {
+        font-size: 1.6em;
+    }
+    h6 {
+        font-size: 1.4em;
+    }
+    h2,h3,h4 {
+        padding-top: 60px;
+    }
+    .page-toc {
+        padding-left: 15px;
+        padding-bottom: 15px;
+        ul {
+            padding-inline-start: 20px;
+        }
+    }
+}
+
+// This is the small section
+
 @media (max-width: 600px) {
     #form {
         &.submit {
@@ -51,4 +119,3 @@
         }
     }
 }
-
